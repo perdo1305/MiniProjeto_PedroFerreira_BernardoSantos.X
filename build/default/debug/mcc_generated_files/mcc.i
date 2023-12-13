@@ -9836,25 +9836,32 @@ void SPI1_WriteByte(uint8_t byte);
 uint8_t SPI1_ReadByte(void);
 # 56 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/ccp5.h" 1
-# 59 "mcc_generated_files/ccp5.h"
-void CCP5_Initialize(void);
+# 1 "mcc_generated_files/tmr1.h" 1
+# 94 "mcc_generated_files/tmr1.h"
+void TMR1_Initialize(void);
+# 125 "mcc_generated_files/tmr1.h"
+void TMR1_StartTimer(void);
+# 155 "mcc_generated_files/tmr1.h"
+void TMR1_StopTimer(void);
+# 189 "mcc_generated_files/tmr1.h"
+uint16_t TMR1_ReadTimer(void);
+# 215 "mcc_generated_files/tmr1.h"
+void TMR1_WriteTimer(uint16_t timerVal);
+# 247 "mcc_generated_files/tmr1.h"
+void TMR1_Reload(void);
+# 288 "mcc_generated_files/tmr1.h"
+void TMR1_StartSinglePulseAcquisition(void);
+# 329 "mcc_generated_files/tmr1.h"
+uint8_t TMR1_CheckGateValueStatus(void);
+# 345 "mcc_generated_files/tmr1.h"
+void TMR1_ISR(void);
+# 364 "mcc_generated_files/tmr1.h"
+ void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+# 382 "mcc_generated_files/tmr1.h"
+extern void (*TMR1_InterruptHandler)(void);
+# 400 "mcc_generated_files/tmr1.h"
+void TMR1_DefaultInterruptHandler(void);
 # 57 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/ext_int.h" 1
-# 250 "mcc_generated_files/ext_int.h"
-void EXT_INT_Initialize(void);
-# 272 "mcc_generated_files/ext_int.h"
-void INT0_ISR(void);
-# 296 "mcc_generated_files/ext_int.h"
-void INT0_CallBack(void);
-# 319 "mcc_generated_files/ext_int.h"
-void INT0_SetInterruptHandler(void (* InterruptHandler)(void));
-# 343 "mcc_generated_files/ext_int.h"
-extern void (*INT0_InterruptHandler)(void);
-# 367 "mcc_generated_files/ext_int.h"
-void INT0_DefaultInterruptHandler(void);
-# 58 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/tmr0.h" 1
 # 100 "mcc_generated_files/tmr0.h"
@@ -9877,7 +9884,27 @@ void TMR0_ISR(void);
 extern void (*TMR0_InterruptHandler)(void);
 # 345 "mcc_generated_files/tmr0.h"
 void TMR0_DefaultInterruptHandler(void);
+# 58 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/ccp5.h" 1
+# 59 "mcc_generated_files/ccp5.h"
+void CCP5_Initialize(void);
 # 59 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/ext_int.h" 1
+# 250 "mcc_generated_files/ext_int.h"
+void EXT_INT_Initialize(void);
+# 272 "mcc_generated_files/ext_int.h"
+void INT0_ISR(void);
+# 296 "mcc_generated_files/ext_int.h"
+void INT0_CallBack(void);
+# 319 "mcc_generated_files/ext_int.h"
+void INT0_SetInterruptHandler(void (* InterruptHandler)(void));
+# 343 "mcc_generated_files/ext_int.h"
+extern void (*INT0_InterruptHandler)(void);
+# 367 "mcc_generated_files/ext_int.h"
+void INT0_DefaultInterruptHandler(void);
+# 60 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/adc.h" 1
 # 72 "mcc_generated_files/adc.h"
@@ -9921,7 +9948,7 @@ void ADC_ISR(void);
 extern void (*ADC_InterruptHandler)(void);
 # 386 "mcc_generated_files/adc.h"
 void ADC_DefaultInterruptHandler(void);
-# 60 "mcc_generated_files/mcc.h" 2
+# 61 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart1.h" 1
 # 76 "mcc_generated_files/eusart1.h"
@@ -9976,10 +10003,10 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 506 "mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 61 "mcc_generated_files/mcc.h" 2
-# 76 "mcc_generated_files/mcc.h"
+# 62 "mcc_generated_files/mcc.h" 2
+# 77 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 89 "mcc_generated_files/mcc.h"
+# 90 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 47 "mcc_generated_files/mcc.c" 2
 
@@ -9992,9 +10019,10 @@ void SYSTEM_Initialize(void)
     SPI1_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
-    ADC_Initialize();
     CCP5_Initialize();
+    ADC_Initialize();
     EXT_INT_Initialize();
+    TMR1_Initialize();
     TMR0_Initialize();
     EUSART1_Initialize();
 }

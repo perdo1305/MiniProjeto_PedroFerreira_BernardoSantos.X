@@ -47,27 +47,45 @@
                          Main application
  */
 uint16_t convertedValue;
-uint16_t nivel_agua = 0; // Nivel de agua em percentagem
+uint16_t nivel_agua = 0;  // Nivel de agua em percentagem
+
+volatile bool SistemaControloLigado = false;
+volatile bool BombaLigada = false;
+volatile uint16_t nivel_referencia = 0;
 
 //______________INTERRUPTS________________________
 void INT0_MyInterruptHandler(void) {
-    IO_RB3_LED_RED_Toggle();
-    IO_RB4_LED_ORANGE_Toggle();
-    printf("ola\r\n");
+    // se o botao de emergencia for pressionado desliga o sistema de controlo
+    BombaLigada = false;
+    SistemaControloLigado = false;
 
     EXT_INT0_InterruptFlagClear();
 }
 
+/**
+ * Funcao que e chamada quando o ADC termina a conversao
+*/
 void ADC_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
     convertedValue = ADC_GetConversionResult();
-    nivel_agua = (long) convertedValue * 100 / 1023;
+    nivel_agua = (long)convertedValue * 100 / 1023;
 }
 
+/**
+ * Funcao que e chamada quando o timer 0 termina a contagem (25ms) 
+*/
 void TMR0_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
     ADC_StartConversion();
 }
+
+void TMR1_MyInterruptHandler(void) {
+    // liga led laranja se o sistema de controlo estiver ligado com uma frequencia de 2Hz
+    if (SistemaControloLigado) {
+        IO_RB4_LED_ORANGE_Toggle();
+    }
+}
+
 //________________________________________________
 void CheckUSART(void);
 void ShowMenuInTerminal(void);
@@ -111,18 +129,35 @@ void main(void) {
     TMR0_SetInterruptHandler(TMR0_MyInterruptHandler);
     TMR0_StartTimer();
 
+    TMR1_SetInterruptHandler(TMR1_MyInterruptHandler);
+    TMR1_StartTimer();
+
     printf("SETUP COMPLETED SUCCESSFULLY\r\n");
+    SistemaControloLigado = true;
 
     while (1) {
-        // printf("LOOPING\r\n");
-        IO_RB5_LED_GREEN_SetHigh();
+        // Sistema de controlo desligado, desliga o timer e acende o led vermelho
+        if (!SistemaControloLigado) {
+            TMR1_StopTimer();
+            IO_RB4_LED_ORANGE_SetLow();
+            IO_RB3_LED_RED_SetHigh();
+        } else {
+            TMR1_StartTimer();
+            IO_RB3_LED_RED_SetLow();
+        }
+
+        // se a bomba estiver ligada acende o led verde
+        if (BombaLigada) {
+            IO_RB5_LED_GREEN_SetHigh();
+        } else {
+            IO_RB5_LED_GREEN_SetLow();
+        }
 
         if (carater_recebido) {
             ShowMenuInTerminal();
             carater_recebido = 0;
         }
         CheckUSART();
-
         // Add your application code
     }
 }
@@ -148,13 +183,17 @@ void ShowMenuInTerminal() {
             EUSART1_Write(12);
             // TODO - Desligar bomba de agua
             printf("\r\nBomba de agua desligada");
-            cnt_char = 0;  // Inicia a contagem de caracteres para compor esse valor
+            printf("\r\n0 - Voltar ao Menu Principal");
+            printf("\r\nOpcao: ");
+            BombaLigada = false;
             menu = 0;
             break;
         case '2':  // Ativar comtrolo do nivel de agua
             EUSART1_Write(12);
             // TODO - Ativar controlo do nivel de agua
             printf("\r\nControlo do nivel de agua ativado");
+            printf("\r\n0 - Voltar ao Menu Principal");
+            printf("\r\nOpcao: ");
             menu = 0;
             break;
         case '3':  // Visualizar a percentagem do nivel de agua
@@ -162,16 +201,22 @@ void ShowMenuInTerminal() {
             // TODO - Visualizar a percentagem do nivel de agua
             printf("\r\nPercentagem do nivel de agua: %d", nivel_agua);
             printf("\r\nbits: %d", convertedValue);
+            printf("\r\n0 - Voltar ao Menu Principal");
+            printf("\r\nOpcao: ");
             menu = 0;
             break;
         case '4':  // Visualizar o nivel de referencia
             EUSART1_Write(12);
             // TODO - Visualizar o nivel de referencia
+            printf("\r\n0 - Voltar ao Menu Principal");
+            printf("\r\nOpcao: ");
             menu = 0;
             break;
         case '5':  // Programar novo valor de referencia
             EUSART1_Write(12);
             // TODO - Programar novo valor de referencia
+            printf("\r\n0 - Voltar ao Menu Principal");
+            printf("\r\nOpcao: ");
             menu = 0;
             break;
         default:  // Opcao Invalida

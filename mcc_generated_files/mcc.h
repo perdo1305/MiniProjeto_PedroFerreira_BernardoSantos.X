@@ -54,9 +54,10 @@
 #include <conio.h>
 #include "interrupt_manager.h"
 #include "spi1.h"
+#include "tmr1.h"
+#include "tmr0.h"
 #include "ccp5.h"
 #include "ext_int.h"
-#include "tmr0.h"
 #include "adc.h"
 #include "eusart1.h"
 
