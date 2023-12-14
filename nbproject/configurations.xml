@@ -61,7 +61,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>VSMViewerPlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.40</languageToolchainVersion>
+        <languageToolchainVersion>2.41</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -177,9 +177,6 @@
       <Tool>
         <property key="design.file" value="Mini_projeto_micro.pdsprj"/>
       </Tool>
-      <VSMViewerPlatformTool>
-        <property key="design.file" value="Mini_projeto_micro.pdsprj"/>
-      </VSMViewerPlatformTool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
         <property key="stack-guidance" value="false"/>

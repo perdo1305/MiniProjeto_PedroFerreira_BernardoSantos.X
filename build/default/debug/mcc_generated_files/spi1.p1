@@ -48,8 +48,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _SSP1CON1bits `VS672 ~T0 @X0 0 e@4038 ]
 "72 mcc_generated_files/spi1.c
 [; ;mcc_generated_files/spi1.c: 72: _Bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)
-[c E355 0 .. ]
-[n E355 . SPI1_DEFAULT  ]
+[c E358 0 .. ]
+[n E358 . SPI1_DEFAULT  ]
 "13784 C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 13784: extern volatile unsigned char SSP1CON2 __attribute__((address(0xFC5)));
 [v _SSP1CON2 `Vuc ~T0 @X0 0 e@4037 ]
@@ -872,14 +872,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "72
 [; ;mcc_generated_files/spi1.c: 72: _Bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)
-[v _SPI1_Open `(a ~T0 @X0 1 ef1`E355 ]
+[v _SPI1_Open `(a ~T0 @X0 1 ef1`E358 ]
 "73
 [; ;mcc_generated_files/spi1.c: 73: {
 {
 [e :U _SPI1_Open ]
 "72
 [; ;mcc_generated_files/spi1.c: 72: _Bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)
-[v _spi1UniqueConfiguration `E355 ~T0 @X0 1 r1 ]
+[v _spi1UniqueConfiguration `E358 ~T0 @X0 1 r1 ]
 "73
 [; ;mcc_generated_files/spi1.c: 73: {
 [f ]

@@ -128,14 +128,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "272 mcc_generated_files/ext_int.h
 [; ;mcc_generated_files/ext_int.h: 272: void INT0_ISR(void);
 [v _INT0_ISR `(v ~T0 @X0 0 ef ]
-[v F6430 `(v ~T0 @X0 0 tf ]
+[v F6433 `(v ~T0 @X0 0 tf ]
 "95 mcc_generated_files/eusart1.h
 [; ;mcc_generated_files/eusart1.h: 95: extern void (*EUSART1_TxDefaultInterruptHandler)(void);
-[v _EUSART1_TxDefaultInterruptHandler `*F6430 ~T0 @X0 0 e ]
-[v F6432 `(v ~T0 @X0 0 tf ]
+[v _EUSART1_TxDefaultInterruptHandler `*F6433 ~T0 @X0 0 e ]
+[v F6435 `(v ~T0 @X0 0 tf ]
 "96
 [; ;mcc_generated_files/eusart1.h: 96: extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-[v _EUSART1_RxDefaultInterruptHandler `*F6432 ~T0 @X0 0 e ]
+[v _EUSART1_RxDefaultInterruptHandler `*F6435 ~T0 @X0 0 e ]
 "345 mcc_generated_files/tmr1.h
 [; ;mcc_generated_files/tmr1.h: 345: void TMR1_ISR(void);
 [v _TMR1_ISR `(v ~T0 @X0 0 ef ]
