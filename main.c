@@ -99,30 +99,11 @@ unsigned char carater_recebido = 1;
 unsigned char intro_valor = 0;
 
 void main(void) {
-    // Initialize the device
     SYSTEM_Initialize();
 
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts
-    // Use the following macros to:
-
-    // Enable high priority global interrupts
     INTERRUPT_GlobalInterruptHighEnable();
-
-    // Enable low priority global interrupts.
     INTERRUPT_GlobalInterruptLowEnable();
-
-    // Disable high priority global interrupts
-    // INTERRUPT_GlobalInterruptHighDisable();
-
-    // Disable low priority global interrupts.
-    // INTERRUPT_GlobalInterruptLowDisable();
-
-    // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Peripheral Interrupts
-    // INTERRUPT_PeripheralInterruptDisable();
 
     INT0_SetInterruptHandler(INT0_MyInterruptHandler);
     ADC_SetInterruptHandler(ADC_MyInterruptHandler);
@@ -230,15 +211,19 @@ void ShowMenuInTerminal() {
 
 void CheckUSART() {
     if (EUSART1_is_rx_ready()) {
-        rxData = EUSART1_Read();                               // Funcao que le caracter da EUSART
-        EUSART1_Write(rxData);                                 // Mostra caracter recebido devolvendo-o ah EUSART
-        if ((rxData >= '0' && rxData <= '9') || rxData == 13)  // Protecao / Se estiver enrtre 0 e 9 ou ENTER
-        {
-            carater_recebido = 1;  // Indica caracter aceite
-            menu = rxData;         // O caracter ser]a usado para o switch case
-        } else {
-            carater_recebido = 0;  // Caso contrario nao aceita o caracter e...
-            menu = '0';            // ...volta a mostrar o menu principal opcao 0
+        rxData = EUSART1_Read();  // Funcao que le caracter da EUSART
+        EUSART1_Write(rxData);    // Mostra caracter recebido devolvendo-o ah EUSART
+
+        switch (rxData) {
+            case '0' ... '9':
+            case 13:
+                carater_recebido = 1;  // Indica caracter aceite
+                menu = rxData;         // O caracter ser]a usado para o switch case
+                break;
+            default:
+                carater_recebido = 0;  // Caso contrario nao aceita o caracter e...
+                menu = '0';            // ...volta a mostrar o menu principal opcao 0
+                break;
         }
 
         if (intro_valor == 1)  // Se estiver em modo de ler um valor para o programa e nao escolher um item do menu
