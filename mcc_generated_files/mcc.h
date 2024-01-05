@@ -53,7 +53,7 @@
 #include <stdbool.h>
 #include <conio.h>
 #include "interrupt_manager.h"
-#include "spi1.h"
+#include "spi2.h"
 #include "tmr1.h"
 #include "tmr0.h"
 #include "ccp5.h"

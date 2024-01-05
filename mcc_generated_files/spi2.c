@@ -1,17 +1,17 @@
 /**
-  SPI1 Generated Driver File
+  SPI2 Generated Driver File
 
   @Company
     Microchip Technology Inc.
 
   @File Name
-    spi1.c
+    spi2.c
 
   @Summary
-    This is the generated driver implementation file for the SPI1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+    This is the generated driver implementation file for the SPI2 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description
-    This header file provides implementations for driver APIs for SPI1.
+    This header file provides implementations for driver APIs for SPI2.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.78.1
         Device            :  PIC18F46K22
@@ -44,7 +44,7 @@
     SOFTWARE.
 */
 
-#include "spi1.h"
+#include "spi2.h"
 #include <xc.h>
 
 typedef struct { 
@@ -52,86 +52,86 @@ typedef struct {
     uint8_t stat;
     uint8_t add;
     uint8_t operation;
-} spi1_configuration_t;
+} spi2_configuration_t;
 
 //con1 == SSPxCON1, stat == SSPxSTAT, add == SSPxADD, operation == Master/Slave
-static const spi1_configuration_t spi1_configuration[] = {   
+static const spi2_configuration_t spi2_configuration[] = {   
     { 0x0, 0x40, 0x1, 0 }
 };
 
-void SPI1_Initialize(void)
+void SPI2_Initialize(void)
 {
     //SPI setup
-    SSP1STAT = 0x40;
-    SSP1CON1 = 0x00;
-    SSP1ADD = 0x01;
-    TRISCbits.TRISC3 = 0;
-    SSP1CON1bits.SSPEN = 0;
+    SSP2STAT = 0x40;
+    SSP2CON1 = 0x00;
+    SSP2ADD = 0x01;
+    TRISDbits.TRISD0 = 0;
+    SSP2CON1bits.SSPEN = 0;
 }
 
-bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)
+bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration)
 {
-    if(!SSP1CON1bits.SSPEN)
+    if(!SSP2CON1bits.SSPEN)
     {
-        SSP1STAT = spi1_configuration[spi1UniqueConfiguration].stat;
-        SSP1CON1 = spi1_configuration[spi1UniqueConfiguration].con1;
-        SSP1CON2 = 0x00;
-        SSP1ADD  = spi1_configuration[spi1UniqueConfiguration].add;
-        TRISCbits.TRISC3 = spi1_configuration[spi1UniqueConfiguration].operation;
-        SSP1CON1bits.SSPEN = 1;
+        SSP2STAT = spi2_configuration[spi2UniqueConfiguration].stat;
+        SSP2CON1 = spi2_configuration[spi2UniqueConfiguration].con1;
+        SSP2CON2 = 0x00;
+        SSP2ADD  = spi2_configuration[spi2UniqueConfiguration].add;
+        TRISDbits.TRISD0 = spi2_configuration[spi2UniqueConfiguration].operation;
+        SSP2CON1bits.SSPEN = 1;
         return true;
     }
     return false;
 }
 
-void SPI1_Close(void)
+void SPI2_Close(void)
 {
-    SSP1CON1bits.SSPEN = 0;
+    SSP2CON1bits.SSPEN = 0;
 }
 
-uint8_t SPI1_ExchangeByte(uint8_t data)
+uint8_t SPI2_ExchangeByte(uint8_t data)
 {
-    SSP1BUF = data;
-    while(!PIR1bits.SSP1IF);
-    PIR1bits.SSP1IF = 0;
-    return SSP1BUF;
+    SSP2BUF = data;
+    while(!PIR3bits.SSP2IF);
+    PIR3bits.SSP2IF = 0;
+    return SSP2BUF;
 }
 
-void SPI1_ExchangeBlock(void *block, size_t blockSize)
+void SPI2_ExchangeBlock(void *block, size_t blockSize)
 {
     uint8_t *data = block;
     while(blockSize--)
     {
-        *data = SPI1_ExchangeByte(*data );
+        *data = SPI2_ExchangeByte(*data );
         data++;
     }
 }
 
 // Half Duplex SPI Functions
-void SPI1_WriteBlock(void *block, size_t blockSize)
+void SPI2_WriteBlock(void *block, size_t blockSize)
 {
     uint8_t *data = block;
     while(blockSize--)
     {
-        SPI1_ExchangeByte(*data++);
+        SPI2_ExchangeByte(*data++);
     }
 }
 
-void SPI1_ReadBlock(void *block, size_t blockSize)
+void SPI2_ReadBlock(void *block, size_t blockSize)
 {
     uint8_t *data = block;
     while(blockSize--)
     {
-        *data++ = SPI1_ExchangeByte(0);
+        *data++ = SPI2_ExchangeByte(0);
     }
 }
 
-void SPI1_WriteByte(uint8_t byte)
+void SPI2_WriteByte(uint8_t byte)
 {
-    SSP1BUF = byte;
+    SSP2BUF = byte;
 }
 
-uint8_t SPI1_ReadByte(void)
+uint8_t SPI2_ReadByte(void)
 {
-    return SSP1BUF;
+    return SSP2BUF;
 }

@@ -9661,9 +9661,9 @@ unsigned char __t3rd16on(void);
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 343 "mcc_generated_files/pin_manager.h"
+# 351 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 355 "mcc_generated_files/pin_manager.h"
+# 363 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -9838,21 +9838,21 @@ char *tempnam(const char *, const char *);
 void INTERRUPT_Initialize (void);
 # 55 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/spi1.h" 1
-# 59 "mcc_generated_files/spi1.h"
+# 1 "mcc_generated_files/spi2.h" 1
+# 59 "mcc_generated_files/spi2.h"
 typedef enum {
-    SPI1_DEFAULT
-} spi1_modes_t;
+    SPI2_DEFAULT
+} spi2_modes_t;
 
-void SPI1_Initialize(void);
-_Bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration);
-void SPI1_Close(void);
-uint8_t SPI1_ExchangeByte(uint8_t data);
-void SPI1_ExchangeBlock(void *block, size_t blockSize);
-void SPI1_WriteBlock(void *block, size_t blockSize);
-void SPI1_ReadBlock(void *block, size_t blockSize);
-void SPI1_WriteByte(uint8_t byte);
-uint8_t SPI1_ReadByte(void);
+void SPI2_Initialize(void);
+_Bool SPI2_Open(spi2_modes_t spi2UniqueConfiguration);
+void SPI2_Close(void);
+uint8_t SPI2_ExchangeByte(uint8_t data);
+void SPI2_ExchangeBlock(void *block, size_t blockSize);
+void SPI2_WriteBlock(void *block, size_t blockSize);
+void SPI2_ReadBlock(void *block, size_t blockSize);
+void SPI2_WriteByte(uint8_t byte);
+uint8_t SPI2_ReadByte(void);
 # 56 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/tmr1.h" 1
@@ -10035,13 +10035,13 @@ void SYSTEM_Initialize(void)
 {
 
     INTERRUPT_Initialize();
-    SPI1_Initialize();
+    SPI2_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
-    CCP5_Initialize();
     ADC_Initialize();
-    EXT_INT_Initialize();
+    CCP5_Initialize();
     TMR1_Initialize();
+    EXT_INT_Initialize();
     TMR0_Initialize();
     EUSART1_Initialize();
 }

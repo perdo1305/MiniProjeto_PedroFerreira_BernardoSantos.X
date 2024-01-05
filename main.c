@@ -45,13 +45,13 @@
 // Bernardo Santos N2222033
 
 #include "mcc_generated_files/mcc.h"
-
+#include "lib_ili9341.h"
 /*
                          Main application
  */
 uint16_t convertedValue;
 uint16_t nivel_agua = 0;  // Nivel de agua em percentagem
-
+char string[50] = "";
 volatile bool SistemaControloLigado = false;
 volatile bool BombaLigada = false;
 volatile uint16_t nivel_referencia = 0;
@@ -104,6 +104,25 @@ unsigned char intro_valor = 0;
 void main(void) {
     SYSTEM_Initialize();
 
+     SPI2_Open(SPI2_DEFAULT);
+    // Inicializa o LCD grafico    
+    lcd_init();
+    
+    
+    lcd_draw_string(82, 220, "ENGENHARIA ELETROTECNICA", FUCHSIA, BLACK);
+    snprintf(string, sizeof (string), "MICROPROCESSADORES");
+    lcd_draw_string(85, 190, string, LIME, BLACK);
+    snprintf(string, sizeof (string), "2022 / 23");
+    lcd_draw_string(120, 165, string, ILI9341_PINK, BLACK);
+    snprintf(string, sizeof (string), "SISTEMA PARA CONTROLO DE UM");
+    lcd_draw_string(20, 140, string, RED, BLACK);
+    snprintf(string, sizeof (string), "MOTOR EM MALHA ABERTA");
+    lcd_draw_string(40, 120, string, RED, BLACK);
+    snprintf(string, sizeof (string), "Autores: Sergio Faria");
+    lcd_draw_string(20, 95, string, YELLOW, BLACK);
+    snprintf(string, sizeof (string), "Lucas Thomaz");
+    lcd_draw_string(90, 75, string, YELLOW, BLACK);    
+    
     INTERRUPT_GlobalInterruptHighEnable();
     INTERRUPT_GlobalInterruptLowEnable();
     INTERRUPT_PeripheralInterruptEnable();
