@@ -14,8 +14,13 @@ channel_CTMU 29
 channel_DAC 30
 channel_FVRBuf2 31
 ]
+<<<<<<< Updated upstream
 "72 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 [e E6398 . `uc
+=======
+"72 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+[e E6408 . `uc
+>>>>>>> Stashed changes
 channel_AN0 0
 channel_CTMU 29
 channel_DAC 30
@@ -67,7 +72,11 @@ channel_FVRBuf2 31
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
+<<<<<<< Updated upstream
 "60 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+=======
+"60 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+>>>>>>> Stashed changes
 [v _INT0_MyInterruptHandler INT0_MyInterruptHandler `(v  1 e 1 0 ]
 "71
 [v _ADC_MyInterruptHandler ADC_MyInterruptHandler `(v  1 e 1 0 ]
@@ -79,7 +88,11 @@ channel_FVRBuf2 31
 [v _main main `(v  1 e 1 0 ]
 "151
 [v _ShowMenuInTerminal ShowMenuInTerminal `(v  1 e 1 0 ]
+<<<<<<< Updated upstream
 "215
+=======
+"214
+>>>>>>> Stashed changes
 [v _CheckUSART CheckUSART `(v  1 e 1 0 ]
 "62 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -619,7 +632,11 @@ channel_FVRBuf2 31
 [v _flags flags `uc  1 s 1 flags ]
 "144
 [v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+<<<<<<< Updated upstream
 "52 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+=======
+"52 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+>>>>>>> Stashed changes
 [v _convertedValue convertedValue `us  1 e 2 0 ]
 "53
 [v _nivel_agua nivel_agua `us  1 e 2 0 ]
@@ -686,7 +703,11 @@ channel_FVRBuf2 31
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
 "58
 [v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
+<<<<<<< Updated upstream
 "104 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+=======
+"104 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+>>>>>>> Stashed changes
 [v _main main `(v  1 e 1 0 ]
 {
 "146
@@ -706,10 +727,17 @@ channel_FVRBuf2 31
 {
 "98
 } 0
+<<<<<<< Updated upstream
 "151 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 [v _ShowMenuInTerminal ShowMenuInTerminal `(v  1 e 1 0 ]
 {
 "213
+=======
+"151 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+[v _ShowMenuInTerminal ShowMenuInTerminal `(v  1 e 1 0 ]
+{
+"212
+>>>>>>> Stashed changes
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -946,10 +974,17 @@ channel_FVRBuf2 31
 [v ADC_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 30 ]
 "153
 } 0
+<<<<<<< Updated upstream
 "215 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 [v _CheckUSART CheckUSART `(v  1 e 1 0 ]
 {
 "236
+=======
+"214 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+[v _CheckUSART CheckUSART `(v  1 e 1 0 ]
+{
+"235
+>>>>>>> Stashed changes
 } 0
 "137 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/eusart1.c
 [v _EUSART1_is_rx_ready EUSART1_is_rx_ready `(a  1 e 1 0 ]
@@ -992,7 +1027,11 @@ channel_FVRBuf2 31
 {
 "179
 } 0
+<<<<<<< Updated upstream
 "85 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+=======
+"85 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+>>>>>>> Stashed changes
 [v _TMR1_MyInterruptHandler TMR1_MyInterruptHandler `(v  1 e 1 0 ]
 {
 "90
@@ -1007,7 +1046,11 @@ channel_FVRBuf2 31
 {
 "154
 } 0
+<<<<<<< Updated upstream
 "80 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+=======
+"80 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+>>>>>>> Stashed changes
 [v _TMR0_MyInterruptHandler TMR0_MyInterruptHandler `(v  1 e 1 0 ]
 {
 "83
@@ -1032,7 +1075,11 @@ channel_FVRBuf2 31
 {
 "57
 } 0
+<<<<<<< Updated upstream
 "60 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+=======
+"60 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+>>>>>>> Stashed changes
 [v _INT0_MyInterruptHandler INT0_MyInterruptHandler `(v  1 e 1 0 ]
 {
 "66
@@ -1076,7 +1123,11 @@ channel_FVRBuf2 31
 {
 "158
 } 0
+<<<<<<< Updated upstream
 "71 C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+=======
+"71 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+>>>>>>> Stashed changes
 [v _ADC_MyInterruptHandler ADC_MyInterruptHandler `(v  1 e 1 0 ]
 {
 "75

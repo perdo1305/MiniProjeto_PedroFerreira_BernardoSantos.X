@@ -20,8 +20,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _INTCONbits `VS825 ~T0 @X0 0 e@4082 ]
 "72 main.c
 [; ;main.c: 72:     ADC_SelectChannel(channel_AN0);
+<<<<<<< Updated upstream
 [c E6398 0 29 30 31 .. ]
 [n E6398 . channel_AN0 channel_CTMU channel_DAC channel_FVRBuf2  ]
+=======
+[c E6408 0 29 30 31 .. ]
+[n E6408 . channel_AN0 channel_CTMU channel_DAC channel_FVRBuf2  ]
+>>>>>>> Stashed changes
 "166 ./mcc_generated_files/adc.h
 [; ;./mcc_generated_files/adc.h: 166: void ADC_SelectChannel(adc_channel_t channel);
 [v _ADC_SelectChannel `(v ~T0 @X0 0 ef1`E6398 ]
@@ -906,7 +911,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "72
 [; ;main.c: 72:     ADC_SelectChannel(channel_AN0);
+<<<<<<< Updated upstream
 [e ( _ADC_SelectChannel (1 . `E6398 0 ]
+=======
+[e ( _ADC_SelectChannel (1 . `E6408 0 ]
+>>>>>>> Stashed changes
 "73
 [; ;main.c: 73:     convertedValue = ADC_GetConversionResult();
 [e = _convertedValue ( _ADC_GetConversionResult ..  ]
@@ -925,7 +934,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "81
 [; ;main.c: 81:     ADC_SelectChannel(channel_AN0);
+<<<<<<< Updated upstream
 [e ( _ADC_SelectChannel (1 . `E6398 0 ]
+=======
+[e ( _ADC_SelectChannel (1 . `E6408 0 ]
+>>>>>>> Stashed changes
 "82
 [; ;main.c: 82:     ADC_StartConversion();
 [e ( _ADC_StartConversion ..  ]
@@ -1217,6 +1230,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 177:             printf("\r\nControlo do nivel de agua ativado");
 [e ( _printf :s 13C ]
 "178
+<<<<<<< Updated upstream
 [; ;main.c: 178:             SistemaControloLigado = 1;
 [e = _SistemaControloLigado -> -> 1 `i `a ]
 "179
@@ -1311,6 +1325,99 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 892  ]
 "212
 [; ;main.c: 212:     }
+=======
+[; ;main.c: 178:             printf("\r\n0 - Voltar ao Menu Principal");
+[e ( _printf :s 14C ]
+"179
+[; ;main.c: 179:             printf("\r\nOpcao: ");
+[e ( _printf :s 15C ]
+"180
+[; ;main.c: 180:             menu = 0;
+[e = _menu -> -> 0 `i `uc ]
+"181
+[; ;main.c: 181:             break;
+[e $U 892  ]
+"182
+[; ;main.c: 182:         case '3':
+[e :U 897 ]
+"183
+[; ;main.c: 183:             EUSART1_Write(12);
+[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
+"185
+[; ;main.c: 185:             printf("\r\nPercentagem do nivel de agua: %d", nivel_agua);
+[e ( _printf , (. :s 16C -> _nivel_agua `ui ]
+"186
+[; ;main.c: 186:             printf("\r\nbits: %d", convertedValue);
+[e ( _printf , (. :s 17C -> _convertedValue `ui ]
+"187
+[; ;main.c: 187:             printf("\r\n0 - Voltar ao Menu Principal");
+[e ( _printf :s 18C ]
+"188
+[; ;main.c: 188:             printf("\r\nOpcao: ");
+[e ( _printf :s 19C ]
+"189
+[; ;main.c: 189:             menu = 0;
+[e = _menu -> -> 0 `i `uc ]
+"190
+[; ;main.c: 190:             break;
+[e $U 892  ]
+"191
+[; ;main.c: 191:         case '4':
+[e :U 898 ]
+"192
+[; ;main.c: 192:             EUSART1_Write(12);
+[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
+"194
+[; ;main.c: 194:             printf("\r\n0 - Voltar ao Menu Principal");
+[e ( _printf :s 20C ]
+"195
+[; ;main.c: 195:             printf("\r\nOpcao: ");
+[e ( _printf :s 21C ]
+"196
+[; ;main.c: 196:             menu = 0;
+[e = _menu -> -> 0 `i `uc ]
+"197
+[; ;main.c: 197:             break;
+[e $U 892  ]
+"198
+[; ;main.c: 198:         case '5':
+[e :U 899 ]
+"199
+[; ;main.c: 199:             EUSART1_Write(12);
+[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
+"201
+[; ;main.c: 201:             printf("\r\n0 - Voltar ao Menu Principal");
+[e ( _printf :s 22C ]
+"202
+[; ;main.c: 202:             printf("\r\nOpcao: ");
+[e ( _printf :s 23C ]
+"203
+[; ;main.c: 203:             menu = 0;
+[e = _menu -> -> 0 `i `uc ]
+"204
+[; ;main.c: 204:             break;
+[e $U 892  ]
+"205
+[; ;main.c: 205:         default:
+[e :U 900 ]
+"206
+[; ;main.c: 206:             EUSART1_Write(12);
+[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
+"207
+[; ;main.c: 207:             printf("\r\nOpcao Invalida");
+[e ( _printf :s 24C ]
+"208
+[; ;main.c: 208:             printf("\r\nPrima 0 para voltar ao Menu Principal");
+[e ( _printf :s 25C ]
+"209
+[; ;main.c: 209:             menu = 0;
+[e = _menu -> -> 0 `i `uc ]
+"210
+[; ;main.c: 210:             break;
+[e $U 892  ]
+"211
+[; ;main.c: 211:     }
+>>>>>>> Stashed changes
 }
 [e $U 892  ]
 [e :U 893 ]
@@ -1322,16 +1429,26 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 53 `ui `i 899
  900 ]
 [e :U 892 ]
+<<<<<<< Updated upstream
 "213
 [; ;main.c: 213: }
 [e :UE 891 ]
 }
 "215
 [; ;main.c: 215: void CheckUSART() {
+=======
+"212
+[; ;main.c: 212: }
+[e :UE 891 ]
+}
+"214
+[; ;main.c: 214: void CheckUSART() {
+>>>>>>> Stashed changes
 [v _CheckUSART `(v ~T0 @X0 1 ef ]
 {
 [e :U _CheckUSART ]
 [f ]
+<<<<<<< Updated upstream
 "216
 [; ;main.c: 216:     if (EUSART1_is_rx_ready()) {
 [e $ ! != -> ( _EUSART1_is_rx_ready ..  `i -> 0 `i 902  ]
@@ -1375,6 +1492,51 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 903  ]
 "230
 [; ;main.c: 230:         }
+=======
+"215
+[; ;main.c: 215:     if (EUSART1_is_rx_ready()) {
+[e $ ! != -> ( _EUSART1_is_rx_ready ..  `i -> 0 `i 902  ]
+{
+"216
+[; ;main.c: 216:         rxData = EUSART1_Read();
+[e = _rxData ( _EUSART1_Read ..  ]
+"217
+[; ;main.c: 217:         EUSART1_Write(rxData);
+[e ( _EUSART1_Write (1 _rxData ]
+"219
+[; ;main.c: 219:         switch (rxData) {
+[e $U 904  ]
+{
+"220
+[; ;main.c: 220:             case '0' ... '9':
+[e :U 905 ]
+"221
+[; ;main.c: 221:             case 13:
+[e :U 906 ]
+"222
+[; ;main.c: 222:                 carater_recebido = 1;
+[e = _carater_recebido -> -> 1 `i `uc ]
+"223
+[; ;main.c: 223:                 menu = rxData;
+[e = _menu -> _rxData `uc ]
+"224
+[; ;main.c: 224:                 break;
+[e $U 903  ]
+"225
+[; ;main.c: 225:             default:
+[e :U 907 ]
+"226
+[; ;main.c: 226:                 carater_recebido = 0;
+[e = _carater_recebido -> -> 0 `i `uc ]
+"227
+[; ;main.c: 227:                 menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
+"228
+[; ;main.c: 228:                 break;
+[e $U 903  ]
+"229
+[; ;main.c: 229:         }
+>>>>>>> Stashed changes
 }
 [e $U 903  ]
 [e :U 904 ]
@@ -1382,6 +1544,7 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 13 `i 906
  907 ]
 [e :U 903 ]
+<<<<<<< Updated upstream
 "232
 [; ;main.c: 232:         if (intro_valor == 1) {
 [e $ ! == -> _intro_valor `i -> 1 `i 908  ]
@@ -1399,6 +1562,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 902 ]
 "236
 [; ;main.c: 236: }
+=======
+"231
+[; ;main.c: 231:         if (intro_valor == 1) {
+[e $ ! == -> _intro_valor `i -> 1 `i 908  ]
+{
+"232
+[; ;main.c: 232:             menu = 1;
+[e = _menu -> -> 1 `i `uc ]
+"233
+[; ;main.c: 233:         }
+}
+[e :U 908 ]
+"234
+[; ;main.c: 234:     }
+}
+[e :U 902 ]
+"235
+[; ;main.c: 235: }
+>>>>>>> Stashed changes
 [e :UE 901 ]
 }
 [p f _printf 8388736 ]

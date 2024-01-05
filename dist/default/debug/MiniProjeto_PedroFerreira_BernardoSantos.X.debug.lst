@@ -1,7 +1,12 @@
 
 
+<<<<<<< Updated upstream
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
                                                                                                Fri Jan 05 09:34:25 2024
+=======
+Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
+                                                                                               Fri Jan 05 09:34:47 2024
+>>>>>>> Stashed changes
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	18F46K22
@@ -1103,6 +1108,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   1089   000002                     ADC_SelectChannel@channel:
   1090                           	callstack 0
   1091                           
+<<<<<<< Updated upstream
   1092                           ; 1 bytes @ 0x1
   1093   000002                     	ds	1
   1094   000003                     ??_ADC_GetConversionResult:
@@ -1210,6 +1216,38 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   1196 ;;		On exit  : 0/0
   1197 ;;		Unchanged: 0/0
   1198 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+=======
+  1092                           ; 1 bytes @ 0x1F
+  1093   000020                     	ds	1
+  1094   000021                     ___awdiv@divisor:
+  1095                           	callstack 0
+  1096   000021                     ___awmod@divisor:
+  1097                           	callstack 0
+  1098                           
+  1099                           ; 2 bytes @ 0x20
+  1100   000021                     	ds	2
+  1101   000023                     
+  1102                           ; 1 bytes @ 0x22
+  1103 ;;
+  1104 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+  1105 ;;
+  1106 ;; *************** function _main *****************
+  1107 ;; Defined at:
+  1108 ;;		line 104 in file "main.c"
+  1109 ;; Parameters:    Size  Location     Type
+  1110 ;;		None
+  1111 ;; Auto vars:     Size  Location     Type
+  1112 ;;		None
+  1113 ;; Return value:  Size  Location     Type
+  1114 ;;                  1    wreg      void 
+  1115 ;; Registers used:
+  1116 ;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+  1117 ;; Tracked objects:
+  1118 ;;		On entry : 0/0
+  1119 ;;		On exit  : 0/0
+  1120 ;;		Unchanged: 0/0
+  1121 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+>>>>>>> Stashed changes
       +1  BANK12  BANK13  BANK14  BANK15
   1199 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0       0       0       0
@@ -1219,6 +1257,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
       +0       0       0       0       0
   1202 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0       0       0       0
+<<<<<<< Updated upstream
   1203 ;;Total ram usage:        0 bytes
   1204 ;; Hardware stack levels required when called: 14
   1205 ;; This function calls:
@@ -1327,6 +1366,198 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   1308   000916  EC42  F009         	call	_TMR1_StartTimer	;wreg free
   1309   00091A  968A               	bcf	138,3,c	;volatile
   1310   00091C                     l3419:
+=======
+  1126 ;;Total ram usage:        0 bytes
+  1127 ;; Hardware stack levels required when called: 11
+  1128 ;; This function calls:
+  1129 ;;		_ADC_SetInterruptHandler
+  1130 ;;		_CheckUSART
+  1131 ;;		_INT0_SetInterruptHandler
+  1132 ;;		_SYSTEM_Initialize
+  1133 ;;		_ShowMenuInTerminal
+  1134 ;;		_TMR0_SetInterruptHandler
+  1135 ;;		_TMR0_StartTimer
+  1136 ;;		_TMR1_SetInterruptHandler
+  1137 ;;		_TMR1_StartTimer
+  1138 ;;		_TMR1_StopTimer
+  1139 ;;		_printf
+  1140 ;; This function is called by:
+  1141 ;;		Startup code after reset
+  1142 ;; This function uses a non-reentrant model
+  1143 ;;
+  1144                           
+  1145                           	psect	text0
+  1146   0007C6                     __ptext0:
+  1147                           	callstack 0
+  1148   0007C6                     _main:
+  1149                           	callstack 20
+  1150   0007C6                     
+  1151                           ;main.c: 105:     SYSTEM_Initialize();
+  1152   0007C6  EC5D  F007         	call	_SYSTEM_Initialize	;wreg free
+  1153   0007CA                     
+  1154                           ;main.c: 107:     (INTCONbits.GIEH = 1);
+  1155   0007CA  8EF2               	bsf	242,7,c	;volatile
+  1156   0007CC                     
+  1157                           ;main.c: 108:     (INTCONbits.GIEL = 1);
+  1158   0007CC  8CF2               	bsf	242,6,c	;volatile
+  1159   0007CE                     
+  1160                           ;main.c: 109:     (INTCONbits.PEIE = 1);
+  1161   0007CE  8CF2               	bsf	242,6,c	;volatile
+  1162                           
+  1163                           ;main.c: 111:     INT0_SetInterruptHandler(INT0_MyInterruptHandler);
+  1164   0007D0  0E56               	movlw	low _INT0_MyInterruptHandler
+  1165   0007D2  6E1F               	movwf	INT0_SetInterruptHandler@InterruptHandler^0,c
+  1166   0007D4  0E10               	movlw	high _INT0_MyInterruptHandler
+  1167   0007D6  6E20               	movwf	(INT0_SetInterruptHandler@InterruptHandler+1)^0,c
+  1168   0007D8  EC47  F008         	call	_INT0_SetInterruptHandler	;wreg free
+  1169                           
+  1170                           ;main.c: 112:     ADC_SetInterruptHandler(ADC_MyInterruptHandler);
+  1171   0007DC  0E6E               	movlw	low _ADC_MyInterruptHandler
+  1172   0007DE  6E1F               	movwf	ADC_SetInterruptHandler@InterruptHandler^0,c
+  1173   0007E0  0E0B               	movlw	high _ADC_MyInterruptHandler
+  1174   0007E2  6E20               	movwf	(ADC_SetInterruptHandler@InterruptHandler+1)^0,c
+  1175   0007E4  EC65  F008         	call	_ADC_SetInterruptHandler	;wreg free
+  1176                           
+  1177                           ;main.c: 113:     TMR0_SetInterruptHandler(TMR0_MyInterruptHandler);
+  1178   0007E8  0E64               	movlw	low _TMR0_MyInterruptHandler
+  1179   0007EA  6E1F               	movwf	TMR0_SetInterruptHandler@InterruptHandler^0,c
+  1180   0007EC  0E10               	movlw	high _TMR0_MyInterruptHandler
+  1181   0007EE  6E20               	movwf	(TMR0_SetInterruptHandler@InterruptHandler+1)^0,c
+  1182   0007F0  EC42  F008         	call	_TMR0_SetInterruptHandler	;wreg free
+  1183   0007F4                     
+  1184                           ;main.c: 114:     TMR0_StartTimer();
+  1185   0007F4  EC78  F008         	call	_TMR0_StartTimer	;wreg free
+  1186   0007F8                     
+  1187                           ;main.c: 116:     TMR1_SetInterruptHandler(TMR1_MyInterruptHandler);
+  1188   0007F8  0EF8               	movlw	low _TMR1_MyInterruptHandler
+  1189   0007FA  6E1F               	movwf	TMR1_SetInterruptHandler@InterruptHandler^0,c
+  1190   0007FC  0E0D               	movlw	high _TMR1_MyInterruptHandler
+  1191   0007FE  6E20               	movwf	(TMR1_SetInterruptHandler@InterruptHandler+1)^0,c
+  1192   000800  EC3D  F008         	call	_TMR1_SetInterruptHandler	;wreg free
+  1193                           
+  1194                           ;main.c: 117:     TMR1_StartTimer();
+  1195   000804  EC76  F008         	call	_TMR1_StartTimer	;wreg free
+  1196   000808                     
+  1197                           ;main.c: 119:     printf("SETUP COMPLETED SUCCESSFULLY\r\n");
+  1198   000808  0E53               	movlw	low STR_1
+  1199   00080A  0100               	movlb	0	; () banked
+  1200   00080C  6FBE               	movwf	printf@fmt& (0+255),b
+  1201   00080E  0EFF               	movlw	high STR_1
+  1202   000810  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1203   000812  ECD1  F007         	call	_printf	;wreg free
+  1204   000816                     
+  1205                           ;main.c: 120:     SistemaControloLigado = 1;
+  1206   000816  0E01               	movlw	1
+  1207   000818  0100               	movlb	0	; () banked
+  1208   00081A  6F9F               	movwf	_SistemaControloLigado& (0+255),b	;volatile
+  1209   00081C                     l3231:
+  1210                           
+  1211                           ;main.c: 124:         if (!SistemaControloLigado) {
+  1212   00081C  0100               	movlb	0	; () banked
+  1213   00081E  519F               	movf	_SistemaControloLigado& (0+255),w,b	;volatile
+  1214   000820  A4D8               	btfss	status,2,c
+  1215   000822  EF15  F004         	goto	u2011
+  1216   000826  EF17  F004         	goto	u2010
+  1217   00082A                     u2011:
+  1218   00082A  EF1D  F004         	goto	l3239
+  1219   00082E                     u2010:
+  1220   00082E                     
+  1221                           ; BSR set to: 0
+  1222                           ;main.c: 125:             TMR1_StopTimer();
+  1223   00082E  EC74  F008         	call	_TMR1_StopTimer	;wreg free
+  1224   000832  988A               	bcf	138,4,c	;volatile
+  1225   000834  868A               	bsf	138,3,c	;volatile
+  1226   000836  EF20  F004         	goto	l3243
+  1227   00083A                     l3239:
+  1228                           
+  1229                           ; BSR set to: 0
+  1230                           ;main.c: 129:             TMR1_StartTimer();
+  1231   00083A  EC76  F008         	call	_TMR1_StartTimer	;wreg free
+  1232   00083E  968A               	bcf	138,3,c	;volatile
+  1233   000840                     l3243:
+  1234                           
+  1235                           ;main.c: 134:         if (BombaLigada) {
+  1236   000840  0100               	movlb	0	; () banked
+  1237   000842  519E               	movf	_BombaLigada& (0+255),w,b	;volatile
+  1238   000844  B4D8               	btfsc	status,2,c
+  1239   000846  EF27  F004         	goto	u2021
+  1240   00084A  EF29  F004         	goto	u2020
+  1241   00084E                     u2021:
+  1242   00084E  EF2C  F004         	goto	l620
+  1243   000852                     u2020:
+  1244   000852                     
+  1245                           ; BSR set to: 0
+  1246   000852  8A8A               	bsf	138,5,c	;volatile
+  1247   000854  EF2D  F004         	goto	l3245
+  1248   000858                     l620:
+  1249                           
+  1250                           ; BSR set to: 0
+  1251   000858  9A8A               	bcf	138,5,c	;volatile
+  1252   00085A                     l3245:
+  1253                           
+  1254                           ; BSR set to: 0
+  1255                           ;main.c: 140:         if (carater_recebido) {
+  1256   00085A  51D1               	movf	_carater_recebido& (0+255),w,b
+  1257   00085C  B4D8               	btfsc	status,2,c
+  1258   00085E  EF33  F004         	goto	u2031
+  1259   000862  EF35  F004         	goto	u2030
+  1260   000866                     u2031:
+  1261   000866  EF3A  F004         	goto	l3251
+  1262   00086A                     u2030:
+  1263   00086A                     
+  1264                           ; BSR set to: 0
+  1265                           ;main.c: 141:             ShowMenuInTerminal();
+  1266   00086A  EC9B  F000         	call	_ShowMenuInTerminal	;wreg free
+  1267   00086E                     
+  1268                           ;main.c: 142:             carater_recebido = 0;
+  1269   00086E  0E00               	movlw	0
+  1270   000870  0100               	movlb	0	; () banked
+  1271   000872  6FD1               	movwf	_carater_recebido& (0+255),b
+  1272   000874                     l3251:
+  1273                           
+  1274                           ; BSR set to: 0
+  1275                           ;main.c: 144:         CheckUSART();
+  1276   000874  EC40  F004         	call	_CheckUSART	;wreg free
+  1277   000878  EF0E  F004         	goto	l3231
+  1278   00087C  EF99  F000         	goto	start
+  1279   000880                     __end_of_main:
+  1280                           	callstack 0
+  1281                           
+  1282 ;; *************** function _TMR1_StopTimer *****************
+  1283 ;; Defined at:
+  1284 ;;		line 99 in file "mcc_generated_files/tmr1.c"
+  1285 ;; Parameters:    Size  Location     Type
+  1286 ;;		None
+  1287 ;; Auto vars:     Size  Location     Type
+  1288 ;;		None
+  1289 ;; Return value:  Size  Location     Type
+  1290 ;;                  1    wreg      void 
+  1291 ;; Registers used:
+  1292 ;;		None
+  1293 ;; Tracked objects:
+  1294 ;;		On entry : 0/0
+  1295 ;;		On exit  : 0/0
+  1296 ;;		Unchanged: 0/0
+  1297 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  1298 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1299 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1300 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1301 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1302 ;;Total ram usage:        0 bytes
+  1303 ;; Hardware stack levels used: 1
+  1304 ;; Hardware stack levels required when called: 4
+  1305 ;; This function calls:
+  1306 ;;		Nothing
+  1307 ;; This function is called by:
+  1308 ;;		_main
+  1309 ;; This function uses a non-reentrant model
+  1310 ;;
+>>>>>>> Stashed changes
   1311                           
   1312                           ;main.c: 134:         if (BombaLigada) {
   1313   00091C  0100               	movlb	0	; () banked
@@ -1447,6 +1678,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
       +0       0       0       0       0
   1420 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0       0       0       0
+<<<<<<< Updated upstream
   1421 ;;Total ram usage:        0 bytes
   1422 ;; Hardware stack levels used: 1
   1423 ;; Hardware stack levels required when called: 4
@@ -1830,6 +2062,339 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   1791   0002F6  6BA4               	clrf	(??_ShowMenuInTerminal+1)& (0+255),b
   1792                           
   1793                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+=======
+  1386 ;;Total ram usage:        0 bytes
+  1387 ;; Hardware stack levels used: 1
+  1388 ;; Hardware stack levels required when called: 4
+  1389 ;; This function calls:
+  1390 ;;		Nothing
+  1391 ;; This function is called by:
+  1392 ;;		_main
+  1393 ;; This function uses a non-reentrant model
+  1394 ;;
+  1395                           
+  1396                           	psect	text3
+  1397   0010F0                     __ptext3:
+  1398                           	callstack 0
+  1399   0010F0                     _TMR0_StartTimer:
+  1400                           	callstack 26
+  1401   0010F0                     
+  1402                           ;mcc_generated_files/tmr0.c: 97:     T0CONbits.TMR0ON = 1;
+  1403   0010F0  8ED5               	bsf	213,7,c	;volatile
+  1404   0010F2  0012               	return		;funcret
+  1405   0010F4                     __end_of_TMR0_StartTimer:
+  1406                           	callstack 0
+  1407                           
+  1408 ;; *************** function _ShowMenuInTerminal *****************
+  1409 ;; Defined at:
+  1410 ;;		line 151 in file "main.c"
+  1411 ;; Parameters:    Size  Location     Type
+  1412 ;;		None
+  1413 ;; Auto vars:     Size  Location     Type
+  1414 ;;		None
+  1415 ;; Return value:  Size  Location     Type
+  1416 ;;                  1    wreg      void 
+  1417 ;; Registers used:
+  1418 ;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+  1419 ;; Tracked objects:
+  1420 ;;		On entry : 0/0
+  1421 ;;		On exit  : 0/0
+  1422 ;;		Unchanged: 0/0
+  1423 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  1424 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1425 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1426 ;;      Temps:          0       2       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1427 ;;      Totals:         0       2       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1428 ;;Total ram usage:        2 bytes
+  1429 ;; Hardware stack levels used: 1
+  1430 ;; Hardware stack levels required when called: 10
+  1431 ;; This function calls:
+  1432 ;;		_EUSART1_Write
+  1433 ;;		_printf
+  1434 ;; This function is called by:
+  1435 ;;		_main
+  1436 ;; This function uses a non-reentrant model
+  1437 ;;
+  1438                           
+  1439                           	psect	text4
+  1440   000136                     __ptext4:
+  1441                           	callstack 0
+  1442   000136                     _ShowMenuInTerminal:
+  1443                           	callstack 20
+  1444   000136                     
+  1445                           ;main.c: 152:     switch (menu) {
+  1446   000136  EF76  F001         	goto	l3189
+  1447   00013A                     l3109:
+  1448                           
+  1449                           ; BSR set to: 0
+  1450                           ;main.c: 154:             EUSART1_Write(12);
+  1451   00013A  0E0C               	movlw	12
+  1452   00013C  EC10  F006         	call	_EUSART1_Write
+  1453   000140                     
+  1454                           ;main.c: 155:             printf("\r\nMENU PRINCIPAL");
+  1455   000140  0EC8               	movlw	low STR_2
+  1456   000142  0100               	movlb	0	; () banked
+  1457   000144  6FBE               	movwf	printf@fmt& (0+255),b
+  1458   000146  0EFF               	movlw	high STR_2
+  1459   000148  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1460   00014A  ECD1  F007         	call	_printf	;wreg free
+  1461   00014E                     
+  1462                           ;main.c: 156:             printf("\r\n1 - Desligar bomba de agua");
+  1463   00014E  0E91               	movlw	low STR_3
+  1464   000150  0100               	movlb	0	; () banked
+  1465   000152  6FBE               	movwf	printf@fmt& (0+255),b
+  1466   000154  0EFF               	movlw	high STR_3
+  1467   000156  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1468   000158  ECD1  F007         	call	_printf	;wreg free
+  1469   00015C                     
+  1470                           ;main.c: 157:             printf("\r\n2 - Ativar comtrolo do nivel de agua");
+  1471   00015C  0EE5               	movlw	low STR_4
+  1472   00015E  0100               	movlb	0	; () banked
+  1473   000160  6FBE               	movwf	printf@fmt& (0+255),b
+  1474   000162  0EFE               	movlw	high STR_4
+  1475   000164  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1476   000166  ECD1  F007         	call	_printf	;wreg free
+  1477   00016A                     
+  1478                           ;main.c: 158:             printf("\r\n3 - Visualizar a percentagem do nivel de agua");
+  1479   00016A  0E3D               	movlw	low STR_5
+  1480   00016C  0100               	movlb	0	; () banked
+  1481   00016E  6FBE               	movwf	printf@fmt& (0+255),b
+  1482   000170  0EFE               	movlw	high STR_5
+  1483   000172  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1484   000174  ECD1  F007         	call	_printf	;wreg free
+  1485   000178                     
+  1486                           ;main.c: 159:             printf("\r\n4 - Visualizar o nivel de referencia");
+  1487   000178  0EBE               	movlw	low STR_6
+  1488   00017A  0100               	movlb	0	; () banked
+  1489   00017C  6FBE               	movwf	printf@fmt& (0+255),b
+  1490   00017E  0EFE               	movlw	high STR_6
+  1491   000180  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1492   000182  ECD1  F007         	call	_printf	;wreg free
+  1493   000186                     
+  1494                           ;main.c: 160:             printf("\r\n5 - Programar novo valor de referencia");
+  1495   000186  0E6D               	movlw	low STR_7
+  1496   000188  0100               	movlb	0	; () banked
+  1497   00018A  6FBE               	movwf	printf@fmt& (0+255),b
+  1498   00018C  0EFE               	movlw	high STR_7
+  1499   00018E  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1500   000190  ECD1  F007         	call	_printf	;wreg free
+  1501   000194                     
+  1502                           ;main.c: 161:             printf("\r\n0 - Voltar ao Menu Principal");
+  1503   000194  0E72               	movlw	low STR_8
+  1504   000196  0100               	movlb	0	; () banked
+  1505   000198  6FBE               	movwf	printf@fmt& (0+255),b
+  1506   00019A  0EFF               	movlw	high STR_8
+  1507   00019C  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1508   00019E  ECD1  F007         	call	_printf	;wreg free
+  1509   0001A2                     
+  1510                           ;main.c: 162:             printf("\r\nOpcao: ");
+  1511   0001A2  0EF5               	movlw	low STR_9
+  1512   0001A4  0100               	movlb	0	; () banked
+  1513   0001A6  6FBE               	movwf	printf@fmt& (0+255),b
+  1514   0001A8  0EFF               	movlw	high STR_9
+  1515   0001AA  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1516   0001AC  ECD1  F007         	call	_printf	;wreg free
+  1517   0001B0                     l3127:
+  1518                           
+  1519                           ;main.c: 163:             menu = 0;
+  1520   0001B0  0E00               	movlw	0
+  1521   0001B2  0100               	movlb	0	; () banked
+  1522   0001B4  6FD2               	movwf	_menu& (0+255),b
+  1523                           
+  1524                           ;main.c: 164:             break;
+  1525   0001B6  EF9C  F001         	goto	l637
+  1526   0001BA                     l3129:
+  1527                           
+  1528                           ; BSR set to: 0
+  1529                           ;main.c: 166:             EUSART1_Write(12);
+  1530   0001BA  0E0C               	movlw	12
+  1531   0001BC  EC10  F006         	call	_EUSART1_Write
+  1532   0001C0                     
+  1533                           ;main.c: 168:             printf("\r\nBomba de agua desligada");
+  1534   0001C0  0EAE               	movlw	low STR_10
+  1535   0001C2  0100               	movlb	0	; () banked
+  1536   0001C4  6FBE               	movwf	printf@fmt& (0+255),b
+  1537   0001C6  0EFF               	movlw	high STR_10
+  1538   0001C8  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1539   0001CA  ECD1  F007         	call	_printf	;wreg free
+  1540   0001CE                     
+  1541                           ;main.c: 169:             printf("\r\n0 - Voltar ao Menu Principal");
+  1542   0001CE  0E72               	movlw	low STR_8
+  1543   0001D0  0100               	movlb	0	; () banked
+  1544   0001D2  6FBE               	movwf	printf@fmt& (0+255),b
+  1545   0001D4  0EFF               	movlw	high STR_8
+  1546   0001D6  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1547   0001D8  ECD1  F007         	call	_printf	;wreg free
+  1548   0001DC                     
+  1549                           ;main.c: 170:             printf("\r\nOpcao: ");
+  1550   0001DC  0EF5               	movlw	low STR_9
+  1551   0001DE  0100               	movlb	0	; () banked
+  1552   0001E0  6FBE               	movwf	printf@fmt& (0+255),b
+  1553   0001E2  0EFF               	movlw	high STR_9
+  1554   0001E4  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1555   0001E6  ECD1  F007         	call	_printf	;wreg free
+  1556   0001EA                     
+  1557                           ;main.c: 171:             BombaLigada = 0;
+  1558   0001EA  0E00               	movlw	0
+  1559   0001EC  0100               	movlb	0	; () banked
+  1560   0001EE  6F9E               	movwf	_BombaLigada& (0+255),b	;volatile
+  1561   0001F0  EFD8  F000         	goto	l3127
+  1562   0001F4                     l3141:
+  1563                           
+  1564                           ; BSR set to: 0
+  1565                           ;main.c: 175:             EUSART1_Write(12);
+  1566   0001F4  0E0C               	movlw	12
+  1567   0001F6  EC10  F006         	call	_EUSART1_Write
+  1568   0001FA                     
+  1569                           ;main.c: 177:             printf("\r\nControlo do nivel de agua ativado");
+  1570   0001FA  0E0C               	movlw	low STR_13
+  1571   0001FC  0100               	movlb	0	; () banked
+  1572   0001FE  6FBE               	movwf	printf@fmt& (0+255),b
+  1573   000200  0EFF               	movlw	high STR_13
+  1574   000202  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1575   000204  ECD1  F007         	call	_printf	;wreg free
+  1576   000208                     
+  1577                           ;main.c: 178:             printf("\r\n0 - Voltar ao Menu Principal");
+  1578   000208  0E72               	movlw	low STR_8
+  1579   00020A  0100               	movlb	0	; () banked
+  1580   00020C  6FBE               	movwf	printf@fmt& (0+255),b
+  1581   00020E  0EFF               	movlw	high STR_8
+  1582   000210  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1583   000212  ECD1  F007         	call	_printf	;wreg free
+  1584   000216                     
+  1585                           ;main.c: 179:             printf("\r\nOpcao: ");
+  1586   000216  0EF5               	movlw	low STR_9
+  1587   000218  0100               	movlb	0	; () banked
+  1588   00021A  6FBE               	movwf	printf@fmt& (0+255),b
+  1589   00021C  0EFF               	movlw	high STR_9
+  1590   00021E  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1591   000220  ECD1  F007         	call	_printf	;wreg free
+  1592   000224  EFD8  F000         	goto	l3127
+  1593   000228                     l3151:
+  1594                           
+  1595                           ; BSR set to: 0
+  1596                           ;main.c: 183:             EUSART1_Write(12);
+  1597   000228  0E0C               	movlw	12
+  1598   00022A  EC10  F006         	call	_EUSART1_Write
+  1599   00022E                     
+  1600                           ;main.c: 185:             printf("\r\nPercentagem do nivel de agua: %d", nivel_agua);
+  1601   00022E  0E30               	movlw	low STR_16
+  1602   000230  0100               	movlb	0	; () banked
+  1603   000232  6FBE               	movwf	printf@fmt& (0+255),b
+  1604   000234  0EFF               	movlw	high STR_16
+  1605   000236  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1606   000238  C09C  F0C0         	movff	_nivel_agua,?_printf+2
+  1607   00023C  C09D  F0C1         	movff	_nivel_agua+1,?_printf+3
+  1608   000240  ECD1  F007         	call	_printf	;wreg free
+  1609   000244                     
+  1610                           ;main.c: 186:             printf("\r\nbits: %d", convertedValue);
+  1611   000244  0EEA               	movlw	low STR_17
+  1612   000246  0100               	movlb	0	; () banked
+  1613   000248  6FBE               	movwf	printf@fmt& (0+255),b
+  1614   00024A  0EFF               	movlw	high STR_17
+  1615   00024C  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1616   00024E  C029  F0C0         	movff	_convertedValue,?_printf+2
+  1617   000252  C02A  F0C1         	movff	_convertedValue+1,?_printf+3
+  1618   000256  ECD1  F007         	call	_printf	;wreg free
+  1619   00025A                     
+  1620                           ;main.c: 187:             printf("\r\n0 - Voltar ao Menu Principal");
+  1621   00025A  0E72               	movlw	low STR_8
+  1622   00025C  0100               	movlb	0	; () banked
+  1623   00025E  6FBE               	movwf	printf@fmt& (0+255),b
+  1624   000260  0EFF               	movlw	high STR_8
+  1625   000262  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1626   000264  ECD1  F007         	call	_printf	;wreg free
+  1627   000268                     
+  1628                           ;main.c: 188:             printf("\r\nOpcao: ");
+  1629   000268  0EF5               	movlw	low STR_9
+  1630   00026A  0100               	movlb	0	; () banked
+  1631   00026C  6FBE               	movwf	printf@fmt& (0+255),b
+  1632   00026E  0EFF               	movlw	high STR_9
+  1633   000270  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1634   000272  ECD1  F007         	call	_printf	;wreg free
+  1635   000276  EFD8  F000         	goto	l3127
+  1636   00027A                     l3163:
+  1637                           
+  1638                           ; BSR set to: 0
+  1639                           ;main.c: 192:             EUSART1_Write(12);
+  1640   00027A  0E0C               	movlw	12
+  1641   00027C  EC10  F006         	call	_EUSART1_Write
+  1642   000280                     
+  1643                           ;main.c: 194:             printf("\r\n0 - Voltar ao Menu Principal");
+  1644   000280  0E72               	movlw	low STR_8
+  1645   000282  0100               	movlb	0	; () banked
+  1646   000284  6FBE               	movwf	printf@fmt& (0+255),b
+  1647   000286  0EFF               	movlw	high STR_8
+  1648   000288  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1649   00028A  ECD1  F007         	call	_printf	;wreg free
+  1650   00028E                     
+  1651                           ;main.c: 195:             printf("\r\nOpcao: ");
+  1652   00028E  0EF5               	movlw	low STR_9
+  1653   000290  0100               	movlb	0	; () banked
+  1654   000292  6FBE               	movwf	printf@fmt& (0+255),b
+  1655   000294  0EFF               	movlw	high STR_9
+  1656   000296  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1657   000298  ECD1  F007         	call	_printf	;wreg free
+  1658   00029C  EFD8  F000         	goto	l3127
+  1659   0002A0                     l3171:
+  1660                           
+  1661                           ; BSR set to: 0
+  1662                           ;main.c: 199:             EUSART1_Write(12);
+  1663   0002A0  0E0C               	movlw	12
+  1664   0002A2  EC10  F006         	call	_EUSART1_Write
+  1665   0002A6                     
+  1666                           ;main.c: 201:             printf("\r\n0 - Voltar ao Menu Principal");
+  1667   0002A6  0E72               	movlw	low STR_8
+  1668   0002A8  0100               	movlb	0	; () banked
+  1669   0002AA  6FBE               	movwf	printf@fmt& (0+255),b
+  1670   0002AC  0EFF               	movlw	high STR_8
+  1671   0002AE  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1672   0002B0  ECD1  F007         	call	_printf	;wreg free
+  1673   0002B4                     
+  1674                           ;main.c: 202:             printf("\r\nOpcao: ");
+  1675   0002B4  0EF5               	movlw	low STR_9
+  1676   0002B6  0100               	movlb	0	; () banked
+  1677   0002B8  6FBE               	movwf	printf@fmt& (0+255),b
+  1678   0002BA  0EFF               	movlw	high STR_9
+  1679   0002BC  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1680   0002BE  ECD1  F007         	call	_printf	;wreg free
+  1681   0002C2  EFD8  F000         	goto	l3127
+  1682   0002C6                     l3179:
+  1683                           
+  1684                           ; BSR set to: 0
+  1685                           ;main.c: 206:             EUSART1_Write(12);
+  1686   0002C6  0E0C               	movlw	12
+  1687   0002C8  EC10  F006         	call	_EUSART1_Write
+  1688   0002CC                     
+  1689                           ;main.c: 207:             printf("\r\nOpcao Invalida");
+  1690   0002CC  0ED9               	movlw	low STR_24
+  1691   0002CE  0100               	movlb	0	; () banked
+  1692   0002D0  6FBE               	movwf	printf@fmt& (0+255),b
+  1693   0002D2  0EFF               	movlw	high STR_24
+  1694   0002D4  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1695   0002D6  ECD1  F007         	call	_printf	;wreg free
+  1696   0002DA                     
+  1697                           ;main.c: 208:             printf("\r\nPrima 0 para voltar ao Menu Principal");
+  1698   0002DA  0E96               	movlw	low STR_25
+  1699   0002DC  0100               	movlb	0	; () banked
+  1700   0002DE  6FBE               	movwf	printf@fmt& (0+255),b
+  1701   0002E0  0EFE               	movlw	high STR_25
+  1702   0002E2  6FBF               	movwf	(printf@fmt+1)& (0+255),b
+  1703   0002E4  ECD1  F007         	call	_printf	;wreg free
+  1704   0002E8  EFD8  F000         	goto	l3127
+  1705   0002EC                     l3189:
+  1706   0002EC  0100               	movlb	0	; () banked
+  1707   0002EE  51D2               	movf	_menu& (0+255),w,b
+  1708   0002F0  6FC3               	movwf	??_ShowMenuInTerminal& (0+255),b
+  1709   0002F2  6BC4               	clrf	(??_ShowMenuInTerminal+1)& (0+255),b
+  1710                           
+  1711                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+>>>>>>> Stashed changes
       +                          itches
   1794                           ; Switch size 1, requested type "simple"
   1795                           ; Number of cases is 1, Range of values is 0 to 0
@@ -4107,6 +4672,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
       +0       0       0       0       0
   3910 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0       0       0       0
+<<<<<<< Updated upstream
   3911 ;;Total ram usage:        0 bytes
   3912 ;; Hardware stack levels used: 1
   3913 ;; Hardware stack levels required when called: 5
@@ -4160,6 +4726,48 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   3960 ;;		On exit  : 0/0
   3961 ;;		Unchanged: 0/0
   3962 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+=======
+  4040 ;;Total ram usage:        2 bytes
+  4041 ;; Hardware stack levels used: 1
+  4042 ;; Hardware stack levels required when called: 4
+  4043 ;; This function calls:
+  4044 ;;		Nothing
+  4045 ;; This function is called by:
+  4046 ;;		_ADC_Initialize
+  4047 ;;		_main
+  4048 ;; This function uses a non-reentrant model
+  4049 ;;
+  4050                           
+  4051                           	psect	text32
+  4052   0010CA                     __ptext32:
+  4053                           	callstack 0
+  4054   0010CA                     _ADC_SetInterruptHandler:
+  4055                           	callstack 24
+  4056   0010CA                     
+  4057                           ;mcc_generated_files/adc.c: 152:     ADC_InterruptHandler = InterruptHandler;
+  4058   0010CA  C01F  F03D         	movff	ADC_SetInterruptHandler@InterruptHandler,_ADC_InterruptHandler
+  4059   0010CE  C020  F03E         	movff	ADC_SetInterruptHandler@InterruptHandler+1,_ADC_InterruptHandler+1
+  4060   0010D2  0012               	return		;funcret
+  4061   0010D4                     __end_of_ADC_SetInterruptHandler:
+  4062                           	callstack 0
+  4063                           
+  4064 ;; *************** function _CheckUSART *****************
+  4065 ;; Defined at:
+  4066 ;;		line 214 in file "main.c"
+  4067 ;; Parameters:    Size  Location     Type
+  4068 ;;		None
+  4069 ;; Auto vars:     Size  Location     Type
+  4070 ;;		None
+  4071 ;; Return value:  Size  Location     Type
+  4072 ;;                  1    wreg      void 
+  4073 ;; Registers used:
+  4074 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+  4075 ;; Tracked objects:
+  4076 ;;		On entry : 0/0
+  4077 ;;		On exit  : 0/0
+  4078 ;;		Unchanged: 0/0
+  4079 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+>>>>>>> Stashed changes
       +1  BANK12  BANK13  BANK14  BANK15
   3963 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
       +0       0       0       0       0
@@ -4308,6 +4916,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4093   000B9A  0E00               	movlw	0
   4094   000B9C  6E30               	movwf	_eusart1RxLastError^0,c	;volatile
   4095                           
+<<<<<<< Updated upstream
   4096                           ;mcc_generated_files/eusart1.c: 120:     eusart1TxHead = 0;
   4097   000B9E  0E00               	movlw	0
   4098   000BA0  6E36               	movwf	_eusart1TxHead^0,c	;volatile
@@ -4356,6 +4965,142 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4140 ;;		On exit  : 0/0
   4141 ;;		Unchanged: 0/0
   4142 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+=======
+  4096                           	psect	text33
+  4097   000880                     __ptext33:
+  4098                           	callstack 0
+  4099   000880                     _CheckUSART:
+  4100                           	callstack 25
+  4101   000880                     
+  4102                           ;main.c: 215:     if (EUSART1_is_rx_ready()) {
+  4103   000880  ECED  F007         	call	_EUSART1_is_rx_ready	;wreg free
+  4104   000884  0900               	iorlw	0
+  4105   000886  B4D8               	btfsc	status,2,c
+  4106   000888  EF48  F004         	goto	u2001
+  4107   00088C  EF4A  F004         	goto	u2000
+  4108   000890                     u2001:
+  4109   000890  EF99  F004         	goto	l647
+  4110   000894                     u2000:
+  4111   000894                     
+  4112                           ;main.c: 216:         rxData = EUSART1_Read();
+  4113   000894  EC5F  F006         	call	_EUSART1_Read	;wreg free
+  4114   000898  6E30               	movwf	_rxData^0,c
+  4115                           
+  4116                           ;main.c: 217:         EUSART1_Write(rxData);
+  4117   00089A  5030               	movf	_rxData^0,w,c
+  4118   00089C  EC10  F006         	call	_EUSART1_Write
+  4119                           
+  4120                           ;main.c: 219:         switch (rxData) {
+  4121   0008A0  EF60  F004         	goto	l3207
+  4122   0008A4                     l3199:
+  4123                           
+  4124                           ;main.c: 222:                 carater_recebido = 1;
+  4125   0008A4  0E01               	movlw	1
+  4126   0008A6  0100               	movlb	0	; () banked
+  4127   0008A8  6FD1               	movwf	_carater_recebido& (0+255),b
+  4128   0008AA                     
+  4129                           ; BSR set to: 0
+  4130                           ;main.c: 223:                 menu = rxData;
+  4131   0008AA  C030  F0D2         	movff	_rxData,_menu
+  4132                           
+  4133                           ;main.c: 224:                 break;
+  4134   0008AE  EF99  F004         	goto	l647
+  4135   0008B2                     l3203:
+  4136                           
+  4137                           ;main.c: 226:                 carater_recebido = 0;
+  4138   0008B2  0E00               	movlw	0
+  4139   0008B4  0100               	movlb	0	; () banked
+  4140   0008B6  6FD1               	movwf	_carater_recebido& (0+255),b
+  4141                           
+  4142                           ;main.c: 227:                 menu = '0';
+  4143   0008B8  0E30               	movlw	48
+  4144   0008BA  6FD2               	movwf	_menu& (0+255),b
+  4145                           
+  4146                           ;main.c: 228:                 break;
+  4147   0008BC  EF99  F004         	goto	l647
+  4148   0008C0                     l3207:
+  4149   0008C0  5030               	movf	_rxData^0,w,c
+  4150   0008C2  6E20               	movwf	??_CheckUSART^0,c
+  4151   0008C4  6A21               	clrf	(??_CheckUSART+1)^0,c
+  4152                           
+  4153                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+  4154                           ; Switch size 1, requested type "simple"
+  4155                           ; Number of cases is 1, Range of values is 0 to 0
+  4156                           ; switch strategies available:
+  4157                           ; Name         Instructions Cycles
+  4158                           ; simple_byte            4     3 (average)
+  4159                           ;	Chosen strategy is simple_byte
+  4160   0008C6  5021               	movf	(??_CheckUSART+1)^0,w,c
+  4161   0008C8  0A00               	xorlw	0	; case 0
+  4162   0008CA  B4D8               	btfsc	status,2,c
+  4163   0008CC  EF6A  F004         	goto	l3295
+  4164   0008D0  EF59  F004         	goto	l3203
+  4165   0008D4                     l3295:
+  4166                           
+  4167                           ; Switch size 1, requested type "simple"
+  4168                           ; Number of cases is 11, Range of values is 13 to 57
+  4169                           ; switch strategies available:
+  4170                           ; Name         Instructions Cycles
+  4171                           ; simple_byte           34    18 (average)
+  4172                           ;	Chosen strategy is simple_byte
+  4173   0008D4  5020               	movf	??_CheckUSART^0,w,c
+  4174   0008D6  0A0D               	xorlw	13	; case 13
+  4175   0008D8  B4D8               	btfsc	status,2,c
+  4176   0008DA  EF52  F004         	goto	l3199
+  4177   0008DE  0A3D               	xorlw	61	; case 48
+  4178   0008E0  B4D8               	btfsc	status,2,c
+  4179   0008E2  EF52  F004         	goto	l3199
+  4180   0008E6  0A01               	xorlw	1	; case 49
+  4181   0008E8  B4D8               	btfsc	status,2,c
+  4182   0008EA  EF52  F004         	goto	l3199
+  4183   0008EE  0A03               	xorlw	3	; case 50
+  4184   0008F0  B4D8               	btfsc	status,2,c
+  4185   0008F2  EF52  F004         	goto	l3199
+  4186   0008F6  0A01               	xorlw	1	; case 51
+  4187   0008F8  B4D8               	btfsc	status,2,c
+  4188   0008FA  EF52  F004         	goto	l3199
+  4189   0008FE  0A07               	xorlw	7	; case 52
+  4190   000900  B4D8               	btfsc	status,2,c
+  4191   000902  EF52  F004         	goto	l3199
+  4192   000906  0A01               	xorlw	1	; case 53
+  4193   000908  B4D8               	btfsc	status,2,c
+  4194   00090A  EF52  F004         	goto	l3199
+  4195   00090E  0A03               	xorlw	3	; case 54
+  4196   000910  B4D8               	btfsc	status,2,c
+  4197   000912  EF52  F004         	goto	l3199
+  4198   000916  0A01               	xorlw	1	; case 55
+  4199   000918  B4D8               	btfsc	status,2,c
+  4200   00091A  EF52  F004         	goto	l3199
+  4201   00091E  0A0F               	xorlw	15	; case 56
+  4202   000920  B4D8               	btfsc	status,2,c
+  4203   000922  EF52  F004         	goto	l3199
+  4204   000926  0A01               	xorlw	1	; case 57
+  4205   000928  B4D8               	btfsc	status,2,c
+  4206   00092A  EF52  F004         	goto	l3199
+  4207   00092E  EF59  F004         	goto	l3203
+  4208   000932                     l647:
+  4209   000932  0012               	return		;funcret
+  4210   000934                     __end_of_CheckUSART:
+  4211                           	callstack 0
+  4212                           
+  4213 ;; *************** function _EUSART1_is_rx_ready *****************
+  4214 ;; Defined at:
+  4215 ;;		line 137 in file "mcc_generated_files/eusart1.c"
+  4216 ;; Parameters:    Size  Location     Type
+  4217 ;;		None
+  4218 ;; Auto vars:     Size  Location     Type
+  4219 ;;		None
+  4220 ;; Return value:  Size  Location     Type
+  4221 ;;                  1    wreg      _Bool 
+  4222 ;; Registers used:
+  4223 ;;		wreg, status,2
+  4224 ;; Tracked objects:
+  4225 ;;		On entry : 0/0
+  4226 ;;		On exit  : 0/0
+  4227 ;;		Unchanged: 0/0
+  4228 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+>>>>>>> Stashed changes
       +1  BANK12  BANK13  BANK14  BANK15
   4143 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
       +0       0       0       0       0
@@ -4696,6 +5441,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4441   001118  0E00               	movlw	0
   4442   00111A  6EC1               	movwf	193,c	;volatile
   4443                           
+<<<<<<< Updated upstream
   4444                           ;mcc_generated_files/adc.c: 73:     ADCON2 = 0x8C;
   4445   00111C  0E8C               	movlw	140
   4446   00111E  6EC0               	movwf	192,c	;volatile
@@ -4712,6 +5458,1106 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   4457   001128  8C9D               	bsf	157,6,c	;volatile
   4458   00112A                     
   4459                           ;mcc_generated_files/adc.c: 85:     ADC_SetInterruptHandler(ADC_DefaultInterruptHandler)
+=======
+  4444                           ;mcc_generated_files/eusart1.c: 166:     PIE1bits.RC1IE = 0;
+  4445   000CFC  9A9D               	bcf	157,5,c	;volatile
+  4446   000CFE                     
+  4447                           ;mcc_generated_files/eusart1.c: 167:     eusart1RxCount--;
+  4448   000CFE  0633               	decf	_eusart1RxCount^0,f,c	;volatile
+  4449   000D00                     
+  4450                           ;mcc_generated_files/eusart1.c: 168:     PIE1bits.RC1IE = 1;
+  4451   000D00  8A9D               	bsf	157,5,c	;volatile
+  4452   000D02                     
+  4453                           ;mcc_generated_files/eusart1.c: 170:     return readValue;
+  4454   000D02  501F               	movf	EUSART1_Read@readValue^0,w,c
+  4455   000D04  0012               	return		;funcret
+  4456   000D06                     __end_of_EUSART1_Read:
+  4457                           	callstack 0
+  4458                           
+  4459 ;; *************** function _INTERRUPT_InterruptManagerHigh *****************
+  4460 ;; Defined at:
+  4461 ;;		line 79 in file "mcc_generated_files/interrupt_manager.c"
+  4462 ;; Parameters:    Size  Location     Type
+  4463 ;;		None
+  4464 ;; Auto vars:     Size  Location     Type
+  4465 ;;		None
+  4466 ;; Return value:  Size  Location     Type
+  4467 ;;                  1    wreg      void 
+  4468 ;; Registers used:
+  4469 ;;		wreg, fsr2l, fsr2h, status,2, status,0, pcl, pclath, pclatu, tosl, cstack
+  4470 ;; Tracked objects:
+  4471 ;;		On entry : 0/0
+  4472 ;;		On exit  : 0/0
+  4473 ;;		Unchanged: 0/0
+  4474 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  4475 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4476 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4477 ;;      Temps:          4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4478 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4479 ;;Total ram usage:        4 bytes
+  4480 ;; Hardware stack levels used: 1
+  4481 ;; Hardware stack levels required when called: 3
+  4482 ;; This function calls:
+  4483 ;;		NULL
+  4484 ;;		_ADC_ISR
+  4485 ;;		_EUSART1_Receive_ISR
+  4486 ;;		_EUSART1_Transmit_ISR
+  4487 ;;		_INT0_ISR
+  4488 ;;		_TMR0_ISR
+  4489 ;;		_TMR1_ISR
+  4490 ;; This function is called by:
+  4491 ;;		Interrupt level 2
+  4492 ;; This function uses a non-reentrant model
+  4493 ;;
+  4494                           
+  4495                           	psect	intcode
+  4496   000008                     __pintcode:
+  4497                           	callstack 0
+  4498   000008                     _INTERRUPT_InterruptManagerHigh:
+  4499                           	callstack 20
+  4500                           
+  4501                           ;incstack = 0
+  4502   000008  8241               	bsf	int$flags,1,c	;set compiler interrupt flag (level 2)
+  4503   00000A  CFFA F01B          	movff	pclath,??_INTERRUPT_InterruptManagerHigh
+  4504   00000E  CFFB F01C          	movff	pclatu,??_INTERRUPT_InterruptManagerHigh+1
+  4505   000012  CFD9 F01D          	movff	fsr2l,??_INTERRUPT_InterruptManagerHigh+2
+  4506   000016  CFDA F01E          	movff	fsr2h,??_INTERRUPT_InterruptManagerHigh+3
+  4507   00001A                     
+  4508                           ;mcc_generated_files/interrupt_manager.c: 82:     if(PIE1bits.ADIE == 1 && PIR1bits.ADIF
+      +                           == 1)
+  4509   00001A  AC9D               	btfss	157,6,c	;volatile
+  4510   00001C  EF12  F000         	goto	i2u152_41
+  4511   000020  EF14  F000         	goto	i2u152_40
+  4512   000024                     i2u152_41:
+  4513   000024  EF1F  F000         	goto	i2l331
+  4514   000028                     i2u152_40:
+  4515   000028  AC9E               	btfss	158,6,c	;volatile
+  4516   00002A  EF19  F000         	goto	i2u153_41
+  4517   00002E  EF1B  F000         	goto	i2u153_40
+  4518   000032                     i2u153_41:
+  4519   000032  EF1F  F000         	goto	i2l331
+  4520   000036                     i2u153_40:
+  4521   000036                     
+  4522                           ;mcc_generated_files/interrupt_manager.c: 83:     {;mcc_generated_files/interrupt_manage
+      +                          r.c: 84:         ADC_ISR();
+  4523   000036  EC30  F007         	call	_ADC_ISR	;wreg free
+  4524                           
+  4525                           ;mcc_generated_files/interrupt_manager.c: 85:     }
+  4526   00003A  EF8F  F000         	goto	i2l343
+  4527   00003E                     i2l331:
+  4528   00003E  AAF2               	btfss	242,5,c	;volatile
+  4529   000040  EF24  F000         	goto	i2u154_41
+  4530   000044  EF26  F000         	goto	i2u154_40
+  4531   000048                     i2u154_41:
+  4532   000048  EF31  F000         	goto	i2l333
+  4533   00004C                     i2u154_40:
+  4534   00004C  A4F2               	btfss	242,2,c	;volatile
+  4535   00004E  EF2B  F000         	goto	i2u155_41
+  4536   000052  EF2D  F000         	goto	i2u155_40
+  4537   000056                     i2u155_41:
+  4538   000056  EF31  F000         	goto	i2l333
+  4539   00005A                     i2u155_40:
+  4540   00005A                     
+  4541                           ;mcc_generated_files/interrupt_manager.c: 87:     {;mcc_generated_files/interrupt_manage
+      +                          r.c: 88:         TMR0_ISR();
+  4542   00005A  EC17  F007         	call	_TMR0_ISR	;wreg free
+  4543                           
+  4544                           ;mcc_generated_files/interrupt_manager.c: 89:     }
+  4545   00005E  EF8F  F000         	goto	i2l343
+  4546   000062                     i2l333:
+  4547   000062  A8F2               	btfss	242,4,c	;volatile
+  4548   000064  EF36  F000         	goto	i2u156_41
+  4549   000068  EF38  F000         	goto	i2u156_40
+  4550   00006C                     i2u156_41:
+  4551   00006C  EF43  F000         	goto	i2l335
+  4552   000070                     i2u156_40:
+  4553   000070  A2F2               	btfss	242,1,c	;volatile
+  4554   000072  EF3D  F000         	goto	i2u157_41
+  4555   000076  EF3F  F000         	goto	i2u157_40
+  4556   00007A                     i2u157_41:
+  4557   00007A  EF43  F000         	goto	i2l335
+  4558   00007E                     i2u157_40:
+  4559   00007E                     
+  4560                           ;mcc_generated_files/interrupt_manager.c: 91:     {;mcc_generated_files/interrupt_manage
+      +                          r.c: 92:         INT0_ISR();
+  4561   00007E  EC6A  F008         	call	_INT0_ISR	;wreg free
+  4562                           
+  4563                           ;mcc_generated_files/interrupt_manager.c: 93:     }
+  4564   000082  EF8F  F000         	goto	i2l343
+  4565   000086                     i2l335:
+  4566   000086  A89D               	btfss	157,4,c	;volatile
+  4567   000088  EF48  F000         	goto	i2u158_41
+  4568   00008C  EF4A  F000         	goto	i2u158_40
+  4569   000090                     i2u158_41:
+  4570   000090  EF60  F000         	goto	i2l337
+  4571   000094                     i2u158_40:
+  4572   000094  A89E               	btfss	158,4,c	;volatile
+  4573   000096  EF4F  F000         	goto	i2u159_41
+  4574   00009A  EF51  F000         	goto	i2u159_40
+  4575   00009E                     i2u159_41:
+  4576   00009E  EF60  F000         	goto	i2l337
+  4577   0000A2                     i2u159_40:
+  4578   0000A2                     
+  4579                           ;mcc_generated_files/interrupt_manager.c: 95:     {;mcc_generated_files/interrupt_manage
+      +                          r.c: 96:         EUSART1_TxDefaultInterruptHandler();
+  4580   0000A2  D802               	call	i2u160_48
+  4581   0000A4  EF5E  F000         	goto	i2u160_49
+  4582   0000A8                     i2u160_48:
+  4583   0000A8  0005               	push	
+  4584   0000AA  6EFA               	movwf	pclath,c
+  4585   0000AC  0100               	movlb	0	; () banked
+  4586   0000AE  51CF               	movf	_EUSART1_TxDefaultInterruptHandler& (0+255),w,b
+  4587   0000B0  6EFD               	movwf	tosl,c
+  4588   0000B2  51D0               	movf	(_EUSART1_TxDefaultInterruptHandler+1)& (0+255),w,b
+  4589   0000B4  6EFE               	movwf	tosh,c
+  4590   0000B6  6AFF               	clrf	tosu,c
+  4591   0000B8  50FA               	movf	pclath,w,c
+  4592   0000BA  0012               	return		;indir
+  4593   0000BC                     i2u160_49:
+  4594                           
+  4595                           ;mcc_generated_files/interrupt_manager.c: 97:     }
+  4596   0000BC  EF8F  F000         	goto	i2l343
+  4597   0000C0                     i2l337:
+  4598   0000C0  AA9D               	btfss	157,5,c	;volatile
+  4599   0000C2  EF65  F000         	goto	i2u161_41
+  4600   0000C6  EF67  F000         	goto	i2u161_40
+  4601   0000CA                     i2u161_41:
+  4602   0000CA  EF7D  F000         	goto	i2l339
+  4603   0000CE                     i2u161_40:
+  4604   0000CE  AA9E               	btfss	158,5,c	;volatile
+  4605   0000D0  EF6C  F000         	goto	i2u162_41
+  4606   0000D4  EF6E  F000         	goto	i2u162_40
+  4607   0000D8                     i2u162_41:
+  4608   0000D8  EF7D  F000         	goto	i2l339
+  4609   0000DC                     i2u162_40:
+  4610   0000DC                     
+  4611                           ;mcc_generated_files/interrupt_manager.c: 99:     {;mcc_generated_files/interrupt_manage
+      +                          r.c: 100:         EUSART1_RxDefaultInterruptHandler();
+  4612   0000DC  D802               	call	i2u163_48
+  4613   0000DE  EF7B  F000         	goto	i2u163_49
+  4614   0000E2                     i2u163_48:
+  4615   0000E2  0005               	push	
+  4616   0000E4  6EFA               	movwf	pclath,c
+  4617   0000E6  0100               	movlb	0	; () banked
+  4618   0000E8  51CD               	movf	_EUSART1_RxDefaultInterruptHandler& (0+255),w,b
+  4619   0000EA  6EFD               	movwf	tosl,c
+  4620   0000EC  51CE               	movf	(_EUSART1_RxDefaultInterruptHandler+1)& (0+255),w,b
+  4621   0000EE  6EFE               	movwf	tosh,c
+  4622   0000F0  6AFF               	clrf	tosu,c
+  4623   0000F2  50FA               	movf	pclath,w,c
+  4624   0000F4  0012               	return		;indir
+  4625   0000F6                     i2u163_49:
+  4626                           
+  4627                           ;mcc_generated_files/interrupt_manager.c: 101:     }
+  4628   0000F6  EF8F  F000         	goto	i2l343
+  4629   0000FA                     i2l339:
+  4630   0000FA  A09D               	btfss	157,0,c	;volatile
+  4631   0000FC  EF82  F000         	goto	i2u164_41
+  4632   000100  EF84  F000         	goto	i2u164_40
+  4633   000104                     i2u164_41:
+  4634   000104  EF8F  F000         	goto	i2l338
+  4635   000108                     i2u164_40:
+  4636   000108  A09E               	btfss	158,0,c	;volatile
+  4637   00010A  EF89  F000         	goto	i2u165_41
+  4638   00010E  EF8B  F000         	goto	i2u165_40
+  4639   000112                     i2u165_41:
+  4640   000112  EF8F  F000         	goto	i2l338
+  4641   000116                     i2u165_40:
+  4642   000116                     
+  4643                           ;mcc_generated_files/interrupt_manager.c: 103:     {;mcc_generated_files/interrupt_manag
+      +                          er.c: 104:         TMR1_ISR();
+  4644   000116  ECA5  F006         	call	_TMR1_ISR	;wreg free
+  4645                           
+  4646                           ;mcc_generated_files/interrupt_manager.c: 105:     }
+  4647   00011A  EF8F  F000         	goto	i2l343
+  4648   00011E                     i2l338:
+  4649   00011E                     i2l343:
+  4650   00011E  C01E  FFDA         	movff	??_INTERRUPT_InterruptManagerHigh+3,fsr2h
+  4651   000122  C01D  FFD9         	movff	??_INTERRUPT_InterruptManagerHigh+2,fsr2l
+  4652   000126  C01C  FFFB         	movff	??_INTERRUPT_InterruptManagerHigh+1,pclatu
+  4653   00012A  C01B  FFFA         	movff	??_INTERRUPT_InterruptManagerHigh,pclath
+  4654   00012E  9241               	bcf	int$flags,1,c	;clear compiler interrupt flag (level 2)
+  4655   000130  0011               	retfie		f
+  4656   000132                     __end_of_INTERRUPT_InterruptManagerHigh:
+  4657                           	callstack 0
+  4658                           
+  4659 ;; *************** function _TMR1_ISR *****************
+  4660 ;; Defined at:
+  4661 ;;		line 158 in file "mcc_generated_files/tmr1.c"
+  4662 ;; Parameters:    Size  Location     Type
+  4663 ;;		None
+  4664 ;; Auto vars:     Size  Location     Type
+  4665 ;;		None
+  4666 ;; Return value:  Size  Location     Type
+  4667 ;;                  1    wreg      void 
+  4668 ;; Registers used:
+  4669 ;;		wreg, status,2, status,0, pcl, pclath, pclatu, tosl, cstack
+  4670 ;; Tracked objects:
+  4671 ;;		On entry : 0/0
+  4672 ;;		On exit  : 0/0
+  4673 ;;		Unchanged: 0/0
+  4674 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  4675 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4676 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4677 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4678 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4679 ;;Total ram usage:        0 bytes
+  4680 ;; Hardware stack levels used: 1
+  4681 ;; Hardware stack levels required when called: 1
+  4682 ;; This function calls:
+  4683 ;;		NULL
+  4684 ;;		_TMR1_DefaultInterruptHandler
+  4685 ;;		_TMR1_MyInterruptHandler
+  4686 ;;		_TMR1_WriteTimer
+  4687 ;; This function is called by:
+  4688 ;;		_INTERRUPT_InterruptManagerHigh
+  4689 ;; This function uses a non-reentrant model
+  4690 ;;
+  4691                           
+  4692                           	psect	text38
+  4693   000D4A                     __ptext38:
+  4694                           	callstack 0
+  4695   000D4A                     _TMR1_ISR:
+  4696                           	callstack 21
+  4697   000D4A                     
+  4698                           ;mcc_generated_files/tmr1.c: 162:     PIR1bits.TMR1IF = 0;
+  4699   000D4A  909E               	bcf	158,0,c	;volatile
+  4700   000D4C                     
+  4701                           ;mcc_generated_files/tmr1.c: 163:     TMR1_WriteTimer(timer1ReloadVal);
+  4702   000D4C  C02B  F001         	movff	_timer1ReloadVal,TMR1_WriteTimer@timerVal	;volatile
+  4703   000D50  C02C  F002         	movff	_timer1ReloadVal+1,TMR1_WriteTimer@timerVal+1	;volatile
+  4704   000D54  EC87  F007         	call	_TMR1_WriteTimer	;wreg free
+  4705   000D58                     
+  4706                           ;mcc_generated_files/tmr1.c: 165:     if(TMR1_InterruptHandler)
+  4707   000D58  0100               	movlb	0	; () banked
+  4708   000D5A  51C5               	movf	_TMR1_InterruptHandler& (0+255),w,b
+  4709   000D5C  11C6               	iorwf	(_TMR1_InterruptHandler+1)& (0+255),w,b
+  4710   000D5E  B4D8               	btfsc	status,2,c
+  4711   000D60  EFB4  F006         	goto	i2u149_41
+  4712   000D64  EFB6  F006         	goto	i2u149_40
+  4713   000D68                     i2u149_41:
+  4714   000D68  EFC2  F006         	goto	i2l519
+  4715   000D6C                     i2u149_40:
+  4716   000D6C                     
+  4717                           ; BSR set to: 0
+  4718                           ;mcc_generated_files/tmr1.c: 166:     {;mcc_generated_files/tmr1.c: 167:         TMR1_In
+      +                          terruptHandler();
+  4719   000D6C  D802               	call	i2u150_48
+  4720   000D6E  EFC2  F006         	goto	i2u150_49
+  4721   000D72                     i2u150_48:
+  4722   000D72  0005               	push	
+  4723   000D74  6EFA               	movwf	pclath,c
+  4724   000D76  51C5               	movf	_TMR1_InterruptHandler& (0+255),w,b
+  4725   000D78  6EFD               	movwf	tosl,c
+  4726   000D7A  51C6               	movf	(_TMR1_InterruptHandler+1)& (0+255),w,b
+  4727   000D7C  6EFE               	movwf	tosh,c
+  4728   000D7E  6AFF               	clrf	tosu,c
+  4729   000D80  50FA               	movf	pclath,w,c
+  4730   000D82  0012               	return		;indir
+  4731   000D84                     i2u150_49:
+  4732   000D84                     i2l519:
+  4733   000D84  0012               	return		;funcret
+  4734   000D86                     __end_of_TMR1_ISR:
+  4735                           	callstack 0
+  4736                           
+  4737 ;; *************** function _TMR1_WriteTimer *****************
+  4738 ;; Defined at:
+  4739 ;;		line 121 in file "mcc_generated_files/tmr1.c"
+  4740 ;; Parameters:    Size  Location     Type
+  4741 ;;  timerVal        2    0[COMRAM] unsigned short 
+  4742 ;; Auto vars:     Size  Location     Type
+  4743 ;;		None
+  4744 ;; Return value:  Size  Location     Type
+  4745 ;;                  1    wreg      void 
+  4746 ;; Registers used:
+  4747 ;;		wreg, status,2
+  4748 ;; Tracked objects:
+  4749 ;;		On entry : 0/0
+  4750 ;;		On exit  : 0/0
+  4751 ;;		Unchanged: 0/0
+  4752 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  4753 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4754 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4755 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4756 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4757 ;;Total ram usage:        2 bytes
+  4758 ;; Hardware stack levels used: 1
+  4759 ;; This function calls:
+  4760 ;;		Nothing
+  4761 ;; This function is called by:
+  4762 ;;		_TMR1_ISR
+  4763 ;;		_TMR1_Reload
+  4764 ;; This function uses a non-reentrant model
+  4765 ;;
+  4766                           
+  4767                           	psect	text39
+  4768   000F0E                     __ptext39:
+  4769                           	callstack 0
+  4770   000F0E                     _TMR1_WriteTimer:
+  4771                           	callstack 21
+  4772   000F0E                     
+  4773                           ;mcc_generated_files/tmr1.c: 121: void TMR1_WriteTimer(uint16_t timerVal);mcc_generated_
+      +                          files/tmr1.c: 122: {;mcc_generated_files/tmr1.c: 123:     if (T1CONbits.T1SYNC == 1)
+  4774   000F0E  A4CD               	btfss	205,2,c	;volatile
+  4775   000F10  EF8C  F007         	goto	i2u134_41
+  4776   000F14  EF8E  F007         	goto	i2u134_40
+  4777   000F18                     i2u134_41:
+  4778   000F18  EF96  F007         	goto	i2l2603
+  4779   000F1C                     i2u134_40:
+  4780   000F1C                     
+  4781                           ;mcc_generated_files/tmr1.c: 124:     {;mcc_generated_files/tmr1.c: 126:         T1CONbi
+      +                          ts.TMR1ON = 0;
+  4782   000F1C  90CD               	bcf	205,0,c	;volatile
+  4783   000F1E                     
+  4784                           ;mcc_generated_files/tmr1.c: 129:         TMR1H = (timerVal >> 8);
+  4785   000F1E  5002               	movf	(TMR1_WriteTimer@timerVal+1)^0,w,c
+  4786   000F20  6ECF               	movwf	207,c	;volatile
+  4787   000F22                     
+  4788                           ;mcc_generated_files/tmr1.c: 130:         TMR1L = (uint8_t) timerVal;
+  4789   000F22  C001  FFCE         	movff	TMR1_WriteTimer@timerVal,4046	;volatile
+  4790   000F26                     
+  4791                           ;mcc_generated_files/tmr1.c: 133:         T1CONbits.TMR1ON =1;
+  4792   000F26  80CD               	bsf	205,0,c	;volatile
+  4793                           
+  4794                           ;mcc_generated_files/tmr1.c: 134:     }
+  4795   000F28  EF9A  F007         	goto	i2l506
+  4796   000F2C                     i2l2603:
+  4797                           
+  4798                           ;mcc_generated_files/tmr1.c: 136:     {;mcc_generated_files/tmr1.c: 138:         TMR1H =
+      +                           (timerVal >> 8);
+  4799   000F2C  5002               	movf	(TMR1_WriteTimer@timerVal+1)^0,w,c
+  4800   000F2E  6ECF               	movwf	207,c	;volatile
+  4801   000F30                     
+  4802                           ;mcc_generated_files/tmr1.c: 139:         TMR1L = (uint8_t) timerVal;
+  4803   000F30  C001  FFCE         	movff	TMR1_WriteTimer@timerVal,4046	;volatile
+  4804   000F34                     i2l506:
+  4805   000F34  0012               	return		;funcret
+  4806   000F36                     __end_of_TMR1_WriteTimer:
+  4807                           	callstack 0
+  4808                           
+  4809 ;; *************** function _TMR1_DefaultInterruptHandler *****************
+  4810 ;; Defined at:
+  4811 ;;		line 176 in file "mcc_generated_files/tmr1.c"
+  4812 ;; Parameters:    Size  Location     Type
+  4813 ;;		None
+  4814 ;; Auto vars:     Size  Location     Type
+  4815 ;;		None
+  4816 ;; Return value:  Size  Location     Type
+  4817 ;;                  1    wreg      void 
+  4818 ;; Registers used:
+  4819 ;;		None
+  4820 ;; Tracked objects:
+  4821 ;;		On entry : 0/0
+  4822 ;;		On exit  : 0/0
+  4823 ;;		Unchanged: 0/0
+  4824 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  4825 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4826 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4827 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4828 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4829 ;;Total ram usage:        0 bytes
+  4830 ;; Hardware stack levels used: 1
+  4831 ;; This function calls:
+  4832 ;;		Nothing
+  4833 ;; This function is called by:
+  4834 ;;		_TMR1_Initialize
+  4835 ;;		_TMR1_ISR
+  4836 ;; This function uses a non-reentrant model
+  4837 ;;
+  4838                           
+  4839                           	psect	text40
+  4840   0010FC                     __ptext40:
+  4841                           	callstack 0
+  4842   0010FC                     _TMR1_DefaultInterruptHandler:
+  4843                           	callstack 21
+  4844   0010FC  0012               	return		;funcret
+  4845   0010FE                     __end_of_TMR1_DefaultInterruptHandler:
+  4846                           	callstack 0
+  4847                           
+  4848 ;; *************** function _TMR1_MyInterruptHandler *****************
+  4849 ;; Defined at:
+  4850 ;;		line 85 in file "main.c"
+  4851 ;; Parameters:    Size  Location     Type
+  4852 ;;		None
+  4853 ;; Auto vars:     Size  Location     Type
+  4854 ;;		None
+  4855 ;; Return value:  Size  Location     Type
+  4856 ;;                  1    wreg      void 
+  4857 ;; Registers used:
+  4858 ;;		wreg, status,2, status,0
+  4859 ;; Tracked objects:
+  4860 ;;		On entry : 0/0
+  4861 ;;		On exit  : 0/0
+  4862 ;;		Unchanged: 0/0
+  4863 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  4864 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4865 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4866 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4867 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4868 ;;Total ram usage:        1 bytes
+  4869 ;; Hardware stack levels used: 1
+  4870 ;; This function calls:
+  4871 ;;		Nothing
+  4872 ;; This function is called by:
+  4873 ;;		_main
+  4874 ;;		_TMR1_ISR
+  4875 ;; This function uses a non-reentrant model
+  4876 ;;
+  4877                           
+  4878                           	psect	text41
+  4879   000DF8                     __ptext41:
+  4880                           	callstack 0
+  4881   000DF8                     _TMR1_MyInterruptHandler:
+  4882                           	callstack 21
+  4883   000DF8                     
+  4884                           ;main.c: 87:     if (SistemaControloLigado) {
+  4885   000DF8  0100               	movlb	0	; () banked
+  4886   000DFA  519F               	movf	_SistemaControloLigado& (0+255),w,b	;volatile
+  4887   000DFC  B4D8               	btfsc	status,2,c
+  4888   000DFE  EF03  F007         	goto	i2u135_41
+  4889   000E02  EF05  F007         	goto	i2u135_40
+  4890   000E06                     i2u135_41:
+  4891   000E06  EF16  F007         	goto	i2l588
+  4892   000E0A                     i2u135_40:
+  4893   000E0A                     
+  4894                           ; BSR set to: 0
+  4895   000E0A  B88A               	btfsc	138,4,c	;volatile
+  4896   000E0C  EF0A  F007         	goto	i2u136_41
+  4897   000E10  EF0D  F007         	goto	i2u136_40
+  4898   000E14                     i2u136_41:
+  4899   000E14  0E01               	movlw	1
+  4900   000E16  EF0E  F007         	goto	i2u136_46
+  4901   000E1A                     i2u136_40:
+  4902   000E1A  0E00               	movlw	0
+  4903   000E1C                     i2u136_46:
+  4904   000E1C  0AFF               	xorlw	255
+  4905   000E1E  6E01               	movwf	??_TMR1_MyInterruptHandler^0,c
+  4906   000E20  3A01               	swapf	??_TMR1_MyInterruptHandler^0,f,c
+  4907   000E22  508A               	movf	138,w,c	;volatile
+  4908   000E24  1801               	xorwf	??_TMR1_MyInterruptHandler^0,w,c
+  4909   000E26  0BEF               	andlw	-17
+  4910   000E28  1801               	xorwf	??_TMR1_MyInterruptHandler^0,w,c
+  4911   000E2A  6E8A               	movwf	138,c	;volatile
+  4912   000E2C                     i2l588:
+  4913                           
+  4914                           ; BSR set to: 0
+  4915   000E2C  0012               	return		;funcret
+  4916   000E2E                     __end_of_TMR1_MyInterruptHandler:
+  4917                           	callstack 0
+  4918                           
+  4919 ;; *************** function _TMR0_ISR *****************
+  4920 ;; Defined at:
+  4921 ;;		line 129 in file "mcc_generated_files/tmr0.c"
+  4922 ;; Parameters:    Size  Location     Type
+  4923 ;;		None
+  4924 ;; Auto vars:     Size  Location     Type
+  4925 ;;		None
+  4926 ;; Return value:  Size  Location     Type
+  4927 ;;                  1    wreg      void 
+  4928 ;; Registers used:
+  4929 ;;		wreg, status,2, status,0, pcl, pclath, pclatu, tosl, cstack
+  4930 ;; Tracked objects:
+  4931 ;;		On entry : 0/0
+  4932 ;;		On exit  : 0/0
+  4933 ;;		Unchanged: 0/0
+  4934 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  4935 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4936 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4937 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4938 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  4939 ;;Total ram usage:        0 bytes
+  4940 ;; Hardware stack levels used: 1
+  4941 ;; Hardware stack levels required when called: 2
+  4942 ;; This function calls:
+  4943 ;;		NULL
+  4944 ;;		_TMR0_DefaultInterruptHandler
+  4945 ;;		_TMR0_MyInterruptHandler
+  4946 ;; This function is called by:
+  4947 ;;		_INTERRUPT_InterruptManagerHigh
+  4948 ;; This function uses a non-reentrant model
+  4949 ;;
+  4950                           
+  4951                           	psect	text42
+  4952   000E2E                     __ptext42:
+  4953                           	callstack 0
+  4954   000E2E                     _TMR0_ISR:
+  4955                           	callstack 20
+  4956   000E2E                     
+  4957                           ;mcc_generated_files/tmr0.c: 133:     INTCONbits.TMR0IF = 0;
+  4958   000E2E  94F2               	bcf	242,2,c	;volatile
+  4959                           
+  4960                           ;mcc_generated_files/tmr0.c: 136:     TMR0L = timer0ReloadVal;
+  4961   000E30  C031  FFD6         	movff	_timer0ReloadVal,4054	;volatile
+  4962   000E34                     
+  4963                           ;mcc_generated_files/tmr0.c: 138:     if(TMR0_InterruptHandler)
+  4964   000E34  5039               	movf	_TMR0_InterruptHandler^0,w,c
+  4965   000E36  103A               	iorwf	(_TMR0_InterruptHandler+1)^0,w,c
+  4966   000E38  B4D8               	btfsc	status,2,c
+  4967   000E3A  EF21  F007         	goto	i2u147_41
+  4968   000E3E  EF23  F007         	goto	i2u147_40
+  4969   000E42                     i2u147_41:
+  4970   000E42  EF2F  F007         	goto	i2l457
+  4971   000E46                     i2u147_40:
+  4972   000E46                     
+  4973                           ;mcc_generated_files/tmr0.c: 139:     {;mcc_generated_files/tmr0.c: 140:         TMR0_In
+      +                          terruptHandler();
+  4974   000E46  D802               	call	i2u148_48
+  4975   000E48  EF2F  F007         	goto	i2u148_49
+  4976   000E4C                     i2u148_48:
+  4977   000E4C  0005               	push	
+  4978   000E4E  6EFA               	movwf	pclath,c
+  4979   000E50  5039               	movf	_TMR0_InterruptHandler^0,w,c
+  4980   000E52  6EFD               	movwf	tosl,c
+  4981   000E54  503A               	movf	(_TMR0_InterruptHandler+1)^0,w,c
+  4982   000E56  6EFE               	movwf	tosh,c
+  4983   000E58  6AFF               	clrf	tosu,c
+  4984   000E5A  50FA               	movf	pclath,w,c
+  4985   000E5C  0012               	return		;indir
+  4986   000E5E                     i2u148_49:
+  4987   000E5E                     i2l457:
+  4988   000E5E  0012               	return		;funcret
+  4989   000E60                     __end_of_TMR0_ISR:
+  4990                           	callstack 0
+  4991                           
+  4992 ;; *************** function _TMR0_DefaultInterruptHandler *****************
+  4993 ;; Defined at:
+  4994 ;;		line 151 in file "mcc_generated_files/tmr0.c"
+  4995 ;; Parameters:    Size  Location     Type
+  4996 ;;		None
+  4997 ;; Auto vars:     Size  Location     Type
+  4998 ;;		None
+  4999 ;; Return value:  Size  Location     Type
+  5000 ;;                  1    wreg      void 
+  5001 ;; Registers used:
+  5002 ;;		None
+  5003 ;; Tracked objects:
+  5004 ;;		On entry : 0/0
+  5005 ;;		On exit  : 0/0
+  5006 ;;		Unchanged: 0/0
+  5007 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  5008 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5009 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5010 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5011 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5012 ;;Total ram usage:        0 bytes
+  5013 ;; Hardware stack levels used: 1
+  5014 ;; This function calls:
+  5015 ;;		Nothing
+  5016 ;; This function is called by:
+  5017 ;;		_TMR0_Initialize
+  5018 ;;		_TMR0_ISR
+  5019 ;; This function uses a non-reentrant model
+  5020 ;;
+  5021                           
+  5022                           	psect	text43
+  5023   0010FE                     __ptext43:
+  5024                           	callstack 0
+  5025   0010FE                     _TMR0_DefaultInterruptHandler:
+  5026                           	callstack 21
+  5027   0010FE  0012               	return		;funcret
+  5028   001100                     __end_of_TMR0_DefaultInterruptHandler:
+  5029                           	callstack 0
+  5030                           
+  5031 ;; *************** function _TMR0_MyInterruptHandler *****************
+  5032 ;; Defined at:
+  5033 ;;		line 80 in file "main.c"
+  5034 ;; Parameters:    Size  Location     Type
+  5035 ;;		None
+  5036 ;; Auto vars:     Size  Location     Type
+  5037 ;;		None
+  5038 ;; Return value:  Size  Location     Type
+  5039 ;;                  1    wreg      void 
+  5040 ;; Registers used:
+  5041 ;;		wreg, status,2, status,0, cstack
+  5042 ;; Tracked objects:
+  5043 ;;		On entry : 0/0
+  5044 ;;		On exit  : 0/0
+  5045 ;;		Unchanged: 0/0
+  5046 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  5047 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5048 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5049 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5050 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5051 ;;Total ram usage:        0 bytes
+  5052 ;; Hardware stack levels used: 1
+  5053 ;; Hardware stack levels required when called: 1
+  5054 ;; This function calls:
+  5055 ;;		_ADC_SelectChannel
+  5056 ;;		_ADC_StartConversion
+  5057 ;; This function is called by:
+  5058 ;;		_main
+  5059 ;;		_TMR0_ISR
+  5060 ;; This function uses a non-reentrant model
+  5061 ;;
+  5062                           
+  5063                           	psect	text44
+  5064   001064                     __ptext44:
+  5065                           	callstack 0
+  5066   001064                     _TMR0_MyInterruptHandler:
+  5067                           	callstack 20
+  5068   001064                     
+  5069                           ;main.c: 81:     ADC_SelectChannel(channel_AN0);
+  5070   001064  0E00               	movlw	0
+  5071   001066  ECE1  F007         	call	_ADC_SelectChannel
+  5072   00106A                     
+  5073                           ;main.c: 82:     ADC_StartConversion();
+  5074   00106A  EC7A  F008         	call	_ADC_StartConversion	;wreg free
+  5075   00106E  0012               	return		;funcret
+  5076   001070                     __end_of_TMR0_MyInterruptHandler:
+  5077                           	callstack 0
+  5078                           
+  5079 ;; *************** function _ADC_StartConversion *****************
+  5080 ;; Defined at:
+  5081 ;;		line 96 in file "mcc_generated_files/adc.c"
+  5082 ;; Parameters:    Size  Location     Type
+  5083 ;;		None
+  5084 ;; Auto vars:     Size  Location     Type
+  5085 ;;		None
+  5086 ;; Return value:  Size  Location     Type
+  5087 ;;                  1    wreg      void 
+  5088 ;; Registers used:
+  5089 ;;		None
+  5090 ;; Tracked objects:
+  5091 ;;		On entry : 0/0
+  5092 ;;		On exit  : 0/0
+  5093 ;;		Unchanged: 0/0
+  5094 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  5095 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5096 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5097 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5098 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5099 ;;Total ram usage:        0 bytes
+  5100 ;; Hardware stack levels used: 1
+  5101 ;; This function calls:
+  5102 ;;		Nothing
+  5103 ;; This function is called by:
+  5104 ;;		_TMR0_MyInterruptHandler
+  5105 ;; This function uses a non-reentrant model
+  5106 ;;
+  5107                           
+  5108                           	psect	text45
+  5109   0010F4                     __ptext45:
+  5110                           	callstack 0
+  5111   0010F4                     _ADC_StartConversion:
+  5112                           	callstack 20
+  5113   0010F4                     
+  5114                           ;mcc_generated_files/adc.c: 99:     ADCON0bits.GO_nDONE = 1;
+  5115   0010F4  82C2               	bsf	194,1,c	;volatile
+  5116   0010F6  0012               	return		;funcret
+  5117   0010F8                     __end_of_ADC_StartConversion:
+  5118                           	callstack 0
+  5119                           
+  5120 ;; *************** function _INT0_ISR *****************
+  5121 ;; Defined at:
+  5122 ;;		line 32 in file "mcc_generated_files/ext_int.c"
+  5123 ;; Parameters:    Size  Location     Type
+  5124 ;;		None
+  5125 ;; Auto vars:     Size  Location     Type
+  5126 ;;		None
+  5127 ;; Return value:  Size  Location     Type
+  5128 ;;                  1    wreg      void 
+  5129 ;; Registers used:
+  5130 ;;		wreg, status,2, status,0, pcl, pclath, pclatu, tosl, cstack
+  5131 ;; Tracked objects:
+  5132 ;;		On entry : 0/0
+  5133 ;;		On exit  : 0/0
+  5134 ;;		Unchanged: 0/0
+  5135 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  5136 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5137 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5138 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5139 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5140 ;;Total ram usage:        0 bytes
+  5141 ;; Hardware stack levels used: 1
+  5142 ;; Hardware stack levels required when called: 2
+  5143 ;; This function calls:
+  5144 ;;		_INT0_CallBack
+  5145 ;; This function is called by:
+  5146 ;;		_INTERRUPT_InterruptManagerHigh
+  5147 ;; This function uses a non-reentrant model
+  5148 ;;
+  5149                           
+  5150                           	psect	text46
+  5151   0010D4                     __ptext46:
+  5152                           	callstack 0
+  5153   0010D4                     _INT0_ISR:
+  5154                           	callstack 20
+  5155   0010D4                     
+  5156                           ;mcc_generated_files/ext_int.c: 34:     (INTCONbits.INT0IF = 0);
+  5157   0010D4  92F2               	bcf	242,1,c	;volatile
+  5158   0010D6                     
+  5159                           ;mcc_generated_files/ext_int.c: 37:     INT0_CallBack();
+  5160   0010D6  EC47  F007         	call	_INT0_CallBack	;wreg free
+  5161   0010DA  0012               	return		;funcret
+  5162   0010DC                     __end_of_INT0_ISR:
+  5163                           	callstack 0
+  5164                           
+  5165 ;; *************** function _INT0_CallBack *****************
+  5166 ;; Defined at:
+  5167 ;;		line 41 in file "mcc_generated_files/ext_int.c"
+  5168 ;; Parameters:    Size  Location     Type
+  5169 ;;		None
+  5170 ;; Auto vars:     Size  Location     Type
+  5171 ;;		None
+  5172 ;; Return value:  Size  Location     Type
+  5173 ;;                  1    wreg      void 
+  5174 ;; Registers used:
+  5175 ;;		wreg, status,2, status,0, pcl, pclath, pclatu, tosl, cstack
+  5176 ;; Tracked objects:
+  5177 ;;		On entry : 0/0
+  5178 ;;		On exit  : 0/0
+  5179 ;;		Unchanged: 0/0
+  5180 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  5181 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5182 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5183 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5184 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5185 ;;Total ram usage:        0 bytes
+  5186 ;; Hardware stack levels used: 1
+  5187 ;; Hardware stack levels required when called: 1
+  5188 ;; This function calls:
+  5189 ;;		NULL
+  5190 ;;		_INT0_DefaultInterruptHandler
+  5191 ;;		_INT0_MyInterruptHandler
+  5192 ;; This function is called by:
+  5193 ;;		_INT0_ISR
+  5194 ;; This function uses a non-reentrant model
+  5195 ;;
+  5196                           
+  5197                           	psect	text47
+  5198   000E8E                     __ptext47:
+  5199                           	callstack 0
+  5200   000E8E                     _INT0_CallBack:
+  5201                           	callstack 20
+  5202   000E8E                     
+  5203                           ;mcc_generated_files/ext_int.c: 44:     if(INT0_InterruptHandler)
+  5204   000E8E  503B               	movf	_INT0_InterruptHandler^0,w,c
+  5205   000E90  103C               	iorwf	(_INT0_InterruptHandler+1)^0,w,c
+  5206   000E92  B4D8               	btfsc	status,2,c
+  5207   000E94  EF4E  F007         	goto	i2u128_41
+  5208   000E98  EF50  F007         	goto	i2u128_40
+  5209   000E9C                     i2u128_41:
+  5210   000E9C  EF5C  F007         	goto	i2l140
+  5211   000EA0                     i2u128_40:
+  5212   000EA0                     
+  5213                           ;mcc_generated_files/ext_int.c: 45:     {;mcc_generated_files/ext_int.c: 46:         INT
+      +                          0_InterruptHandler();
+  5214   000EA0  D802               	call	i2u129_48
+  5215   000EA2  EF5C  F007         	goto	i2u129_49
+  5216   000EA6                     i2u129_48:
+  5217   000EA6  0005               	push	
+  5218   000EA8  6EFA               	movwf	pclath,c
+  5219   000EAA  503B               	movf	_INT0_InterruptHandler^0,w,c
+  5220   000EAC  6EFD               	movwf	tosl,c
+  5221   000EAE  503C               	movf	(_INT0_InterruptHandler+1)^0,w,c
+  5222   000EB0  6EFE               	movwf	tosh,c
+  5223   000EB2  6AFF               	clrf	tosu,c
+  5224   000EB4  50FA               	movf	pclath,w,c
+  5225   000EB6  0012               	return		;indir
+  5226   000EB8                     i2u129_49:
+  5227   000EB8                     i2l140:
+  5228   000EB8  0012               	return		;funcret
+  5229   000EBA                     __end_of_INT0_CallBack:
+  5230                           	callstack 0
+  5231                           
+  5232 ;; *************** function _INT0_DefaultInterruptHandler *****************
+  5233 ;; Defined at:
+  5234 ;;		line 54 in file "mcc_generated_files/ext_int.c"
+  5235 ;; Parameters:    Size  Location     Type
+  5236 ;;		None
+  5237 ;; Auto vars:     Size  Location     Type
+  5238 ;;		None
+  5239 ;; Return value:  Size  Location     Type
+  5240 ;;                  1    wreg      void 
+  5241 ;; Registers used:
+  5242 ;;		None
+  5243 ;; Tracked objects:
+  5244 ;;		On entry : 0/0
+  5245 ;;		On exit  : 0/0
+  5246 ;;		Unchanged: 0/0
+  5247 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  5248 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5249 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5250 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5251 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5252 ;;Total ram usage:        0 bytes
+  5253 ;; Hardware stack levels used: 1
+  5254 ;; This function calls:
+  5255 ;;		Nothing
+  5256 ;; This function is called by:
+  5257 ;;		_EXT_INT_Initialize
+  5258 ;;		_INT0_CallBack
+  5259 ;; This function uses a non-reentrant model
+  5260 ;;
+  5261                           
+  5262                           	psect	text48
+  5263   001100                     __ptext48:
+  5264                           	callstack 0
+  5265   001100                     _INT0_DefaultInterruptHandler:
+  5266                           	callstack 20
+  5267   001100  0012               	return		;funcret
+  5268   001102                     __end_of_INT0_DefaultInterruptHandler:
+  5269                           	callstack 0
+  5270                           
+  5271 ;; *************** function _INT0_MyInterruptHandler *****************
+  5272 ;; Defined at:
+  5273 ;;		line 60 in file "main.c"
+  5274 ;; Parameters:    Size  Location     Type
+  5275 ;;		None
+  5276 ;; Auto vars:     Size  Location     Type
+  5277 ;;		None
+  5278 ;; Return value:  Size  Location     Type
+  5279 ;;                  1    wreg      void 
+  5280 ;; Registers used:
+  5281 ;;		wreg, status,2
+  5282 ;; Tracked objects:
+  5283 ;;		On entry : 0/0
+  5284 ;;		On exit  : 0/0
+  5285 ;;		Unchanged: 0/0
+  5286 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  5287 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5288 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5289 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5290 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5291 ;;Total ram usage:        0 bytes
+  5292 ;; Hardware stack levels used: 1
+  5293 ;; This function calls:
+  5294 ;;		Nothing
+  5295 ;; This function is called by:
+  5296 ;;		_main
+  5297 ;;		_INT0_CallBack
+  5298 ;; This function uses a non-reentrant model
+  5299 ;;
+  5300                           
+  5301                           	psect	text49
+  5302   001056                     __ptext49:
+  5303                           	callstack 0
+  5304   001056                     _INT0_MyInterruptHandler:
+  5305                           	callstack 20
+  5306   001056                     
+  5307                           ;main.c: 62:     BombaLigada = 0;
+  5308   001056  0E00               	movlw	0
+  5309   001058  0100               	movlb	0	; () banked
+  5310   00105A  6F9E               	movwf	_BombaLigada& (0+255),b	;volatile
+  5311                           
+  5312                           ;main.c: 63:     SistemaControloLigado = 0;
+  5313   00105C  0E00               	movlw	0
+  5314   00105E  6F9F               	movwf	_SistemaControloLigado& (0+255),b	;volatile
+  5315   001060                     
+  5316                           ; BSR set to: 0
+  5317                           ;main.c: 65:     (INTCONbits.INT0IF = 0);
+  5318   001060  92F2               	bcf	242,1,c	;volatile
+  5319   001062                     
+  5320                           ; BSR set to: 0
+  5321   001062  0012               	return		;funcret
+  5322   001064                     __end_of_INT0_MyInterruptHandler:
+  5323                           	callstack 0
+  5324                           
+  5325 ;; *************** function _EUSART1_Transmit_ISR *****************
+  5326 ;; Defined at:
+  5327 ;;		line 206 in file "mcc_generated_files/eusart1.c"
+  5328 ;; Parameters:    Size  Location     Type
+  5329 ;;		None
+  5330 ;; Auto vars:     Size  Location     Type
+  5331 ;;		None
+  5332 ;; Return value:  Size  Location     Type
+  5333 ;;                  1    wreg      void 
+  5334 ;; Registers used:
+  5335 ;;		wreg, fsr2l, fsr2h, status,2, status,0
+  5336 ;; Tracked objects:
+  5337 ;;		On entry : 0/0
+  5338 ;;		On exit  : 0/0
+  5339 ;;		Unchanged: 0/0
+  5340 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  5341 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5342 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5343 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5344 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5345 ;;Total ram usage:        0 bytes
+  5346 ;; Hardware stack levels used: 1
+  5347 ;; This function calls:
+  5348 ;;		Nothing
+  5349 ;; This function is called by:
+  5350 ;;		_EUSART1_Initialize
+  5351 ;;		_INTERRUPT_InterruptManagerHigh
+  5352 ;; This function uses a non-reentrant model
+  5353 ;;
+  5354                           
+  5355                           	psect	text50
+  5356   000D86                     __ptext50:
+  5357                           	callstack 0
+  5358   000D86                     _EUSART1_Transmit_ISR:
+  5359                           	callstack 22
+  5360   000D86                     
+  5361                           ;mcc_generated_files/eusart1.c: 210:     if(sizeof(eusart1TxBuffer) > eusart1TxBufferRem
+      +                          aining)
+  5362   000D86  0E08               	movlw	8
+  5363   000D88  6036               	cpfslt	_eusart1TxBufferRemaining^0,c	;volatile
+  5364   000D8A  EFC9  F006         	goto	i2u139_41
+  5365   000D8E  EFCB  F006         	goto	i2u139_40
+  5366   000D92                     i2u139_41:
+  5367   000D92  EFDF  F006         	goto	i2l261
+  5368   000D96                     i2u139_40:
+  5369   000D96                     
+  5370                           ;mcc_generated_files/eusart1.c: 211:     {;mcc_generated_files/eusart1.c: 212:         T
+      +                          XREG1 = eusart1TxBuffer[eusart1TxTail++];
+  5371   000D96  5037               	movf	_eusart1TxTail^0,w,c
+  5372   000D98  0F90               	addlw	low _eusart1TxBuffer
+  5373   000D9A  6ED9               	movwf	fsr2l,c
+  5374   000D9C  6ADA               	clrf	fsr2h,c
+  5375   000D9E  50DF               	movf	indf2,w,c
+  5376   000DA0  6EAD               	movwf	173,c	;volatile
+  5377   000DA2  2A37               	incf	_eusart1TxTail^0,f,c	;volatile
+  5378   000DA4                     
+  5379                           ;mcc_generated_files/eusart1.c: 213:         if(sizeof(eusart1TxBuffer) <= eusart1TxTail
+      +                          )
+  5380   000DA4  0E07               	movlw	7
+  5381   000DA6  6437               	cpfsgt	_eusart1TxTail^0,c	;volatile
+  5382   000DA8  EFD8  F006         	goto	i2u140_41
+  5383   000DAC  EFDA  F006         	goto	i2u140_40
+  5384   000DB0                     i2u140_41:
+  5385   000DB0  EFDC  F006         	goto	i2l2643
+  5386   000DB4                     i2u140_40:
+  5387   000DB4                     
+  5388                           ;mcc_generated_files/eusart1.c: 214:         {;mcc_generated_files/eusart1.c: 215:      
+      +                                 eusart1TxTail = 0;
+  5389   000DB4  0E00               	movlw	0
+  5390   000DB6  6E37               	movwf	_eusart1TxTail^0,c	;volatile
+  5391   000DB8                     i2l2643:
+  5392                           
+  5393                           ;mcc_generated_files/eusart1.c: 217:         eusart1TxBufferRemaining++;
+  5394   000DB8  2A36               	incf	_eusart1TxBufferRemaining^0,f,c	;volatile
+  5395                           
+  5396                           ;mcc_generated_files/eusart1.c: 218:     }
+  5397   000DBA  EFE0  F006         	goto	i2l264
+  5398   000DBE                     i2l261:
+  5399                           
+  5400                           ;mcc_generated_files/eusart1.c: 220:     {;mcc_generated_files/eusart1.c: 221:         P
+      +                          IE1bits.TX1IE = 0;
+  5401   000DBE  989D               	bcf	157,4,c	;volatile
+  5402   000DC0                     i2l264:
+  5403   000DC0  0012               	return		;funcret
+  5404   000DC2                     __end_of_EUSART1_Transmit_ISR:
+  5405                           	callstack 0
+  5406                           
+  5407 ;; *************** function _EUSART1_Receive_ISR *****************
+  5408 ;; Defined at:
+  5409 ;;		line 225 in file "mcc_generated_files/eusart1.c"
+  5410 ;; Parameters:    Size  Location     Type
+  5411 ;;		None
+  5412 ;; Auto vars:     Size  Location     Type
+  5413 ;;		None
+  5414 ;; Return value:  Size  Location     Type
+  5415 ;;                  1    wreg      void 
+  5416 ;; Registers used:
+  5417 ;;		wreg, fsr2l, fsr2h, status,2, status,0, pcl, pclath, pclatu, tosl, cstack
+  5418 ;; Tracked objects:
+  5419 ;;		On entry : 0/0
+  5420 ;;		On exit  : 0/0
+  5421 ;;		Unchanged: 0/0
+  5422 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  5423 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5424 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5425 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5426 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  5427 ;;Total ram usage:        0 bytes
+  5428 ;; Hardware stack levels used: 1
+  5429 ;; Hardware stack levels required when called: 2
+  5430 ;; This function calls:
+  5431 ;;		NULL
+  5432 ;;		_EUSART1_DefaultErrorHandler
+  5433 ;;		_EUSART1_DefaultFramingErrorHandler
+  5434 ;;		_EUSART1_DefaultOverrunErrorHandler
+  5435 ;;		_EUSART1_RxDataHandler
+  5436 ;; This function is called by:
+  5437 ;;		_EUSART1_Initialize
+  5438 ;;		_INTERRUPT_InterruptManagerHigh
+  5439 ;; This function uses a non-reentrant model
+  5440 ;;
+  5441                           
+  5442                           	psect	text51
+  5443   0009E6                     __ptext51:
+  5444                           	callstack 0
+  5445   0009E6                     _EUSART1_Receive_ISR:
+  5446                           	callstack 20
+  5447   0009E6                     
+  5448                           ;mcc_generated_files/eusart1.c: 228:     eusart1RxStatusBuffer[eusart1RxHead].status = 0
+>>>>>>> Stashed changes
       +                          ;
   4460   00112A  0E9C               	movlw	low _ADC_DefaultInterruptHandler
   4461   00112C  6E1F               	movwf	ADC_SetInterruptHandler@InterruptHandler^0,c
@@ -6234,6 +8080,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
       +0       0       0       0       0
   5855 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0       0       0       0
+<<<<<<< Updated upstream
   5856 ;;Total ram usage:        0 bytes
   5857 ;; Hardware stack levels used: 1
   5858 ;; Hardware stack levels required when called: 2
@@ -6396,6 +8243,43 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   6011 ;;		On exit  : 0/0
   6012 ;;		Unchanged: 0/0
   6013 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+=======
+  5842 ;;Total ram usage:        0 bytes
+  5843 ;; Hardware stack levels used: 1
+  5844 ;; This function calls:
+  5845 ;;		Nothing
+  5846 ;; This function is called by:
+  5847 ;;		_ADC_Initialize
+  5848 ;;		_ADC_ISR
+  5849 ;; This function uses a non-reentrant model
+  5850 ;;
+  5851                           
+  5852                           	psect	text57
+  5853   001104                     __ptext57:
+  5854                           	callstack 0
+  5855   001104                     _ADC_DefaultInterruptHandler:
+  5856                           	callstack 21
+  5857   001104  0012               	return		;funcret
+  5858   001106                     __end_of_ADC_DefaultInterruptHandler:
+  5859                           	callstack 0
+  5860                           
+  5861 ;; *************** function _ADC_MyInterruptHandler *****************
+  5862 ;; Defined at:
+  5863 ;;		line 71 in file "main.c"
+  5864 ;; Parameters:    Size  Location     Type
+  5865 ;;		None
+  5866 ;; Auto vars:     Size  Location     Type
+  5867 ;;		None
+  5868 ;; Return value:  Size  Location     Type
+  5869 ;;                  1    wreg      void 
+  5870 ;; Registers used:
+  5871 ;;		wreg, status,2, status,0, cstack
+  5872 ;; Tracked objects:
+  5873 ;;		On entry : 0/0
+  5874 ;;		On exit  : 0/0
+  5875 ;;		Unchanged: 0/0
+  5876 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+>>>>>>> Stashed changes
       +1  BANK12  BANK13  BANK14  BANK15
   6014 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0       0       0       0
@@ -6405,6 +8289,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
       +0       0       0       0       0
   6017 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0       0       0       0
+<<<<<<< Updated upstream
   6018 ;;Total ram usage:        0 bytes
   6019 ;; Hardware stack levels used: 1
   6020 ;; This function calls:
@@ -6446,6 +8331,87 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   6056 ;;		On exit  : 0/0
   6057 ;;		Unchanged: 0/0
   6058 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+=======
+  5881 ;;Total ram usage:        0 bytes
+  5882 ;; Hardware stack levels used: 1
+  5883 ;; Hardware stack levels required when called: 1
+  5884 ;; This function calls:
+  5885 ;;		_ADC_GetConversionResult
+  5886 ;;		_ADC_SelectChannel
+  5887 ;;		___aldiv
+  5888 ;;		___lmul
+  5889 ;; This function is called by:
+  5890 ;;		_main
+  5891 ;;		_ADC_ISR
+  5892 ;; This function uses a non-reentrant model
+  5893 ;;
+  5894                           
+  5895                           	psect	text58
+  5896   000B6E                     __ptext58:
+  5897                           	callstack 0
+  5898   000B6E                     _ADC_MyInterruptHandler:
+  5899                           	callstack 20
+  5900   000B6E                     
+  5901                           ;main.c: 72:     ADC_SelectChannel(channel_AN0);
+  5902   000B6E  0E00               	movlw	0
+  5903   000B70  ECE1  F007         	call	_ADC_SelectChannel
+  5904                           
+  5905                           ;main.c: 73:     convertedValue = ADC_GetConversionResult();
+  5906   000B74  EC02  F008         	call	_ADC_GetConversionResult	;wreg free
+  5907   000B78  C001  F029         	movff	?_ADC_GetConversionResult,_convertedValue
+  5908   000B7C  C002  F02A         	movff	?_ADC_GetConversionResult+1,_convertedValue+1
+  5909                           
+  5910                           ;main.c: 74:     nivel_agua = (long)convertedValue * 100 / 1023;
+  5911   000B80  C029  F001         	movff	_convertedValue,___lmul@multiplier
+  5912   000B84  C02A  F002         	movff	_convertedValue+1,___lmul@multiplier+1
+  5913   000B88  6A03               	clrf	(___lmul@multiplier+2)^0,c
+  5914   000B8A  6A04               	clrf	(___lmul@multiplier+3)^0,c
+  5915   000B8C  0E64               	movlw	100
+  5916   000B8E  6E05               	movwf	___lmul@multiplicand^0,c
+  5917   000B90  0E00               	movlw	0
+  5918   000B92  6E06               	movwf	(___lmul@multiplicand+1)^0,c
+  5919   000B94  0E00               	movlw	0
+  5920   000B96  6E07               	movwf	(___lmul@multiplicand+2)^0,c
+  5921   000B98  0E00               	movlw	0
+  5922   000B9A  6E08               	movwf	(___lmul@multiplicand+3)^0,c
+  5923   000B9C  EC82  F005         	call	___lmul	;wreg free
+  5924   000BA0  C001  F00D         	movff	?___lmul,___aldiv@dividend
+  5925   000BA4  C002  F00E         	movff	?___lmul+1,___aldiv@dividend+1
+  5926   000BA8  C003  F00F         	movff	?___lmul+2,___aldiv@dividend+2
+  5927   000BAC  C004  F010         	movff	?___lmul+3,___aldiv@dividend+3
+  5928   000BB0  0EFF               	movlw	255
+  5929   000BB2  6E11               	movwf	___aldiv@divisor^0,c
+  5930   000BB4  0E03               	movlw	3
+  5931   000BB6  6E12               	movwf	(___aldiv@divisor+1)^0,c
+  5932   000BB8  0E00               	movlw	0
+  5933   000BBA  6E13               	movwf	(___aldiv@divisor+2)^0,c
+  5934   000BBC  0E00               	movlw	0
+  5935   000BBE  6E14               	movwf	(___aldiv@divisor+3)^0,c
+  5936   000BC0  EC94  F002         	call	___aldiv	;wreg free
+  5937   000BC4  C00D  F09C         	movff	?___aldiv,_nivel_agua
+  5938   000BC8  C00E  F09D         	movff	?___aldiv+1,_nivel_agua+1
+  5939   000BCC  0012               	return		;funcret
+  5940   000BCE                     __end_of_ADC_MyInterruptHandler:
+  5941                           	callstack 0
+  5942                           
+  5943 ;; *************** function ___lmul *****************
+  5944 ;; Defined at:
+  5945 ;;		line 15 in file "C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c"
+  5946 ;; Parameters:    Size  Location     Type
+  5947 ;;  multiplier      4    0[COMRAM] unsigned long 
+  5948 ;;  multiplicand    4    4[COMRAM] unsigned long 
+  5949 ;; Auto vars:     Size  Location     Type
+  5950 ;;  product         4    8[COMRAM] unsigned long 
+  5951 ;; Return value:  Size  Location     Type
+  5952 ;;                  4    0[COMRAM] unsigned long 
+  5953 ;; Registers used:
+  5954 ;;		wreg, status,2, status,0
+  5955 ;; Tracked objects:
+  5956 ;;		On entry : 0/0
+  5957 ;;		On exit  : 0/0
+  5958 ;;		Unchanged: 0/0
+  5959 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+>>>>>>> Stashed changes
       +1  BANK12  BANK13  BANK14  BANK15
   6059 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0       0       0       0
@@ -8168,8 +10134,13 @@ DATA                 0      0      D2       3        0.0%
 CODE                 0      0       0       0        0.0%
 
 
+<<<<<<< Updated upstream
 Microchip Technology PIC18 Macro Assembler V2.41 build 20230208172133 
 Symbol Table                                                                                   Fri Jan 05 09:34:25 2024
+=======
+Microchip Technology PIC18 Macro Assembler V2.45 build 20230818022343 
+Symbol Table                                                                                   Fri Jan 05 09:34:47 2024
+>>>>>>> Stashed changes
 
                       _eusart1TxBufferRemaining 0034                                               l9 11D0  
                                              _s 00BD                                              l30 11C0  
