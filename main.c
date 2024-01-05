@@ -41,9 +41,8 @@
     SOFTWARE.
 */
 
-//perdu
-
-//brenardo
+// Pedro Ferreira N2222035
+// Bernardo Santos N2222033
 
 #include "mcc_generated_files/mcc.h"
 
@@ -68,7 +67,7 @@ void INT0_MyInterruptHandler(void) {
 
 /**
  * Funcao que e chamada quando o ADC termina a conversao
-*/
+ */
 void ADC_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
     convertedValue = ADC_GetConversionResult();
@@ -76,8 +75,8 @@ void ADC_MyInterruptHandler(void) {
 }
 
 /**
- * Funcao que e chamada quando o timer 0 termina a contagem (25ms) 
-*/
+ * Funcao que e chamada quando o timer 0 termina a contagem (25ms)
+ */
 void TMR0_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
     ADC_StartConversion();
@@ -143,7 +142,6 @@ void main(void) {
             carater_recebido = 0;
         }
         CheckUSART();
-        // Add your application code
     }
 }
 /**
@@ -230,9 +228,8 @@ void CheckUSART() {
                 break;
         }
 
-        if (intro_valor == 1)  // Se estiver em modo de ler um valor para o programa e nao escolher um item do menu
-        {
-            menu = 1;  // Vai para o switch case 1 onde ira carregar os digitos lidos numa string
+        if (intro_valor == 1) {  // Se estiver em modo de ler um valor para o programa e nao escolher um item do menu
+            menu = 1;            // Vai para o switch case 1 onde ira carregar os digitos lidos numa string
         }
     }
 }
