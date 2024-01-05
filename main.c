@@ -175,6 +175,7 @@ void ShowMenuInTerminal() {
             EUSART1_Write(12);
             // TODO - Ativar controlo do nivel de agua
             printf("\r\nControlo do nivel de agua ativado");
+            SistemaControloLigado = true;
             printf("\r\n0 - Voltar ao Menu Principal");
             printf("\r\nOpcao: ");
             menu = 0;
