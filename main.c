@@ -118,9 +118,9 @@ void main(void) {
     lcd_draw_string(20, 140, string, RED, BLACK);
     snprintf(string, sizeof (string), "MOTOR EM MALHA ABERTA");
     lcd_draw_string(40, 120, string, RED, BLACK);
-    snprintf(string, sizeof (string), "Autores: Sergio Faria");
+    snprintf(string, sizeof (string), "Autores: Pedro Ferreira");
     lcd_draw_string(20, 95, string, YELLOW, BLACK);
-    snprintf(string, sizeof (string), "Lucas Thomaz");
+    snprintf(string, sizeof (string), "Bernardo Santos");
     lcd_draw_string(90, 75, string, YELLOW, BLACK);    
     
     INTERRUPT_GlobalInterruptHighEnable();
