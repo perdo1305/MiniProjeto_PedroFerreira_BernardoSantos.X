@@ -10671,8 +10671,8 @@ void CheckUSART(void);
 void ShowMenuInTerminal(void);
 
 uint8_t rxData;
+uint8_t menu = '0';
 int temperatura = 18;
-char menu = '0';
 unsigned char cnt_char = 0;
 unsigned char s[4];
 unsigned char carater_recebido = 1;

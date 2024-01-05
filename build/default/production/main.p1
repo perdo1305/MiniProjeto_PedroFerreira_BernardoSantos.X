@@ -6735,8 +6735,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 73:     convertedValue = ADC_GetConversionResult();
 [e = _convertedValue ( _ADC_GetConversionResult ..  ]
 "74
-[; ;main.c: 74:     nivel_agua = (long)convertedValue * 100 / 1023;
-[e = _nivel_agua -> / * -> _convertedValue `l -> -> 100 `i `l -> -> 1023 `i `l `us ]
+[; ;main.c: 74:     nivel_agua = nivel_agua = (uint32_t)convertedValue * 100 / 1023;
+[e = _nivel_agua = _nivel_agua -> / * -> _convertedValue `ul -> -> -> 100 `i `l `ul -> -> -> 1023 `i `l `ul `us ]
 "75
 [; ;main.c: 75: }
 [e :UE 860 ]
@@ -6786,16 +6786,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 96: uint8_t rxData;
 [v _rxData `uc ~T0 @X0 1 e ]
 "97
-[; ;main.c: 97: int temperatura = 18;
-[v _temperatura `i ~T0 @X0 1 e ]
-[i _temperatura
--> 18 `i
-]
-"98
-[; ;main.c: 98: char menu = '0';
+[; ;main.c: 97: uint8_t menu = '0';
 [v _menu `uc ~T0 @X0 1 e ]
 [i _menu
 -> -> 48 `ui `uc
+]
+"98
+[; ;main.c: 98: int temperatura = 18;
+[v _temperatura `i ~T0 @X0 1 e ]
+[i _temperatura
+-> 18 `i
 ]
 "99
 [; ;main.c: 99: unsigned char cnt_char = 0;
@@ -7047,8 +7047,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 181:             printf("\r\nOpcao: ");
 [e ( _printf :s 16C ]
 "182
-[; ;main.c: 182:             menu = 0;
-[e = _menu -> -> 0 `i `uc ]
+[; ;main.c: 182:             menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
 "183
 [; ;main.c: 183:             break;
 [e $U 892  ]
@@ -7071,8 +7071,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 190:             BombaLigada = 0;
 [e = _BombaLigada -> -> 0 `i `a ]
 "191
-[; ;main.c: 191:             menu = 0;
-[e = _menu -> -> 0 `i `uc ]
+[; ;main.c: 191:             menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
 "192
 [; ;main.c: 192:             break;
 [e $U 892  ]
@@ -7083,7 +7083,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 194:             EUSART1_Write(12);
 [e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
 "196
-[; ;main.c: 196:             printf("\r\nControlo do nivel de agua ativado");
+[; ;main.c: 196:             printf("\r\nControlo do nivel de agua ativado!");
 [e ( _printf :s 20C ]
 "197
 [; ;main.c: 197:             SistemaControloLigado = 1;
@@ -7095,8 +7095,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 199:             printf("\r\nOpcao: ");
 [e ( _printf :s 22C ]
 "200
-[; ;main.c: 200:             menu = 0;
-[e = _menu -> -> 0 `i `uc ]
+[; ;main.c: 200:             menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
 "201
 [; ;main.c: 201:             break;
 [e $U 892  ]
@@ -7119,8 +7119,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 208:             printf("\r\nOpcao: ");
 [e ( _printf :s 26C ]
 "209
-[; ;main.c: 209:             menu = 0;
-[e = _menu -> -> 0 `i `uc ]
+[; ;main.c: 209:             menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
 "210
 [; ;main.c: 210:             break;
 [e $U 892  ]
@@ -7137,8 +7137,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 215:             printf("\r\nOpcao: ");
 [e ( _printf :s 28C ]
 "216
-[; ;main.c: 216:             menu = 0;
-[e = _menu -> -> 0 `i `uc ]
+[; ;main.c: 216:             menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
 "217
 [; ;main.c: 217:             break;
 [e $U 892  ]
@@ -7155,8 +7155,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 222:             printf("\r\nOpcao: ");
 [e ( _printf :s 30C ]
 "223
-[; ;main.c: 223:             menu = 0;
-[e = _menu -> -> 0 `i `uc ]
+[; ;main.c: 223:             menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
 "224
 [; ;main.c: 224:             break;
 [e $U 892  ]
@@ -7173,8 +7173,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 228:             printf("\r\nPrima 0 para voltar ao Menu Principal");
 [e ( _printf :s 32C ]
 "229
-[; ;main.c: 229:             menu = 0;
-[e = _menu -> -> 0 `i `uc ]
+[; ;main.c: 229:             menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
 "230
 [; ;main.c: 230:             break;
 [e $U 892  ]
@@ -7226,7 +7226,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _carater_recebido -> -> 1 `i `uc ]
 "243
 [; ;main.c: 243:                 menu = rxData;
-[e = _menu -> _rxData `uc ]
+[e = _menu _rxData ]
 "244
 [; ;main.c: 244:                 break;
 [e $U 903  ]
@@ -7282,7 +7282,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p f _printf 8388736 ]
 [p f _snprintf 8388608 ]
 [a 7C 76 117 99 97 115 32 84 104 111 109 97 122 0 ]
-[a 20C 13 10 67 111 110 116 114 111 108 111 32 100 111 32 110 105 118 101 108 32 100 101 32 97 103 117 97 32 97 116 105 118 97 100 111 0 ]
 [a 32C 13 10 80 114 105 109 97 32 48 32 112 97 114 97 32 118 111 108 116 97 114 32 97 111 32 77 101 110 117 32 80 114 105 110 99 105 112 97 108 0 ]
 [a 15C 13 10 48 32 45 32 86 111 108 116 97 114 32 97 111 32 77 101 110 117 32 80 114 105 110 99 105 112 97 108 0 ]
 [a 18C 13 10 48 32 45 32 86 111 108 116 97 114 32 97 111 32 77 101 110 117 32 80 114 105 110 99 105 112 97 108 0 ]
@@ -7306,6 +7305,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 5C 77 79 84 79 82 32 69 77 32 77 65 76 72 65 32 65 66 69 82 84 65 0 ]
 [a 1C 69 78 71 69 78 72 65 82 73 65 32 69 76 69 84 82 79 84 69 67 78 73 67 65 0 ]
 [a 3C 50 48 50 50 32 47 32 50 51 0 ]
+[a 20C 13 10 67 111 110 116 114 111 108 111 32 100 111 32 110 105 118 101 108 32 100 101 32 97 103 117 97 32 97 116 105 118 97 100 111 33 0 ]
 [a 16C 13 10 79 112 99 97 111 58 32 0 ]
 [a 19C 13 10 79 112 99 97 111 58 32 0 ]
 [a 22C 13 10 79 112 99 97 111 58 32 0 ]

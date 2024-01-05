@@ -25,10 +25,10 @@ SPI2_DEFAULT 0
 [e E358 . `uc
 SPI2_DEFAULT 0
 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
 "1 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\abs.c
 [v _abs abs `(i  1 e 2 0 ]
-"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-[v ___aldiv __aldiv `(l  1 e 4 0 ]
 "7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awmod.c
@@ -780,7 +780,7 @@ SPI2_DEFAULT 0
 [v _nivel_referencia nivel_referencia `VEus  1 e 2 0 ]
 "96
 [v _rxData rxData `uc  1 e 1 0 ]
-"98
+"97
 [v _menu menu `uc  1 e 1 0 ]
 "101
 [v _carater_recebido carater_recebido `uc  1 e 1 0 ]
@@ -846,15 +846,15 @@ SPI2_DEFAULT 0
 [u S2409 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
 "17
 [s S2412 _IO_FILE 12 `S2409 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v snprintf@f f `S2412  1 a 12 27 ]
+[v snprintf@f f `S2412  1 a 12 20 ]
 "15
-[v snprintf@cnt cnt `i  1 a 2 25 ]
+[v snprintf@cnt cnt `i  1 a 2 18 ]
 "16
-[v snprintf@ap ap `[1]*.39v  1 a 2 23 ]
+[v snprintf@ap ap `[1]*.39v  1 a 2 16 ]
 "13
-[v snprintf@s s `*.30uc  1 p 1 16 ]
-[v snprintf@n n `ui  1 p 2 17 ]
-[v snprintf@fmt fmt `*.32Cuc  1 p 2 19 ]
+[v snprintf@s s `*.30uc  1 p 1 6 ]
+[v snprintf@n n `ui  1 p 2 7 ]
+[v snprintf@fmt fmt `*.32Cuc  1 p 2 9 ]
 "39
 } 0
 "34 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\lib_ili9341.c
@@ -867,29 +867,29 @@ SPI2_DEFAULT 0
 {
 [v msDelay@ms ms `uc  1 a 1 wreg ]
 "18
-[v msDelay@k k `uc  1 a 1 32 ]
+[v msDelay@k k `uc  1 a 1 31 ]
 "16
 [v msDelay@ms ms `uc  1 a 1 wreg ]
 "20
-[v msDelay@ms ms `uc  1 a 1 31 ]
+[v msDelay@ms ms `uc  1 a 1 30 ]
 "24
 } 0
 "193
 [v _lcd_fill lcd_fill `(v  1 e 1 0 ]
 {
 "195
-[v lcd_fill@width width `us  1 a 2 10 ]
-[v lcd_fill@height height `us  1 a 2 8 ]
+[v lcd_fill@width width `us  1 a 2 8 ]
+[v lcd_fill@height height `us  1 a 2 6 ]
 "193
-[v lcd_fill@bg_color bg_color `us  1 p 2 6 ]
+[v lcd_fill@bg_color bg_color `us  1 p 2 4 ]
 "210
 } 0
 "380
 [v _lcd_draw_string lcd_draw_string `(v  1 e 1 0 ]
 {
 "382
-[v lcd_draw_string@lIndex lIndex `us  1 a 2 24 ]
-[v lcd_draw_string@k k `us  1 a 2 22 ]
+[v lcd_draw_string@lIndex lIndex `us  1 a 2 22 ]
+[v lcd_draw_string@k k `us  1 a 2 20 ]
 "380
 [v lcd_draw_string@x x `us  1 p 2 13 ]
 [v lcd_draw_string@y y `us  1 p 2 15 ]
@@ -902,40 +902,40 @@ SPI2_DEFAULT 0
 [v _lcd_draw_char lcd_draw_char `(v  1 e 1 0 ]
 {
 "357
-[v lcd_draw_char@i i `uc  1 a 1 18 ]
-[v lcd_draw_char@k k `uc  1 a 1 17 ]
-[v lcd_draw_char@j j `uc  1 a 1 16 ]
+[v lcd_draw_char@i i `uc  1 a 1 16 ]
+[v lcd_draw_char@k k `uc  1 a 1 15 ]
+[v lcd_draw_char@j j `uc  1 a 1 14 ]
 "355
-[v lcd_draw_char@x x `us  1 p 2 6 ]
-[v lcd_draw_char@y y `us  1 p 2 8 ]
-[v lcd_draw_char@fIndex fIndex `us  1 p 2 10 ]
-[v lcd_draw_char@fg_color fg_color `us  1 p 2 12 ]
-[v lcd_draw_char@bg_color bg_color `us  1 p 2 14 ]
+[v lcd_draw_char@x x `us  1 p 2 4 ]
+[v lcd_draw_char@y y `us  1 p 2 6 ]
+[v lcd_draw_char@fIndex fIndex `us  1 p 2 8 ]
+[v lcd_draw_char@fg_color fg_color `us  1 p 2 10 ]
+[v lcd_draw_char@bg_color bg_color `us  1 p 2 12 ]
 "378
 } 0
 "144
 [v _lcd_set_cursor lcd_set_cursor `(uc  1 e 1 0 ]
 {
-[v lcd_set_cursor@x x `us  1 p 2 2 ]
-[v lcd_set_cursor@y y `us  1 p 2 4 ]
+[v lcd_set_cursor@x x `us  1 p 2 0 ]
+[v lcd_set_cursor@y y `us  1 p 2 2 ]
 "152
 } 0
 "170
 [v _lcd_set_cursor_y lcd_set_cursor_y `(uc  1 e 1 0 ]
 {
-[v lcd_set_cursor_y@y y `us  1 p 2 0 ]
+[v lcd_set_cursor_y@y y `us  1 p 2 32 ]
 "183
 } 0
 "155
 [v _lcd_set_cursor_x lcd_set_cursor_x `(uc  1 e 1 0 ]
 {
-[v lcd_set_cursor_x@x x `us  1 p 2 0 ]
+[v lcd_set_cursor_x@x x `us  1 p 2 32 ]
 "168
 } 0
 "185
 [v _lcd_draw_pixel lcd_draw_pixel `(uc  1 e 1 0 ]
 {
-[v lcd_draw_pixel@color color `us  1 p 2 0 ]
+[v lcd_draw_pixel@color color `us  1 p 2 32 ]
 "191
 } 0
 "134
@@ -943,9 +943,9 @@ SPI2_DEFAULT 0
 {
 [v lcd_send@dc dc `a  1 a 1 wreg ]
 [v lcd_send@dc dc `a  1 a 1 wreg ]
-[v lcd_send@value value `uc  1 p 1 31 ]
+[v lcd_send@value value `uc  1 p 1 30 ]
 "136
-[v lcd_send@dc dc `a  1 a 1 32 ]
+[v lcd_send@dc dc `a  1 a 1 31 ]
 "142
 } 0
 "92 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/spi2.c
@@ -954,7 +954,7 @@ SPI2_DEFAULT 0
 [v SPI2_ExchangeByte@data data `uc  1 a 1 wreg ]
 [v SPI2_ExchangeByte@data data `uc  1 a 1 wreg ]
 "94
-[v SPI2_ExchangeByte@data data `uc  1 a 1 30 ]
+[v SPI2_ExchangeByte@data data `uc  1 a 1 29 ]
 "98
 } 0
 "99 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr1.c
@@ -981,21 +981,21 @@ SPI2_DEFAULT 0
 [v _printf printf `(i  1 e 2 0 ]
 {
 "8
-[v printf@ap ap `[1]*.39v  1 a 2 18 ]
+[v printf@ap ap `[1]*.39v  1 a 2 24 ]
 "5
-[v printf@fmt fmt `*.32Cuc  1 p 2 16 ]
+[v printf@fmt fmt `*.32Cuc  1 p 2 6 ]
 "13
 } 0
 "1817 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
 "1820
-[v vfprintf@cfmt cfmt `*.32uc  1 a 2 16 ]
+[v vfprintf@cfmt cfmt `*.32uc  1 a 2 22 ]
 [s S2447 _IO_FILE 0 ]
 "1817
-[v vfprintf@fp fp `*.39S2447  1 p 2 10 ]
-[v vfprintf@fmt fmt `*.32Cuc  1 p 2 12 ]
-[v vfprintf@ap ap `*.39*.39v  1 p 2 14 ]
+[v vfprintf@fp fp `*.39S2447  1 p 2 0 ]
+[v vfprintf@fmt fmt `*.32Cuc  1 p 2 2 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 4 ]
 "1840
 } 0
 "1177
@@ -1003,29 +1003,29 @@ SPI2_DEFAULT 0
 {
 [u S2465 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
 "1188
-[v vfpfcnvrt@convarg convarg `S2465  1 a 4 5 ]
+[v vfpfcnvrt@convarg convarg `S2465  1 a 4 17 ]
 "1179
-[v vfpfcnvrt@cp cp `*.32uc  1 a 2 3 ]
+[v vfpfcnvrt@cp cp `*.32uc  1 a 2 15 ]
 "1191
-[v vfpfcnvrt@cnt cnt `i  1 a 2 1 ]
+[v vfpfcnvrt@cnt cnt `i  1 a 2 13 ]
 "1179
-[v vfpfcnvrt@c c `uc  1 a 1 9 ]
+[v vfpfcnvrt@c c `uc  1 a 1 21 ]
 "1180
-[v vfpfcnvrt@done done `a  1 a 1 0 ]
+[v vfpfcnvrt@done done `a  1 a 1 12 ]
 [s S2447 _IO_FILE 0 ]
 "1177
-[v vfpfcnvrt@fp fp `*.39S2447  1 p 2 9 ]
-[v vfpfcnvrt@fmt fmt `*.30*.32uc  1 p 1 11 ]
-[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 12 ]
+[v vfpfcnvrt@fp fp `*.39S2447  1 p 2 5 ]
+[v vfpfcnvrt@fmt fmt `*.30*.32uc  1 p 1 7 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 8 ]
 "1814
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
-[v fputc@c c `i  1 p 2 0 ]
+[v fputc@c c `i  1 p 2 31 ]
 [u S2409 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
 [s S2412 _IO_FILE 12 `S2409 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v fputc@fp fp `*.39S2412  1 p 2 2 ]
+[v fputc@fp fp `*.39S2412  1 p 2 33 ]
 "24
 } 0
 "201 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/eusart1.c
@@ -1034,24 +1034,24 @@ SPI2_DEFAULT 0
 [v putch@txData txData `uc  1 a 1 wreg ]
 [v putch@txData txData `uc  1 a 1 wreg ]
 "203
-[v putch@txData txData `uc  1 a 1 31 ]
+[v putch@txData txData `uc  1 a 1 30 ]
 "204
 } 0
 "1 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\abs.c
 [v _abs abs `(i  1 e 2 0 ]
 {
-[v abs@a a `i  1 p 2 2 ]
+[v abs@a a `i  1 p 2 0 ]
 "4
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 1 ]
-[v ___awmod@counter counter `uc  1 a 1 0 ]
+[v ___awmod@sign sign `uc  1 a 1 34 ]
+[v ___awmod@counter counter `uc  1 a 1 33 ]
 "7
-[v ___awmod@dividend dividend `i  1 p 2 30 ]
-[v ___awmod@divisor divisor `i  1 p 2 32 ]
+[v ___awmod@dividend dividend `i  1 p 2 29 ]
+[v ___awmod@divisor divisor `i  1 p 2 31 ]
 "34
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\awdiv.c
@@ -1063,8 +1063,8 @@ SPI2_DEFAULT 0
 [v ___awdiv@sign sign `uc  1 a 1 1 ]
 [v ___awdiv@counter counter `uc  1 a 1 0 ]
 "7
-[v ___awdiv@dividend dividend `i  1 p 2 30 ]
-[v ___awdiv@divisor divisor `i  1 p 2 32 ]
+[v ___awdiv@dividend dividend `i  1 p 2 29 ]
+[v ___awdiv@divisor divisor `i  1 p 2 31 ]
 "41
 } 0
 "50 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/mcc.c
@@ -1080,7 +1080,7 @@ SPI2_DEFAULT 0
 "172
 [v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 30 ]
+[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 29 ]
 "174
 } 0
 "67 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr0.c
@@ -1091,7 +1091,7 @@ SPI2_DEFAULT 0
 "147
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 30 ]
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 29 ]
 "149
 } 0
 "62 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/spi2.c
@@ -1122,7 +1122,7 @@ SPI2_DEFAULT 0
 "50
 [v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 30 ]
+[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 29 ]
 "52
 } 0
 "88 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/eusart1.c
@@ -1133,31 +1133,31 @@ SPI2_DEFAULT 0
 "285
 [v _EUSART1_SetTxInterruptHandler EUSART1_SetTxInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART1_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 30 ]
+[v EUSART1_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 29 ]
 "287
 } 0
 "289
 [v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART1_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 30 ]
+[v EUSART1_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 29 ]
 "291
 } 0
 "277
 [v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 30 ]
+[v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 29 ]
 "279
 } 0
 "273
 [v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 30 ]
+[v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 29 ]
 "275
 } 0
 "281
 [v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 30 ]
+[v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 29 ]
 "283
 } 0
 "49 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/ccp5.c
@@ -1173,7 +1173,7 @@ SPI2_DEFAULT 0
 "151
 [v _ADC_SetInterruptHandler ADC_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v ADC_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 30 ]
+[v ADC_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 29 ]
 "153
 } 0
 "72 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/spi2.c
@@ -1182,7 +1182,7 @@ SPI2_DEFAULT 0
 [v SPI2_Open@spi2UniqueConfiguration spi2UniqueConfiguration `E358  1 a 1 wreg ]
 [v SPI2_Open@spi2UniqueConfiguration spi2UniqueConfiguration `E358  1 a 1 wreg ]
 "74
-[v SPI2_Open@spi2UniqueConfiguration spi2UniqueConfiguration `E358  1 a 1 31 ]
+[v SPI2_Open@spi2UniqueConfiguration spi2UniqueConfiguration `E358  1 a 1 30 ]
 "85
 } 0
 "234 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
@@ -1200,14 +1200,14 @@ SPI2_DEFAULT 0
 {
 [v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
 [v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART1_Write@txData txData `uc  1 a 1 30 ]
+[v EUSART1_Write@txData txData `uc  1 a 1 29 ]
 "194
 } 0
 "151
 [v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
 {
 "153
-[v EUSART1_Read@readValue readValue `uc  1 a 1 30 ]
+[v EUSART1_Read@readValue readValue `uc  1 a 1 29 ]
 "171
 } 0
 "79 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/interrupt_manager.c
@@ -1330,18 +1330,17 @@ SPI2_DEFAULT 0
 [v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
 "129
 } 0
-"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\aldiv.c
-[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
 {
 "10
-[v ___aldiv@quotient quotient `l  1 a 4 22 ]
+[v ___lldiv@quotient quotient `ul  1 a 4 20 ]
 "11
-[v ___aldiv@sign sign `uc  1 a 1 21 ]
-[v ___aldiv@counter counter `uc  1 a 1 20 ]
+[v ___lldiv@counter counter `uc  1 a 1 24 ]
 "7
-[v ___aldiv@dividend dividend `l  1 p 4 12 ]
-[v ___aldiv@divisor divisor `l  1 p 4 16 ]
-"41
+[v ___lldiv@dividend dividend `ul  1 p 4 12 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 16 ]
+"30
 } 0
 "88 C:\Users\Bernardo Santos\Documents\GitHub\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/adc.c
 [v _ADC_SelectChannel ADC_SelectChannel `(v  1 e 1 0 ]

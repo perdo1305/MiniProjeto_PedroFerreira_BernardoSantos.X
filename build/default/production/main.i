@@ -10648,7 +10648,7 @@ void INT0_MyInterruptHandler(void) {
 void ADC_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
     convertedValue = ADC_GetConversionResult();
-    nivel_agua = (long)convertedValue * 100 / 1023;
+    nivel_agua = nivel_agua = (uint32_t)convertedValue * 100 / 1023;
 }
 
 
@@ -10671,8 +10671,8 @@ void CheckUSART(void);
 void ShowMenuInTerminal(void);
 
 uint8_t rxData;
+uint8_t menu = '0';
 int temperatura = 18;
-char menu = '0';
 unsigned char cnt_char = 0;
 unsigned char s[4];
 unsigned char carater_recebido = 1;
@@ -10756,7 +10756,7 @@ void ShowMenuInTerminal() {
             printf("\r\n5 - Programar novo valor de referencia");
             printf("\r\n0 - Voltar ao Menu Principal");
             printf("\r\nOpcao: ");
-            menu = 0;
+            menu = '0';
             break;
         case '1':
             EUSART1_Write(12);
@@ -10765,16 +10765,16 @@ void ShowMenuInTerminal() {
             printf("\r\n0 - Voltar ao Menu Principal");
             printf("\r\nOpcao: ");
             BombaLigada = 0;
-            menu = 0;
+            menu = '0';
             break;
         case '2':
             EUSART1_Write(12);
 
-            printf("\r\nControlo do nivel de agua ativado");
+            printf("\r\nControlo do nivel de agua ativado!");
             SistemaControloLigado = 1;
             printf("\r\n0 - Voltar ao Menu Principal");
             printf("\r\nOpcao: ");
-            menu = 0;
+            menu = '0';
             break;
         case '3':
             EUSART1_Write(12);
@@ -10783,27 +10783,27 @@ void ShowMenuInTerminal() {
             printf("\r\nbits: %d", convertedValue);
             printf("\r\n0 - Voltar ao Menu Principal");
             printf("\r\nOpcao: ");
-            menu = 0;
+            menu = '0';
             break;
         case '4':
             EUSART1_Write(12);
 
             printf("\r\n0 - Voltar ao Menu Principal");
             printf("\r\nOpcao: ");
-            menu = 0;
+            menu = '0';
             break;
         case '5':
             EUSART1_Write(12);
 
             printf("\r\n0 - Voltar ao Menu Principal");
             printf("\r\nOpcao: ");
-            menu = 0;
+            menu = '0';
             break;
         default:
             EUSART1_Write(12);
             printf("\r\nOpcao Invalida");
             printf("\r\nPrima 0 para voltar ao Menu Principal");
-            menu = 0;
+            menu = '0';
             break;
     }
 }
