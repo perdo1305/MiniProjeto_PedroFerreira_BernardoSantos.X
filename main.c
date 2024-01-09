@@ -71,7 +71,7 @@ void INT0_MyInterruptHandler(void) {
 void ADC_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
     convertedValue = ADC_GetConversionResult();
-    nivel_agua = nivel_agua = (uint32_t)convertedValue * 100 / 1023;
+    nivel_agua = (uint32_t)convertedValue * 100 / 1023;
 }
 
 /**
@@ -104,19 +104,20 @@ unsigned char intro_valor = 0;
 void main(void) {
     SYSTEM_Initialize();
 
-     SPI2_Open(SPI2_DEFAULT);
+    //inicia a comunicacao SPI com o LCD
+    SPI2_Open(SPI2_DEFAULT);
     // Inicializa o LCD grafico    
     lcd_init();
-    
-    
-    lcd_draw_string(82, 220, "ENGENHARIA ELETROTECNICA", FUCHSIA, BLACK);
+    // resolucao do LCD 320x240 (x = 0 a 319, y = 0 a 239)
+    lcd_draw_line(9, 210, 310, 210, ILI9341_WHITE);
+    lcd_draw_string(40, 215, "ENGENHARIA ELETROTECNICA", WHITE, BLACK);
     snprintf(string, sizeof (string), "MICROPROCESSADORES");
-    lcd_draw_string(85, 190, string, LIME, BLACK);
-    snprintf(string, sizeof (string), "2022 / 23");
-    lcd_draw_string(120, 165, string, ILI9341_PINK, BLACK);
-    snprintf(string, sizeof (string), "SISTEMA PARA CONTROLO DE UM");
+    lcd_draw_string(60, 190, string, WHITE, BLACK);
+    snprintf(string, sizeof (string), "2023 / 2024");
+    lcd_draw_string(120, 165, string, WHITE, BLACK);
+    snprintf(string, sizeof (string), "SISTEMA PARA CONTROLO");
     lcd_draw_string(20, 140, string, RED, BLACK);
-    snprintf(string, sizeof (string), "MOTOR EM MALHA ABERTA");
+    snprintf(string, sizeof (string), "DO NIVEL DE AGUA");
     lcd_draw_string(40, 120, string, RED, BLACK);
     snprintf(string, sizeof (string), "Autores: Pedro Ferreira");
     lcd_draw_string(20, 95, string, YELLOW, BLACK);
