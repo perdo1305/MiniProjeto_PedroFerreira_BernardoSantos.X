@@ -7222,58 +7222,94 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 904  ]
 {
 "241
-[; ;main.c: 241:             case '0' ... '9':
+[; ;main.c: 241:             case 48:
 [e :U 905 ]
 "242
-[; ;main.c: 242:             case 13:
+[; ;main.c: 242:             case 49:
 [e :U 906 ]
 "243
-[; ;main.c: 243:                 carater_recebido = 1;
-[e = _carater_recebido -> -> 1 `i `uc ]
-"244
-[; ;main.c: 244:                 menu = rxData;
-[e = _menu _rxData ]
-"245
-[; ;main.c: 245:                 break;
-[e $U 903  ]
-"246
-[; ;main.c: 246:             default:
+[; ;main.c: 243:             case 50:
 [e :U 907 ]
+"244
+[; ;main.c: 244:             case 51:
+[e :U 908 ]
+"245
+[; ;main.c: 245:             case 52:
+[e :U 909 ]
+"246
+[; ;main.c: 246:             case 53:
+[e :U 910 ]
 "247
-[; ;main.c: 247:                 carater_recebido = 0;
-[e = _carater_recebido -> -> 0 `i `uc ]
+[; ;main.c: 247:             case 54:
+[e :U 911 ]
 "248
-[; ;main.c: 248:                 menu = '0';
-[e = _menu -> -> 48 `ui `uc ]
+[; ;main.c: 248:             case 55:
+[e :U 912 ]
 "249
-[; ;main.c: 249:                 break;
-[e $U 903  ]
+[; ;main.c: 249:             case 56:
+[e :U 913 ]
 "250
-[; ;main.c: 250:         }
+[; ;main.c: 250:             case 57:
+[e :U 914 ]
+"251
+[; ;main.c: 251:             case 13:
+[e :U 915 ]
+"252
+[; ;main.c: 252:                 carater_recebido = 1;
+[e = _carater_recebido -> -> 1 `i `uc ]
+"253
+[; ;main.c: 253:                 menu = rxData;
+[e = _menu _rxData ]
+"254
+[; ;main.c: 254:                 break;
+[e $U 903  ]
+"255
+[; ;main.c: 255:             default:
+[e :U 916 ]
+"256
+[; ;main.c: 256:                 carater_recebido = 0;
+[e = _carater_recebido -> -> 0 `i `uc ]
+"257
+[; ;main.c: 257:                 menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
+"258
+[; ;main.c: 258:                 break;
+[e $U 903  ]
+"259
+[; ;main.c: 259:         }
 }
 [e $U 903  ]
 [e :U 904 ]
-[e [\ -> _rxData `i , $ -> -> 48 `ui `i 905
- , $ -> 13 `i 906
- 907 ]
+[e [\ -> _rxData `i , $ -> 48 `i 905
+ , $ -> 49 `i 906
+ , $ -> 50 `i 907
+ , $ -> 51 `i 908
+ , $ -> 52 `i 909
+ , $ -> 53 `i 910
+ , $ -> 54 `i 911
+ , $ -> 55 `i 912
+ , $ -> 56 `i 913
+ , $ -> 57 `i 914
+ , $ -> 13 `i 915
+ 916 ]
 [e :U 903 ]
-"252
-[; ;main.c: 252:         if (intro_valor == 1) {
-[e $ ! == -> _intro_valor `i -> 1 `i 908  ]
+"261
+[; ;main.c: 261:         if (intro_valor == 1) {
+[e $ ! == -> _intro_valor `i -> 1 `i 917  ]
 {
-"253
-[; ;main.c: 253:             menu = 1;
+"262
+[; ;main.c: 262:             menu = 1;
 [e = _menu -> -> 1 `i `uc ]
-"254
-[; ;main.c: 254:         }
+"263
+[; ;main.c: 263:         }
 }
-[e :U 908 ]
-"255
-[; ;main.c: 255:     }
+[e :U 917 ]
+"264
+[; ;main.c: 264:     }
 }
 [e :U 902 ]
-"256
-[; ;main.c: 256: }
+"265
+[; ;main.c: 265: }
 [e :UE 901 ]
 }
 [p f _printf 8388736 ]

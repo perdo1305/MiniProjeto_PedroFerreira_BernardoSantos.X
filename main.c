@@ -238,7 +238,16 @@ void CheckUSART() {
         EUSART1_Write(rxData);    // Mostra caracter recebido devolvendo-o ah EUSART
 
         switch (rxData) {
-            case '0' ... '9':
+            case 48:
+            case 49:
+            case 50:    
+            case 51:    
+            case 52:    
+            case 53:    
+            case 54:    
+            case 55:
+            case 56:
+            case 57:
             case 13:
                 carater_recebido = 1;  // Indica caracter aceite
                 menu = rxData;         // O caracter ser]a usado para o switch case
