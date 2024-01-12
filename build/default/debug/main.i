@@ -10627,7 +10627,7 @@ void INT0_MyInterruptHandler(void) {
 void ADC_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
     convertedValue = ADC_GetConversionResult();
-    nivel_agua = (uint32_t)convertedValue * 100 / 1023;
+    nivel_agua = (convertedValue * 100) / 1023.0;
 }
 
 
@@ -10793,25 +10793,12 @@ void CheckUSART() {
         rxData = EUSART1_Read();
         EUSART1_Write(rxData);
 
-        switch (rxData) {
-            case 48:
-            case 49:
-            case 50:
-            case 51:
-            case 52:
-            case 53:
-            case 54:
-            case 55:
-            case 56:
-            case 57:
-            case 13:
-                carater_recebido = 1;
-                menu = rxData;
-                break;
-            default:
-                carater_recebido = 0;
-                menu = '0';
-                break;
+        if ((rxData >= 48 && rxData <= 57) || rxData == 13) {
+            carater_recebido = 1;
+            menu = rxData;
+        } else {
+            carater_recebido = 0;
+            menu = '0';
         }
 
         if (intro_valor == 1) {

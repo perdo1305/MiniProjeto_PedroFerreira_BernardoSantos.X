@@ -71,7 +71,7 @@ void INT0_MyInterruptHandler(void) {
 void ADC_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
     convertedValue = ADC_GetConversionResult();
-    nivel_agua = (uint32_t)convertedValue * 100 / 1023;
+    nivel_agua = (convertedValue * 100) / 1023.0;
 }
 
 /**
@@ -237,25 +237,12 @@ void CheckUSART() {
         rxData = EUSART1_Read();  // Funcao que le caracter da EUSART
         EUSART1_Write(rxData);    // Mostra caracter recebido devolvendo-o ah EUSART
 
-        switch (rxData) {
-            case 48:
-            case 49:
-            case 50:    
-            case 51:    
-            case 52:    
-            case 53:    
-            case 54:    
-            case 55:
-            case 56:
-            case 57:
-            case 13:
-                carater_recebido = 1;  // Indica caracter aceite
-                menu = rxData;         // O caracter ser]a usado para o switch case
-                break;
-            default:
-                carater_recebido = 0;  // Caso contrario nao aceita o caracter e...
-                menu = '0';            // ...volta a mostrar o menu principal opcao 0
-                break;
+        if ((rxData >= 48 && rxData <= 57) || rxData == 13) {
+            carater_recebido = 1;  // Indica caracter aceite
+            menu = rxData;         // O caracter será usado para o switch case
+        } else {
+            carater_recebido = 0;  // Caso contrario nao aceita o caracter e...
+            menu = '0';            // ...volta a mostrar o menu principal opcao 0
         }
 
         if (intro_valor == 1) {  // Se estiver em modo de ler um valor para o programa e nao escolher um item do menu
