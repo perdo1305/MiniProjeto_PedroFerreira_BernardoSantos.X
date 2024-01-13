@@ -9651,9 +9651,9 @@ unsigned char __t3rd16on(void);
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 351 "mcc_generated_files/pin_manager.h"
+# 415 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 363 "mcc_generated_files/pin_manager.h"
+# 427 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -9835,6 +9835,31 @@ void SPI2_WriteByte(uint8_t byte);
 uint8_t SPI2_ReadByte(void);
 # 56 "mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/tmr6.h" 1
+# 104 "mcc_generated_files/tmr6.h"
+void TMR6_Initialize(void);
+# 133 "mcc_generated_files/tmr6.h"
+void TMR6_StartTimer(void);
+# 165 "mcc_generated_files/tmr6.h"
+void TMR6_StopTimer(void);
+# 200 "mcc_generated_files/tmr6.h"
+uint8_t TMR6_ReadTimer(void);
+# 239 "mcc_generated_files/tmr6.h"
+void TMR6_WriteTimer(uint8_t timerVal);
+# 291 "mcc_generated_files/tmr6.h"
+void TMR6_LoadPeriodRegister(uint8_t periodVal);
+# 309 "mcc_generated_files/tmr6.h"
+void TMR6_ISR(void);
+# 327 "mcc_generated_files/tmr6.h"
+ void TMR6_CallBack(void);
+# 344 "mcc_generated_files/tmr6.h"
+ void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
+# 362 "mcc_generated_files/tmr6.h"
+extern void (*TMR6_InterruptHandler)(void);
+# 380 "mcc_generated_files/tmr6.h"
+void TMR6_DefaultInterruptHandler(void);
+# 57 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/tmr1.h" 1
 # 94 "mcc_generated_files/tmr1.h"
 void TMR1_Initialize(void);
@@ -9860,7 +9885,7 @@ void TMR1_ISR(void);
 extern void (*TMR1_InterruptHandler)(void);
 # 400 "mcc_generated_files/tmr1.h"
 void TMR1_DefaultInterruptHandler(void);
-# 57 "mcc_generated_files/mcc.h" 2
+# 58 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/tmr0.h" 1
 # 100 "mcc_generated_files/tmr0.h"
@@ -9883,12 +9908,12 @@ void TMR0_ISR(void);
 extern void (*TMR0_InterruptHandler)(void);
 # 345 "mcc_generated_files/tmr0.h"
 void TMR0_DefaultInterruptHandler(void);
-# 58 "mcc_generated_files/mcc.h" 2
+# 59 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/ccp5.h" 1
 # 59 "mcc_generated_files/ccp5.h"
 void CCP5_Initialize(void);
-# 59 "mcc_generated_files/mcc.h" 2
+# 60 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/ext_int.h" 1
 # 250 "mcc_generated_files/ext_int.h"
@@ -9903,7 +9928,7 @@ void INT0_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*INT0_InterruptHandler)(void);
 # 367 "mcc_generated_files/ext_int.h"
 void INT0_DefaultInterruptHandler(void);
-# 60 "mcc_generated_files/mcc.h" 2
+# 61 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/adc.h" 1
 # 72 "mcc_generated_files/adc.h"
@@ -9947,7 +9972,7 @@ void ADC_ISR(void);
 extern void (*ADC_InterruptHandler)(void);
 # 386 "mcc_generated_files/adc.h"
 void ADC_DefaultInterruptHandler(void);
-# 61 "mcc_generated_files/mcc.h" 2
+# 62 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart1.h" 1
 # 76 "mcc_generated_files/eusart1.h"
@@ -10002,10 +10027,10 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 506 "mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 62 "mcc_generated_files/mcc.h" 2
-# 77 "mcc_generated_files/mcc.h"
+# 63 "mcc_generated_files/mcc.h" 2
+# 78 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 90 "mcc_generated_files/mcc.h"
+# 91 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 50 "mcc_generated_files/interrupt_manager.c" 2
 
@@ -10035,6 +10060,9 @@ void INTERRUPT_Initialize (void)
     IPR1bits.TMR1IP = 1;
 
 
+
+    IPR5bits.TMR6IP = 0;
+
 }
 
 void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManagerHigh (void)
@@ -10063,6 +10091,19 @@ void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManagerHigh (void)
     else if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
     {
         TMR1_ISR();
+    }
+    else
+    {
+
+    }
+}
+
+void __attribute__((picinterrupt(("low_priority")))) INTERRUPT_InterruptManagerLow (void)
+{
+
+    if(PIE5bits.TMR6IE == 1 && PIR5bits.TMR6IF == 1)
+    {
+        TMR6_ISR();
     }
     else
     {

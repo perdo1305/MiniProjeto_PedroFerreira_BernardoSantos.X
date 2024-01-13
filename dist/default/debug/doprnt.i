@@ -923,6 +923,38 @@ static int dtoa(FILE *fp, vfpf_sint_t d)
 
     return (int) pad(fp, &dbuf[i], w);
 }
+# 917 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+static int utoa(FILE *fp, vfpf_uint_t d)
+{
+    int i, p, w;
+
+
+
+
+
+
+
+    p = (0 <= prec) ? prec : 1;
+    w = width;
+
+
+    i = sizeof(dbuf) - 1;
+    dbuf[i] = '\0';
+    while (i && (d || (0 < p)
+
+
+
+    )) {
+        --i;
+        dbuf[i] = '0' + (d % 10);
+        --p;
+        --w;
+        d = d / 10;
+    }
+
+
+    return (int) pad(fp, &dbuf[i], w);
+}
 # 1047 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
 static int
 vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
@@ -946,15 +978,100 @@ vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
         prec = -1;
 # 1143 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
   cp = *fmt;
-# 1213 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+
+  c = *cp;
+  switch(c) {
+
+
+   case 'h':
+    cp++;
+
+
+
+
+
+
+    break;
+# 1187 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+   case 'u':
+
+
+   case 'i':
+   case 'd':
+# 1202 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+    c = 'i';
+    break;
+   default :
+    c = 0;
+    break;
+  }
+
+
+
+
+
   if (*cp == 'd' || *cp == 'i') {
-# 1256 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
-   convarg.sint = (vfpf_sint_t)(int)(*(int *)__va_arg(*(int **)ap, (int)0));
+
+   switch (c) {
+    case 'i':
+     convarg.sint = (vfpf_sint_t)(int)(*(int *)__va_arg(*(int **)ap, (int)0));
+     break;
+
+    case 'h':
+     convarg.sint = (vfpf_sint_t)(short)(*(int *)__va_arg(*(int **)ap, (int)0));
+     break;
+# 1254 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+   }
+
+
 
    *fmt = cp+1;
    return (int) dtoa(fp, convarg.sint);
   }
-# 1535 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+
+
+
+
+  if (0
+# 1276 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+    || *cp == 'u'
+
+    ) {
+
+   switch (c) {
+    case 'i':
+     convarg.uint = (vfpf_uint_t)(unsigned int)(*(unsigned int *)__va_arg(*(unsigned int **)ap, (unsigned int)0));
+     break;
+
+    case 'h':
+     convarg.uint = (vfpf_uint_t)(unsigned short)(*(unsigned int *)__va_arg(*(unsigned int **)ap, (unsigned int)0));
+     break;
+# 1319 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+   }
+
+
+
+   *fmt = cp+1;
+   switch (*cp) {
+
+
+
+
+
+    case 'u':
+     return (int) utoa(fp, convarg.uint);
+# 1342 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+   }
+  }
+# 1527 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+        if ((*fmt)[0] == '%') {
+            ++*fmt;
+            fputc((int)'%', fp);
+            return (int) 1;
+        }
+
+
+
         ++*fmt;
         return (int) 0;
     }

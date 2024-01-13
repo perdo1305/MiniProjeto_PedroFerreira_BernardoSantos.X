@@ -68,6 +68,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16882
 [; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 16882: extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
 [v _INTCON2bits `VS821 ~T0 @X0 0 e@4081 ]
+"6241
+[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 6241:     struct {
+[s S329 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S329 . TMR4IP TMR5IP TMR6IP ]
+"6246
+[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 6246:     struct {
+[s S330 :1 `uc 1 :1 `uc 1 ]
+[n S330 . CCH05 CCH15 ]
+"6240
+[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 6240: typedef union {
+[u S328 `S329 1 `S330 1 ]
+[n S328 . . . ]
+"6251
+[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 6251: extern volatile IPR5bits_t IPR5bits __attribute__((address(0xF7F)));
+[v _IPR5bits `VS328 ~T0 @X0 0 e@3967 ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
 "9421
@@ -128,17 +143,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 "272 mcc_generated_files/ext_int.h
 [; ;mcc_generated_files/ext_int.h: 272: void INT0_ISR(void);
 [v _INT0_ISR `(v ~T0 @X0 0 ef ]
-[v F6433 `(v ~T0 @X0 0 tf ]
+[v F6450 `(v ~T0 @X0 0 tf ]
 "95 mcc_generated_files/eusart1.h
 [; ;mcc_generated_files/eusart1.h: 95: extern void (*EUSART1_TxDefaultInterruptHandler)(void);
-[v _EUSART1_TxDefaultInterruptHandler `*F6433 ~T0 @X0 0 e ]
-[v F6435 `(v ~T0 @X0 0 tf ]
+[v _EUSART1_TxDefaultInterruptHandler `*F6450 ~T0 @X0 0 e ]
+[v F6452 `(v ~T0 @X0 0 tf ]
 "96
 [; ;mcc_generated_files/eusart1.h: 96: extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-[v _EUSART1_RxDefaultInterruptHandler `*F6435 ~T0 @X0 0 e ]
+[v _EUSART1_RxDefaultInterruptHandler `*F6452 ~T0 @X0 0 e ]
 "345 mcc_generated_files/tmr1.h
 [; ;mcc_generated_files/tmr1.h: 345: void TMR1_ISR(void);
 [v _TMR1_ISR `(v ~T0 @X0 0 ef ]
+[t T2 __interrupt low_priority ]
+"6177 C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h
+[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 6177:     struct {
+[s S325 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S325 . TMR4IE TMR5IE TMR6IE ]
+"6176
+[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 6176: typedef union {
+[u S324 `S325 1 ]
+[n S324 . . ]
+"6183
+[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 6183: extern volatile PIE5bits_t PIE5bits __attribute__((address(0xF7D)));
+[v _PIE5bits `VS324 ~T0 @X0 0 e@3965 ]
+"6209
+[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 6209:     struct {
+[s S327 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S327 . TMR4IF TMR5IF TMR6IF ]
+"6208
+[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 6208: typedef union {
+[u S326 `S327 1 ]
+[n S326 . . ]
+"6215
+[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 6215: extern volatile PIR5bits_t PIR5bits __attribute__((address(0xF7E)));
+[v _PIR5bits `VS326 ~T0 @X0 0 e@3966 ]
+"309 mcc_generated_files/tmr6.h
+[; ;mcc_generated_files/tmr6.h: 309: void TMR6_ISR(void);
+[v _TMR6_ISR `(v ~T0 @X0 0 ef ]
 "55 C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 55: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -924,110 +965,113 @@ Version 4.0 HI-TECH Software Intermediate Code
 "74
 [; ;mcc_generated_files/interrupt_manager.c: 74:     IPR1bits.TMR1IP = 1;
 [e = . . _IPR1bits 0 0 -> -> 1 `i `uc ]
-"77
-[; ;mcc_generated_files/interrupt_manager.c: 77: }
+"78
+[; ;mcc_generated_files/interrupt_manager.c: 78:     IPR5bits.TMR6IP = 0;
+[e = . . _IPR5bits 0 2 -> -> 0 `i `uc ]
+"80
+[; ;mcc_generated_files/interrupt_manager.c: 80: }
 [e :UE 859 ]
 }
 [v $root$_INTERRUPT_InterruptManagerHigh `(v ~T0 @X0 0 e ]
-"79
-[; ;mcc_generated_files/interrupt_manager.c: 79: void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManagerHigh (void)
+"82
+[; ;mcc_generated_files/interrupt_manager.c: 82: void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManagerHigh (void)
 [v _INTERRUPT_InterruptManagerHigh `(v ~T1 @X0 1 ef ]
-"80
-[; ;mcc_generated_files/interrupt_manager.c: 80: {
+"83
+[; ;mcc_generated_files/interrupt_manager.c: 83: {
 {
 [e :U _INTERRUPT_InterruptManagerHigh ]
 [f ]
-"82
-[; ;mcc_generated_files/interrupt_manager.c: 82:     if(PIE1bits.ADIE == 1 && PIR1bits.ADIF == 1)
-[e $ ! && == -> . . _PIE1bits 0 6 `i -> 1 `i == -> . . _PIR1bits 0 6 `i -> 1 `i 861  ]
-"83
-[; ;mcc_generated_files/interrupt_manager.c: 83:     {
-{
-"84
-[; ;mcc_generated_files/interrupt_manager.c: 84:         ADC_ISR();
-[e ( _ADC_ISR ..  ]
 "85
-[; ;mcc_generated_files/interrupt_manager.c: 85:     }
+[; ;mcc_generated_files/interrupt_manager.c: 85:     if(PIE1bits.ADIE == 1 && PIR1bits.ADIF == 1)
+[e $ ! && == -> . . _PIE1bits 0 6 `i -> 1 `i == -> . . _PIR1bits 0 6 `i -> 1 `i 861  ]
+"86
+[; ;mcc_generated_files/interrupt_manager.c: 86:     {
+{
+"87
+[; ;mcc_generated_files/interrupt_manager.c: 87:         ADC_ISR();
+[e ( _ADC_ISR ..  ]
+"88
+[; ;mcc_generated_files/interrupt_manager.c: 88:     }
 }
 [e $U 862  ]
-"86
-[; ;mcc_generated_files/interrupt_manager.c: 86:     else if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
+"89
+[; ;mcc_generated_files/interrupt_manager.c: 89:     else if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
 [e :U 861 ]
 [e $ ! && == -> . . _INTCONbits 0 5 `i -> 1 `i == -> . . _INTCONbits 0 2 `i -> 1 `i 863  ]
-"87
-[; ;mcc_generated_files/interrupt_manager.c: 87:     {
+"90
+[; ;mcc_generated_files/interrupt_manager.c: 90:     {
 {
-"88
-[; ;mcc_generated_files/interrupt_manager.c: 88:         TMR0_ISR();
+"91
+[; ;mcc_generated_files/interrupt_manager.c: 91:         TMR0_ISR();
 [e ( _TMR0_ISR ..  ]
-"89
-[; ;mcc_generated_files/interrupt_manager.c: 89:     }
+"92
+[; ;mcc_generated_files/interrupt_manager.c: 92:     }
 }
 [e $U 864  ]
-"90
-[; ;mcc_generated_files/interrupt_manager.c: 90:     else if(INTCONbits.INT0IE == 1 && INTCONbits.INT0IF == 1)
+"93
+[; ;mcc_generated_files/interrupt_manager.c: 93:     else if(INTCONbits.INT0IE == 1 && INTCONbits.INT0IF == 1)
 [e :U 863 ]
 [e $ ! && == -> . . _INTCONbits 0 4 `i -> 1 `i == -> . . _INTCONbits 0 1 `i -> 1 `i 865  ]
-"91
-[; ;mcc_generated_files/interrupt_manager.c: 91:     {
+"94
+[; ;mcc_generated_files/interrupt_manager.c: 94:     {
 {
-"92
-[; ;mcc_generated_files/interrupt_manager.c: 92:         INT0_ISR();
+"95
+[; ;mcc_generated_files/interrupt_manager.c: 95:         INT0_ISR();
 [e ( _INT0_ISR ..  ]
-"93
-[; ;mcc_generated_files/interrupt_manager.c: 93:     }
+"96
+[; ;mcc_generated_files/interrupt_manager.c: 96:     }
 }
 [e $U 866  ]
-"94
-[; ;mcc_generated_files/interrupt_manager.c: 94:     else if(PIE1bits.TX1IE == 1 && PIR1bits.TX1IF == 1)
+"97
+[; ;mcc_generated_files/interrupt_manager.c: 97:     else if(PIE1bits.TX1IE == 1 && PIR1bits.TX1IF == 1)
 [e :U 865 ]
 [e $ ! && == -> . . _PIE1bits 0 4 `i -> 1 `i == -> . . _PIR1bits 0 4 `i -> 1 `i 867  ]
-"95
-[; ;mcc_generated_files/interrupt_manager.c: 95:     {
+"98
+[; ;mcc_generated_files/interrupt_manager.c: 98:     {
 {
-"96
-[; ;mcc_generated_files/interrupt_manager.c: 96:         EUSART1_TxDefaultInterruptHandler();
+"99
+[; ;mcc_generated_files/interrupt_manager.c: 99:         EUSART1_TxDefaultInterruptHandler();
 [e ( *U _EUSART1_TxDefaultInterruptHandler ..  ]
-"97
-[; ;mcc_generated_files/interrupt_manager.c: 97:     }
+"100
+[; ;mcc_generated_files/interrupt_manager.c: 100:     }
 }
 [e $U 868  ]
-"98
-[; ;mcc_generated_files/interrupt_manager.c: 98:     else if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
+"101
+[; ;mcc_generated_files/interrupt_manager.c: 101:     else if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
 [e :U 867 ]
 [e $ ! && == -> . . _PIE1bits 0 5 `i -> 1 `i == -> . . _PIR1bits 0 5 `i -> 1 `i 869  ]
-"99
-[; ;mcc_generated_files/interrupt_manager.c: 99:     {
+"102
+[; ;mcc_generated_files/interrupt_manager.c: 102:     {
 {
-"100
-[; ;mcc_generated_files/interrupt_manager.c: 100:         EUSART1_RxDefaultInterruptHandler();
+"103
+[; ;mcc_generated_files/interrupt_manager.c: 103:         EUSART1_RxDefaultInterruptHandler();
 [e ( *U _EUSART1_RxDefaultInterruptHandler ..  ]
-"101
-[; ;mcc_generated_files/interrupt_manager.c: 101:     }
+"104
+[; ;mcc_generated_files/interrupt_manager.c: 104:     }
 }
 [e $U 870  ]
-"102
-[; ;mcc_generated_files/interrupt_manager.c: 102:     else if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
+"105
+[; ;mcc_generated_files/interrupt_manager.c: 105:     else if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
 [e :U 869 ]
 [e $ ! && == -> . . _PIE1bits 0 0 `i -> 1 `i == -> . . _PIR1bits 0 0 `i -> 1 `i 871  ]
-"103
-[; ;mcc_generated_files/interrupt_manager.c: 103:     {
+"106
+[; ;mcc_generated_files/interrupt_manager.c: 106:     {
 {
-"104
-[; ;mcc_generated_files/interrupt_manager.c: 104:         TMR1_ISR();
+"107
+[; ;mcc_generated_files/interrupt_manager.c: 107:         TMR1_ISR();
 [e ( _TMR1_ISR ..  ]
-"105
-[; ;mcc_generated_files/interrupt_manager.c: 105:     }
+"108
+[; ;mcc_generated_files/interrupt_manager.c: 108:     }
 }
 [e $U 872  ]
-"106
-[; ;mcc_generated_files/interrupt_manager.c: 106:     else
-[e :U 871 ]
-"107
-[; ;mcc_generated_files/interrupt_manager.c: 107:     {
-{
 "109
-[; ;mcc_generated_files/interrupt_manager.c: 109:     }
+[; ;mcc_generated_files/interrupt_manager.c: 109:     else
+[e :U 871 ]
+"110
+[; ;mcc_generated_files/interrupt_manager.c: 110:     {
+{
+"112
+[; ;mcc_generated_files/interrupt_manager.c: 112:     }
 }
 [e :U 872 ]
 [e :U 870 ]
@@ -1035,7 +1079,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 866 ]
 [e :U 864 ]
 [e :U 862 ]
-"110
-[; ;mcc_generated_files/interrupt_manager.c: 110: }
+"113
+[; ;mcc_generated_files/interrupt_manager.c: 113: }
 [e :UE 860 ]
+}
+[v $root$_INTERRUPT_InterruptManagerLow `(v ~T0 @X0 0 e ]
+"115
+[; ;mcc_generated_files/interrupt_manager.c: 115: void __attribute__((picinterrupt(("low_priority")))) INTERRUPT_InterruptManagerLow (void)
+[v _INTERRUPT_InterruptManagerLow `(v ~T2 @X0 1 ef ]
+"116
+[; ;mcc_generated_files/interrupt_manager.c: 116: {
+{
+[e :U _INTERRUPT_InterruptManagerLow ]
+[f ]
+"118
+[; ;mcc_generated_files/interrupt_manager.c: 118:     if(PIE5bits.TMR6IE == 1 && PIR5bits.TMR6IF == 1)
+[e $ ! && == -> . . _PIE5bits 0 2 `i -> 1 `i == -> . . _PIR5bits 0 2 `i -> 1 `i 874  ]
+"119
+[; ;mcc_generated_files/interrupt_manager.c: 119:     {
+{
+"120
+[; ;mcc_generated_files/interrupt_manager.c: 120:         TMR6_ISR();
+[e ( _TMR6_ISR ..  ]
+"121
+[; ;mcc_generated_files/interrupt_manager.c: 121:     }
+}
+[e $U 875  ]
+"122
+[; ;mcc_generated_files/interrupt_manager.c: 122:     else
+[e :U 874 ]
+"123
+[; ;mcc_generated_files/interrupt_manager.c: 123:     {
+{
+"125
+[; ;mcc_generated_files/interrupt_manager.c: 125:     }
+}
+[e :U 875 ]
+"126
+[; ;mcc_generated_files/interrupt_manager.c: 126: }
+[e :UE 873 ]
 }
