@@ -10253,9 +10253,9 @@ unsigned char __t3rd16on(void);
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 415 "./mcc_generated_files/pin_manager.h"
+# 429 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 427 "./mcc_generated_files/pin_manager.h"
+# 441 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -10491,6 +10491,29 @@ extern void (*TMR1_InterruptHandler)(void);
 void TMR1_DefaultInterruptHandler(void);
 # 58 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/tmr2.h" 1
+# 103 "./mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "./mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "./mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "./mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "./mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "./mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 308 "./mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 326 "./mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "./mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 362 "./mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+# 59 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/tmr0.h" 1
 # 100 "./mcc_generated_files/tmr0.h"
 void TMR0_Initialize(void);
@@ -10512,11 +10535,6 @@ void TMR0_ISR(void);
 extern void (*TMR0_InterruptHandler)(void);
 # 345 "./mcc_generated_files/tmr0.h"
 void TMR0_DefaultInterruptHandler(void);
-# 59 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/ccp5.h" 1
-# 59 "./mcc_generated_files/ccp5.h"
-void CCP5_Initialize(void);
 # 60 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/ext_int.h" 1
@@ -10647,12 +10665,14 @@ char string[50] = "";
 
 volatile _Bool SistemaControloLigado = 0;
 volatile _Bool BombaLigada = 0;
+volatile _Bool BuzzerLigado = 0;
+volatile _Bool UpdateLCD = 1;
 
 volatile uint16_t nivel_referencia = 0;
 volatile uint16_t nivel_referencia_percentagem = 0;
 volatile uint16_t nivel_real = 0;
 volatile uint16_t nivel_real_percentagem = 0;
-volatile uint16_t erro_nivel = 0;
+volatile int erro_nivel = 0;
 
 uint8_t rxData;
 uint8_t menu = '0';
@@ -10695,8 +10715,20 @@ void TMR1_MyInterruptHandler(void) {
     }
 }
 
+void TMR2_MyInterruptHandler(void) {
+    erro_nivel = nivel_referencia_percentagem - nivel_real_percentagem;
+    if (erro_nivel > 0) {
+        BombaLigada = 1;
+        do { LATBbits.LATB7 = 1; } while(0);
+    } else {
+        BombaLigada = 0;
+        do { LATBbits.LATB7 = 0; } while(0);
+    }
+}
+
 void TMR6_MyInterruptHandler(void) {
-    do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0);
+    do { LATBbits.LATB6 = ~LATBbits.LATB6; } while(0);
+    UpdateLCD = 1;
 }
 
 
@@ -10728,6 +10760,9 @@ void main(void) {
     TMR1_SetInterruptHandler(TMR1_MyInterruptHandler);
     TMR1_StartTimer();
 
+    TMR2_SetInterruptHandler(TMR2_MyInterruptHandler);
+    TMR2_StartTimer();
+
     TMR6_SetInterruptHandler(TMR6_MyInterruptHandler);
     TMR6_StartTimer();
 
@@ -10748,6 +10783,7 @@ void main(void) {
 
         if (BombaLigada) {
             do { LATBbits.LATB5 = 1; } while(0);
+
         } else {
             do { LATBbits.LATB5 = 0; } while(0);
         }
@@ -10756,15 +10792,13 @@ void main(void) {
             ShowMenuInTerminal();
             carater_recebido = 0;
         }
-        CheckUSART();
 
-        static int i=0;
-        if(i==3){
+        if (UpdateLCD) {
             Draw_Interface_Screen();
-            i=0;
-        }else{
-            i++;
+            UpdateLCD = 0;
         }
+
+        CheckUSART();
     }
 }
 
@@ -10806,8 +10840,8 @@ void ShowMenuInTerminal() {
         case '3':
             EUSART1_Write(12);
 
-            printf("\r\nPercentagem do nivel de agua: %hu", nivel_referencia_percentagem);
-            printf("\r\nbits: %d", nivel_referencia);
+            printf("\r\nPercentagem do nivel de agua: %hu", nivel_real_percentagem);
+            printf("\r\nbits: %d", nivel_real);
             printf("\r\n\nPrima 0 para voltar ao Menu Principal");
             printf("\r\nOpcao: ");
             menu = '0';
@@ -10860,15 +10894,16 @@ int CheckSensores() {
     getValueFuncs[5] = PORTCbits.RC5;
     getValueFuncs[6] = PORTCbits.RC4;
     getValueFuncs[7] = PORTCbits.RC3;
-    getValueFuncs[8] = PORTCbits.RC2;
+    getValueFuncs[8] = PORTCbits.RC0;
     getValueFuncs[9] = PORTCbits.RC1;
-    int i;
-    for (i = 0; i < 10; i++) {
+
+    int nivel_agua = 0;
+    for (int i = 0; i < 10; i++) {
         if (getValueFuncs[i] == 0) {
-            return i + 1;
+            nivel_agua++;
         }
     }
-    return 0;
+    return nivel_agua;
 }
 
 void Draw_Welcome_Screen() {
@@ -10894,7 +10929,6 @@ void Draw_Welcome_Screen() {
 }
 
 void Draw_Interface_Screen() {
-
 
     lcd_fill_rect(275, 10, 295, 190, 0xFFFF);
 

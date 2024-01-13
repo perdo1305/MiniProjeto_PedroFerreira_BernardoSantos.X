@@ -55,12 +55,14 @@ char string[50] = "";
 
 volatile bool SistemaControloLigado = false;
 volatile bool BombaLigada = false;
+volatile bool BuzzerLigado = false;
+volatile bool UpdateLCD = true;
 
 volatile uint16_t nivel_referencia = 0;
 volatile uint16_t nivel_referencia_percentagem = 0;
 volatile uint16_t nivel_real = 0;
 volatile uint16_t nivel_real_percentagem = 0;
-volatile uint16_t erro_nivel = 0;
+volatile int erro_nivel = 0;
 
 uint8_t rxData;
 uint8_t menu = '0';
@@ -103,8 +105,20 @@ void TMR1_MyInterruptHandler(void) {
     }
 }
 
+void TMR2_MyInterruptHandler(void) {
+    erro_nivel = nivel_referencia_percentagem - nivel_real_percentagem;
+    if (erro_nivel > 0) {
+        BombaLigada = true;
+        IO_RB7_Motor_Control_SetHigh();
+    } else {
+        BombaLigada = false;
+        IO_RB7_Motor_Control_SetLow();
+    }
+}
+
 void TMR6_MyInterruptHandler(void) {
-    IO_RC0_Led_HeartBeat_Toggle(); //heartbeat LED
+    IO_RB6_Led_HeartBeat_Toggle();
+    UpdateLCD = true;
 }
 
 //________________________________________________
@@ -136,6 +150,9 @@ void main(void) {
     TMR1_SetInterruptHandler(TMR1_MyInterruptHandler);
     TMR1_StartTimer();
 
+    TMR2_SetInterruptHandler(TMR2_MyInterruptHandler);
+    TMR2_StartTimer();
+
     TMR6_SetInterruptHandler(TMR6_MyInterruptHandler);
     TMR6_StartTimer();
 
@@ -156,6 +173,7 @@ void main(void) {
         // se a bomba estiver ligada acende o led verde
         if (BombaLigada) {
             IO_RB5_LED_GREEN_SetHigh();
+            
         } else {
             IO_RB5_LED_GREEN_SetLow();
         }
@@ -164,15 +182,13 @@ void main(void) {
             ShowMenuInTerminal();
             carater_recebido = 0;
         }
-        CheckUSART();
-        //fazer so a cada 3 loops
-        static int i=0;
-        if(i==3){
+
+        if (UpdateLCD) {
             Draw_Interface_Screen();
-            i=0;
-        }else{
-            i++;
+            UpdateLCD = false;
         }
+
+        CheckUSART();
     }
 }
 /**
@@ -268,15 +284,16 @@ int CheckSensores() {
     getValueFuncs[5] = IO_RC5_N06_GetValue();  // sensor 6 PORTCbits.RC5
     getValueFuncs[6] = IO_RC4_N07_GetValue();  // sensor 7 PORTCbits.RC4
     getValueFuncs[7] = IO_RC3_N08_GetValue();  // sensor 8 PORTCbits.RC3
-    getValueFuncs[8] = IO_RC2_N09_GetValue();  // sensor 9 PORTCbits.RC2
+    getValueFuncs[8] = IO_RC0_N09_GetValue();  // sensor 9 PORTCbits.RC0
     getValueFuncs[9] = IO_RC1_N10_GetValue();  // sensor 10 PORTCbits.RC1
-    int i;
-    for (i = 0; i < 10; i++) {
+    //saber o nivel de agua sabendo que o sensor esta em contacto com a agua quando o valor e 0
+    int nivel_agua = 0;
+    for (int i = 0; i < 10; i++) {
         if (getValueFuncs[i] == 0) {
-            return i + 1;
+            nivel_agua++;
         }
     }
-    return 0;
+    return nivel_agua;
 }
 
 void Draw_Welcome_Screen() {
@@ -302,7 +319,6 @@ void Draw_Welcome_Screen() {
 }
 
 void Draw_Interface_Screen() {
-
     // barra branca de fundo
     lcd_fill_rect(275, 10, 295, 190, WHITE);
 

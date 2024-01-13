@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/ccp5.c"
+# 1 "mcc_generated_files/tmr2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/ccp5.c" 2
-# 47 "mcc_generated_files/ccp5.c"
+# 1 "mcc_generated_files/tmr2.c" 2
+# 51 "mcc_generated_files/tmr2.c"
 # 1 "C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9638,22 +9638,118 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\\pic\\include\\xc.h" 2 3
-# 47 "mcc_generated_files/ccp5.c" 2
+# 51 "mcc_generated_files/tmr2.c" 2
 
-# 1 "mcc_generated_files/ccp5.h" 1
-# 59 "mcc_generated_files/ccp5.h"
-void CCP5_Initialize(void);
-# 48 "mcc_generated_files/ccp5.c" 2
+# 1 "mcc_generated_files/tmr2.h" 1
+# 55 "mcc_generated_files/tmr2.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdbool.h" 1 3
+# 55 "mcc_generated_files/tmr2.h" 2
+# 103 "mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 308 "mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 326 "mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 362 "mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+# 52 "mcc_generated_files/tmr2.c" 2
 
-void CCP5_Initialize(void)
+
+
+
+
+
+void (*TMR2_InterruptHandler)(void);
+
+
+
+
+
+void TMR2_Initialize(void)
 {
 
 
- CCP5CON = 0x00;
+
+    PR2 = 0xC2;
 
 
- CCPR5L = 0x00;
+    TMR2 = 0x00;
 
 
- CCPR5H = 0x00;
+    PIR1bits.TMR2IF = 0;
+
+
+    PIE1bits.TMR2IE = 1;
+
+
+    TMR2_SetInterruptHandler(TMR2_DefaultInterruptHandler);
+
+
+    T2CON = 0x7E;
+}
+
+void TMR2_StartTimer(void)
+{
+
+    T2CONbits.TMR2ON = 1;
+}
+
+void TMR2_StopTimer(void)
+{
+
+    T2CONbits.TMR2ON = 0;
+}
+
+uint8_t TMR2_ReadTimer(void)
+{
+    uint8_t readVal;
+
+    readVal = TMR2;
+
+    return readVal;
+}
+
+void TMR2_WriteTimer(uint8_t timerVal)
+{
+
+    TMR2 = timerVal;
+}
+
+void TMR2_LoadPeriodRegister(uint8_t periodVal)
+{
+   PR2 = periodVal;
+}
+
+void TMR2_ISR(void)
+{
+
+
+    PIR1bits.TMR2IF = 0;
+
+    if(TMR2_InterruptHandler)
+    {
+        TMR2_InterruptHandler();
+    }
+}
+
+
+void TMR2_SetInterruptHandler(void (* InterruptHandler)(void)){
+    TMR2_InterruptHandler = InterruptHandler;
+}
+
+void TMR2_DefaultInterruptHandler(void){
+
+
 }

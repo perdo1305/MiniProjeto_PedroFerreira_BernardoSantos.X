@@ -9651,9 +9651,9 @@ unsigned char __t3rd16on(void);
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 415 "mcc_generated_files/pin_manager.h"
+# 429 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 427 "mcc_generated_files/pin_manager.h"
+# 441 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -9887,6 +9887,29 @@ extern void (*TMR1_InterruptHandler)(void);
 void TMR1_DefaultInterruptHandler(void);
 # 58 "mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/tmr2.h" 1
+# 103 "mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 308 "mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 326 "mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 362 "mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+# 59 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/tmr0.h" 1
 # 100 "mcc_generated_files/tmr0.h"
 void TMR0_Initialize(void);
@@ -9908,11 +9931,6 @@ void TMR0_ISR(void);
 extern void (*TMR0_InterruptHandler)(void);
 # 345 "mcc_generated_files/tmr0.h"
 void TMR0_DefaultInterruptHandler(void);
-# 59 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/ccp5.h" 1
-# 59 "mcc_generated_files/ccp5.h"
-void CCP5_Initialize(void);
 # 60 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/ext_int.h" 1
@@ -10057,6 +10075,9 @@ void INTERRUPT_Initialize (void)
     IPR1bits.RC1IP = 1;
 
 
+    IPR1bits.TMR2IP = 1;
+
+
     IPR1bits.TMR1IP = 1;
 
 
@@ -10087,6 +10108,10 @@ void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManagerHigh (void)
     else if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
     {
         EUSART1_RxDefaultInterruptHandler();
+    }
+    else if(PIE1bits.TMR2IE == 1 && PIR1bits.TMR2IF == 1)
+    {
+        TMR2_ISR();
     }
     else if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
     {

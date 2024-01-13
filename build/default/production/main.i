@@ -10253,9 +10253,9 @@ unsigned char __t3rd16on(void);
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 415 "./mcc_generated_files/pin_manager.h"
+# 429 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 427 "./mcc_generated_files/pin_manager.h"
+# 441 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -10491,6 +10491,29 @@ extern void (*TMR1_InterruptHandler)(void);
 void TMR1_DefaultInterruptHandler(void);
 # 58 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/tmr2.h" 1
+# 103 "./mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 132 "./mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 164 "./mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 199 "./mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 238 "./mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 290 "./mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 308 "./mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 326 "./mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 344 "./mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 362 "./mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+# 59 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/tmr0.h" 1
 # 100 "./mcc_generated_files/tmr0.h"
 void TMR0_Initialize(void);
@@ -10512,11 +10535,6 @@ void TMR0_ISR(void);
 extern void (*TMR0_InterruptHandler)(void);
 # 345 "./mcc_generated_files/tmr0.h"
 void TMR0_DefaultInterruptHandler(void);
-# 59 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/ccp5.h" 1
-# 59 "./mcc_generated_files/ccp5.h"
-void CCP5_Initialize(void);
 # 60 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/ext_int.h" 1
@@ -10647,6 +10665,8 @@ char string[50] = "";
 
 volatile _Bool SistemaControloLigado = 0;
 volatile _Bool BombaLigada = 0;
+volatile _Bool BuzzerLigado = 0;
+volatile _Bool UpdateLCD = 1;
 
 volatile uint16_t nivel_referencia = 0;
 volatile uint16_t nivel_referencia_percentagem = 0;
@@ -10674,8 +10694,8 @@ void INT0_MyInterruptHandler(void) {
 
 void ADC_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
-    convertedValue = ADC_GetConversionResult();
-    nivel_real = (float)(convertedValue * 100) / 1023.0;
+    nivel_referencia = ADC_GetConversionResult();
+    nivel_referencia_percentagem = (float)(nivel_referencia * 100.0) / 1023.0;
 }
 
 
@@ -10684,6 +10704,8 @@ void ADC_MyInterruptHandler(void) {
 void TMR0_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
     ADC_StartConversion();
+    nivel_real = (uint16_t)CheckSensores();
+    nivel_real_percentagem = (nivel_real * 100) / 10;
 }
 
 void TMR1_MyInterruptHandler(void) {
@@ -10693,8 +10715,17 @@ void TMR1_MyInterruptHandler(void) {
     }
 }
 
+void TMR2_MyInterruptHandler(void){
+    erro_nivel = nivel_referencia - nivel_real;
+    if (erro_nivel > 0) {
+        BombaLigada = 1;
+    } else {
+        BombaLigada = 0;
+    }
+}
+
 void TMR6_MyInterruptHandler(void) {
-    do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0);
+    do { LATBbits.LATB6 = ~LATBbits.LATB6; } while(0);
 }
 
 
@@ -10726,15 +10757,20 @@ void main(void) {
     TMR1_SetInterruptHandler(TMR1_MyInterruptHandler);
     TMR1_StartTimer();
 
+    TMR2_SetInterruptHandler(TMR2_MyInterruptHandler);
+    TMR2_StartTimer();
+
+
     TMR6_SetInterruptHandler(TMR6_MyInterruptHandler);
     TMR6_StartTimer();
+
+
 
     printf("SETUP COMPLETED SUCCESSFULLY\r\n");
     SistemaControloLigado = 1;
 
     while (1) {
 
-        Draw_Interface_Screen();
         if (!SistemaControloLigado) {
             TMR1_StopTimer();
             do { LATBbits.LATB4 = 0; } while(0);
@@ -10755,9 +10791,13 @@ void main(void) {
             ShowMenuInTerminal();
             carater_recebido = 0;
         }
+
+        if (UpdateLCD) {
+            Draw_Interface_Screen();
+            UpdateLCD = 0;
+        }
+
         CheckUSART();
-        nivel_referencia = (uint16_t)CheckSensores();
-        nivel_referencia_percentagem = (nivel_referencia * 100) / 10;
     }
 }
 
@@ -10799,8 +10839,8 @@ void ShowMenuInTerminal() {
         case '3':
             EUSART1_Write(12);
 
-            printf("\r\nPercentagem do nivel de agua: %hu", nivel_real);
-            printf("\r\nbits: %d", convertedValue);
+            printf("\r\nPercentagem do nivel de agua: %hu", nivel_real_percentagem);
+            printf("\r\nbits: %d", nivel_real);
             printf("\r\n\nPrima 0 para voltar ao Menu Principal");
             printf("\r\nOpcao: ");
             menu = '0';
@@ -10853,7 +10893,7 @@ int CheckSensores() {
     getValueFuncs[5] = PORTCbits.RC5;
     getValueFuncs[6] = PORTCbits.RC4;
     getValueFuncs[7] = PORTCbits.RC3;
-    getValueFuncs[8] = PORTCbits.RC2;
+    getValueFuncs[8] = PORTCbits.RC0;
     getValueFuncs[9] = PORTCbits.RC1;
     int i;
     for (i = 0; i < 10; i++) {
@@ -10872,19 +10912,24 @@ void Draw_Welcome_Screen() {
     snprintf(string, sizeof(string), "2023 / 2024");
     lcd_draw_string(120, 165, string, 0xFFFF, 0x0000);
     snprintf(string, sizeof(string), "SISTEMA PARA CONTROLO");
-    lcd_draw_string(20, 140, string, 0xF800, 0x0000);
+    lcd_draw_string(20, 140, string, 0xFD20, 0x0000);
     snprintf(string, sizeof(string), "DO NIVEL DE AGUA");
-    lcd_draw_string(40, 120, string, 0xF800, 0x0000);
+    lcd_draw_string(20, 120, string, 0xFD20, 0x0000);
     snprintf(string, sizeof(string), "Autores: Pedro Ferreira");
     lcd_draw_string(20, 95, string, 0xFFE0, 0x0000);
     snprintf(string, sizeof(string), "Bernardo Santos");
     lcd_draw_string(90, 75, string, 0xFFE0, 0x0000);
+
+    snprintf(string, sizeof(string), "Nivel de agua:");
+    lcd_draw_string(20, 20, string, 0xFFFF, 0x0000);
+    snprintf(string, sizeof(string), "Nivel de referencia:");
+    lcd_draw_string(20, 40, string, 0xFFFF, 0x0000);
 }
 
 void Draw_Interface_Screen() {
 
 
-    lcd_fill_rect(270, 10, 300, 190, 0xFFFF);
+    lcd_fill_rect(275, 10, 295, 190, 0xFFFF);
 
 
     uint16_t barra_agua = (nivel_real_percentagem * 180) / 100;
@@ -10893,7 +10938,7 @@ void Draw_Interface_Screen() {
     } else if (barra_agua <= 0) {
         barra_agua = 11;
     }
-    lcd_fill_rect(271, 11, 299, barra_agua, 0x001F);
+    lcd_fill_rect(276, 11, 294, barra_agua, 0x001F);
 
 
     uint16_t barra_referencia = (nivel_referencia_percentagem * 180) / 100;
@@ -10901,13 +10946,13 @@ void Draw_Interface_Screen() {
     if (barra_referencia >= 180) {
         barra_referencia = 180;
     } else if (barra_referencia <= 0) {
-        barra_referencia = 10;
+        barra_referencia = 11;
     }
-    lcd_fill_rect(271, barra_referencia, 299, barra_referencia + 2, 0xF800);
+    lcd_fill_rect(276, barra_referencia, 294, barra_referencia + 2, 0xF800);
 
 
-    snprintf(string, sizeof(string), "Nivel de agua: %d%%", nivel_real_percentagem);
-    lcd_draw_string(20, 20, string, 0xFFFF, 0x0000);
-    snprintf(string, sizeof(string), "Nivel de referencia: %d%%", nivel_referencia_percentagem);
-    lcd_draw_string(20, 40, string, 0xFFFF, 0x0000);
+    snprintf(string, sizeof(string), "%d%%", nivel_referencia_percentagem);
+    lcd_draw_string(180, 40, string, 0xFFFF, 0x0000);
+    snprintf(string, sizeof(string), "%d%%", nivel_real_percentagem);
+    lcd_draw_string(140, 20, string, 0xFFFF, 0x0000);
 }

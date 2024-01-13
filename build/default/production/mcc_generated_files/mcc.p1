@@ -5,8 +5,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "63 mcc_generated_files/spi2.h
 [; ;mcc_generated_files/spi2.h: 63: void SPI2_Initialize(void);
 [v _SPI2_Initialize `(v ~T0 @X0 0 ef ]
-"415 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 415: void PIN_MANAGER_Initialize (void);
+"429 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 429: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
 "91 mcc_generated_files/mcc.h
 [; ;mcc_generated_files/mcc.h: 91: void OSCILLATOR_Initialize(void);
@@ -14,18 +14,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "104 mcc_generated_files/tmr6.h
 [; ;mcc_generated_files/tmr6.h: 104: void TMR6_Initialize(void);
 [v _TMR6_Initialize `(v ~T0 @X0 0 ef ]
-"59 mcc_generated_files/ccp5.h
-[; ;mcc_generated_files/ccp5.h: 59: void CCP5_Initialize(void);
-[v _CCP5_Initialize `(v ~T0 @X0 0 ef ]
 "136 mcc_generated_files/adc.h
 [; ;mcc_generated_files/adc.h: 136: void ADC_Initialize(void);
 [v _ADC_Initialize `(v ~T0 @X0 0 ef ]
-"94 mcc_generated_files/tmr1.h
-[; ;mcc_generated_files/tmr1.h: 94: void TMR1_Initialize(void);
-[v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
+"103 mcc_generated_files/tmr2.h
+[; ;mcc_generated_files/tmr2.h: 103: void TMR2_Initialize(void);
+[v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
 "250 mcc_generated_files/ext_int.h
 [; ;mcc_generated_files/ext_int.h: 250: void EXT_INT_Initialize(void);
 [v _EXT_INT_Initialize `(v ~T0 @X0 0 ef ]
+"94 mcc_generated_files/tmr1.h
+[; ;mcc_generated_files/tmr1.h: 94: void TMR1_Initialize(void);
+[v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
 "100 mcc_generated_files/tmr0.h
 [; ;mcc_generated_files/tmr0.h: 100: void TMR0_Initialize(void);
 [v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
@@ -824,17 +824,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mcc.c: 57:     TMR6_Initialize();
 [e ( _TMR6_Initialize ..  ]
 "58
-[; ;mcc_generated_files/mcc.c: 58:     CCP5_Initialize();
-[e ( _CCP5_Initialize ..  ]
-"59
-[; ;mcc_generated_files/mcc.c: 59:     ADC_Initialize();
+[; ;mcc_generated_files/mcc.c: 58:     ADC_Initialize();
 [e ( _ADC_Initialize ..  ]
+"59
+[; ;mcc_generated_files/mcc.c: 59:     TMR2_Initialize();
+[e ( _TMR2_Initialize ..  ]
 "60
-[; ;mcc_generated_files/mcc.c: 60:     TMR1_Initialize();
-[e ( _TMR1_Initialize ..  ]
-"61
-[; ;mcc_generated_files/mcc.c: 61:     EXT_INT_Initialize();
+[; ;mcc_generated_files/mcc.c: 60:     EXT_INT_Initialize();
 [e ( _EXT_INT_Initialize ..  ]
+"61
+[; ;mcc_generated_files/mcc.c: 61:     TMR1_Initialize();
+[e ( _TMR1_Initialize ..  ]
 "62
 [; ;mcc_generated_files/mcc.c: 62:     TMR0_Initialize();
 [e ( _TMR0_Initialize ..  ]

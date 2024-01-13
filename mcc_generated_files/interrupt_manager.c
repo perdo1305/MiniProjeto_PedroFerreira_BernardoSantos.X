@@ -71,6 +71,9 @@ void  INTERRUPT_Initialize (void)
     IPR1bits.RC1IP = 1;
 
     // TMRI - high priority
+    IPR1bits.TMR2IP = 1;
+
+    // TMRI - high priority
     IPR1bits.TMR1IP = 1;
 
 
@@ -101,6 +104,10 @@ void __interrupt() INTERRUPT_InterruptManagerHigh (void)
     else if(PIE1bits.RC1IE == 1 && PIR1bits.RC1IF == 1)
     {
         EUSART1_RxDefaultInterruptHandler();
+    }
+    else if(PIE1bits.TMR2IE == 1 && PIR1bits.TMR2IF == 1)
+    {
+        TMR2_ISR();
     }
     else if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
     {

@@ -18,21 +18,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16959
 [; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 16959: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
 [v _INTCONbits `VS825 ~T0 @X0 0 e@4082 ]
-"84 main.c
-[; ;main.c: 84:     ADC_SelectChannel(channel_AN0);
-[c E6488 0 29 30 31 .. ]
-[n E6488 . channel_AN0 channel_CTMU channel_DAC channel_FVRBuf2  ]
+"86 main.c
+[; ;main.c: 86:     ADC_SelectChannel(channel_AN0);
+[c E6503 0 29 30 31 .. ]
+[n E6503 . channel_AN0 channel_CTMU channel_DAC channel_FVRBuf2  ]
 "166 ./mcc_generated_files/adc.h
 [; ;./mcc_generated_files/adc.h: 166: void ADC_SelectChannel(adc_channel_t channel);
-[v _ADC_SelectChannel `(v ~T0 @X0 0 ef1`E6488 ]
+[v _ADC_SelectChannel `(v ~T0 @X0 0 ef1`E6503 ]
 "258
 [; ;./mcc_generated_files/adc.h: 258: adc_result_t ADC_GetConversionResult(void);
 [v _ADC_GetConversionResult `(us ~T0 @X0 0 ef ]
 "193
 [; ;./mcc_generated_files/adc.h: 193: void ADC_StartConversion();
 [v _ADC_StartConversion `(v ~T0 @X0 0 e? ]
-"95 main.c
-[; ;main.c: 95:     nivel_real = (uint16_t)CheckSensores();
+"97 main.c
+[; ;main.c: 97:     nivel_real = (uint16_t)CheckSensores();
 [v _CheckSensores `(i ~T0 @X0 0 e? ]
 "7679 C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h
 [; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 7679:     struct {
@@ -49,27 +49,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7700
 [; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 7700: extern volatile LATBbits_t LATBbits __attribute__((address(0xF8A)));
 [v _LATBbits `VS382 ~T0 @X0 0 e@3978 ]
-"7791
-[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 7791:     struct {
-[s S386 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S386 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"7801
-[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 7801:     struct {
-[s S387 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S387 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
-"7790
-[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 7790: typedef union {
-[u S385 `S386 1 `S387 1 ]
-[n S385 . . . ]
-"7812
-[; ;C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\pic\include\proc\pic18f46k22.h: 7812: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
-[v _LATCbits `VS385 ~T0 @X0 0 e@3979 ]
 [p mainexit ]
 "78 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 78: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"121 main.c
-[; ;main.c: 121:     SPI2_Open(SPI2_DEFAULT);
+"135 main.c
+[; ;main.c: 135:     SPI2_Open(SPI2_DEFAULT);
 [c E6402 0 .. ]
 [n E6402 . SPI2_DEFAULT  ]
 "64 ./mcc_generated_files/spi2.h
@@ -78,21 +63,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2050 ./lib_ili9341.h
 [; ;./lib_ili9341.h: 2050: void lcd_init (void);
 [v _lcd_init `(v ~T0 @X0 0 ef ]
-"114 main.c
-[; ;main.c: 114: void Draw_Welcome_Screen(void);
+"128 main.c
+[; ;main.c: 128: void Draw_Welcome_Screen(void);
 [v _Draw_Welcome_Screen `(v ~T0 @X0 0 ef ]
-[v F6477 `(v ~T0 @X0 0 tf ]
+[v F6492 `(v ~T0 @X0 0 tf ]
 "319 ./mcc_generated_files/ext_int.h
 [; ;./mcc_generated_files/ext_int.h: 319: void INT0_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _INT0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6477 ]
-[v F6505 `(v ~T0 @X0 0 tf ]
+[v _INT0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6492 ]
+[v F6520 `(v ~T0 @X0 0 tf ]
 "350 ./mcc_generated_files/adc.h
 [; ;./mcc_generated_files/adc.h: 350:  void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _ADC_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6505 ]
-[v F6466 `(v ~T0 @X0 0 tf ]
+[v _ADC_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6520 ]
+[v F6482 `(v ~T0 @X0 0 tf ]
 "309 ./mcc_generated_files/tmr0.h
 [; ;./mcc_generated_files/tmr0.h: 309:  void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6466 ]
+[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6482 ]
 "129
 [; ;./mcc_generated_files/tmr0.h: 129: void TMR0_StartTimer(void);
 [v _TMR0_StartTimer `(v ~T0 @X0 0 ef ]
@@ -103,6 +88,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "125
 [; ;./mcc_generated_files/tmr1.h: 125: void TMR1_StartTimer(void);
 [v _TMR1_StartTimer `(v ~T0 @X0 0 ef ]
+[v F6467 `(v ~T0 @X0 0 tf ]
+"326 ./mcc_generated_files/tmr2.h
+[; ;./mcc_generated_files/tmr2.h: 326:  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+[v _TMR2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6467 ]
+"132
+[; ;./mcc_generated_files/tmr2.h: 132: void TMR2_StartTimer(void);
+[v _TMR2_StartTimer `(v ~T0 @X0 0 ef ]
 [v F6434 `(v ~T0 @X0 0 tf ]
 "344 ./mcc_generated_files/tmr6.h
 [; ;./mcc_generated_files/tmr6.h: 344:  void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
@@ -116,15 +108,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "155 ./mcc_generated_files/tmr1.h
 [; ;./mcc_generated_files/tmr1.h: 155: void TMR1_StopTimer(void);
 [v _TMR1_StopTimer `(v ~T0 @X0 0 ef ]
-"112 main.c
-[; ;main.c: 112: void ShowMenuInTerminal(void);
+"126 main.c
+[; ;main.c: 126: void ShowMenuInTerminal(void);
 [v _ShowMenuInTerminal `(v ~T0 @X0 0 ef ]
-"111
-[; ;main.c: 111: void CheckUSART(void);
-[v _CheckUSART `(v ~T0 @X0 0 ef ]
-"115
-[; ;main.c: 115: void Draw_Interface_Screen(void);
+"129
+[; ;main.c: 129: void Draw_Interface_Screen(void);
 [v _Draw_Interface_Screen `(v ~T0 @X0 0 ef ]
+"125
+[; ;main.c: 125: void CheckUSART(void);
+[v _CheckUSART `(v ~T0 @X0 0 ef ]
 "349 ./mcc_generated_files/eusart1.h
 [; ;./mcc_generated_files/eusart1.h: 349: void EUSART1_Write(uint8_t txData);
 [v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
@@ -6798,817 +6790,871 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _BombaLigada
 -> -> 0 `i `a
 ]
+"58
+[; ;main.c: 58: volatile _Bool BuzzerLigado = 0;
+[v _BuzzerLigado `Va ~T0 @X0 1 e ]
+[i _BuzzerLigado
+-> -> 0 `i `a
+]
 "59
-[; ;main.c: 59: volatile uint16_t nivel_referencia = 0;
+[; ;main.c: 59: volatile _Bool UpdateLCD = 1;
+[v _UpdateLCD `Va ~T0 @X0 1 e ]
+[i _UpdateLCD
+-> -> 1 `i `a
+]
+"61
+[; ;main.c: 61: volatile uint16_t nivel_referencia = 0;
 [v _nivel_referencia `Vus ~T0 @X0 1 e ]
 [i _nivel_referencia
 -> -> 0 `i `us
 ]
-"60
-[; ;main.c: 60: volatile uint16_t nivel_referencia_percentagem = 0;
+"62
+[; ;main.c: 62: volatile uint16_t nivel_referencia_percentagem = 0;
 [v _nivel_referencia_percentagem `Vus ~T0 @X0 1 e ]
 [i _nivel_referencia_percentagem
 -> -> 0 `i `us
 ]
-"61
-[; ;main.c: 61: volatile uint16_t nivel_real = 0;
+"63
+[; ;main.c: 63: volatile uint16_t nivel_real = 0;
 [v _nivel_real `Vus ~T0 @X0 1 e ]
 [i _nivel_real
 -> -> 0 `i `us
 ]
-"62
-[; ;main.c: 62: volatile uint16_t nivel_real_percentagem = 0;
+"64
+[; ;main.c: 64: volatile uint16_t nivel_real_percentagem = 0;
 [v _nivel_real_percentagem `Vus ~T0 @X0 1 e ]
 [i _nivel_real_percentagem
 -> -> 0 `i `us
 ]
-"63
-[; ;main.c: 63: volatile uint16_t erro_nivel = 0;
-[v _erro_nivel `Vus ~T0 @X0 1 e ]
-[i _erro_nivel
--> -> 0 `i `us
-]
 "65
-[; ;main.c: 65: uint8_t rxData;
+[; ;main.c: 65: volatile int erro_nivel = 0;
+[v _erro_nivel `Vi ~T0 @X0 1 e ]
+[i _erro_nivel
+-> 0 `i
+]
+"67
+[; ;main.c: 67: uint8_t rxData;
 [v _rxData `uc ~T0 @X0 1 e ]
-"66
-[; ;main.c: 66: uint8_t menu = '0';
+"68
+[; ;main.c: 68: uint8_t menu = '0';
 [v _menu `uc ~T0 @X0 1 e ]
 [i _menu
 -> -> 48 `ui `uc
 ]
-"67
-[; ;main.c: 67: int temperatura = 18;
+"69
+[; ;main.c: 69: int temperatura = 18;
 [v _temperatura `i ~T0 @X0 1 e ]
 [i _temperatura
 -> 18 `i
 ]
-"68
-[; ;main.c: 68: unsigned char cnt_char = 0;
+"70
+[; ;main.c: 70: unsigned char cnt_char = 0;
 [v _cnt_char `uc ~T0 @X0 1 e ]
 [i _cnt_char
 -> -> 0 `i `uc
 ]
-"69
-[; ;main.c: 69: unsigned char s[4];
+"71
+[; ;main.c: 71: unsigned char s[4];
 [v _s `uc ~T0 @X0 -> 4 `i e ]
-"70
-[; ;main.c: 70: unsigned char carater_recebido = 1;
+"72
+[; ;main.c: 72: unsigned char carater_recebido = 1;
 [v _carater_recebido `uc ~T0 @X0 1 e ]
 [i _carater_recebido
 -> -> 1 `i `uc
 ]
-"73
-[; ;main.c: 73: void INT0_MyInterruptHandler(void) {
+"75
+[; ;main.c: 75: void INT0_MyInterruptHandler(void) {
 [v _INT0_MyInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _INT0_MyInterruptHandler ]
 [f ]
-"75
-[; ;main.c: 75:     BombaLigada = 0;
-[e = _BombaLigada -> -> 0 `i `a ]
-"76
-[; ;main.c: 76:     SistemaControloLigado = 0;
-[e = _SistemaControloLigado -> -> 0 `i `a ]
 "77
-[; ;main.c: 77:     (INTCONbits.INT0IF = 0);
-[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 77:     BombaLigada = 0;
+[e = _BombaLigada -> -> 0 `i `a ]
 "78
-[; ;main.c: 78: }
+[; ;main.c: 78:     SistemaControloLigado = 0;
+[e = _SistemaControloLigado -> -> 0 `i `a ]
+"79
+[; ;main.c: 79:     (INTCONbits.INT0IF = 0);
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
+"80
+[; ;main.c: 80: }
 [e :UE 859 ]
 }
-"83
-[; ;main.c: 83: void ADC_MyInterruptHandler(void) {
+"85
+[; ;main.c: 85: void ADC_MyInterruptHandler(void) {
 [v _ADC_MyInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _ADC_MyInterruptHandler ]
 [f ]
-"84
-[; ;main.c: 84:     ADC_SelectChannel(channel_AN0);
-[e ( _ADC_SelectChannel (1 . `E6488 0 ]
-"85
-[; ;main.c: 85:     nivel_referencia = ADC_GetConversionResult();
-[e = _nivel_referencia ( _ADC_GetConversionResult ..  ]
 "86
-[; ;main.c: 86:     nivel_referencia_percentagem = (float)(nivel_referencia * 100.0) / 1023.0;
-[e = _nivel_referencia_percentagem -> / -> -> * -> -> _nivel_referencia `ui `d .100.0 `f `d .1023.0 `us ]
+[; ;main.c: 86:     ADC_SelectChannel(channel_AN0);
+[e ( _ADC_SelectChannel (1 . `E6503 0 ]
 "87
-[; ;main.c: 87: }
+[; ;main.c: 87:     nivel_referencia = ADC_GetConversionResult();
+[e = _nivel_referencia ( _ADC_GetConversionResult ..  ]
+"88
+[; ;main.c: 88:     nivel_referencia_percentagem = (float)(nivel_referencia * 100.0) / 1023.0;
+[e = _nivel_referencia_percentagem -> / -> -> * -> -> _nivel_referencia `ui `d .100.0 `f `d .1023.0 `us ]
+"89
+[; ;main.c: 89: }
 [e :UE 860 ]
 }
-"92
-[; ;main.c: 92: void TMR0_MyInterruptHandler(void) {
+"94
+[; ;main.c: 94: void TMR0_MyInterruptHandler(void) {
 [v _TMR0_MyInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR0_MyInterruptHandler ]
 [f ]
-"93
-[; ;main.c: 93:     ADC_SelectChannel(channel_AN0);
-[e ( _ADC_SelectChannel (1 . `E6488 0 ]
-"94
-[; ;main.c: 94:     ADC_StartConversion();
-[e ( _ADC_StartConversion ..  ]
 "95
-[; ;main.c: 95:     nivel_real = (uint16_t)CheckSensores();
-[e = _nivel_real -> ( _CheckSensores ..  `us ]
+[; ;main.c: 95:     ADC_SelectChannel(channel_AN0);
+[e ( _ADC_SelectChannel (1 . `E6503 0 ]
 "96
-[; ;main.c: 96:     nivel_real_percentagem = (nivel_real * 100) / 10;
-[e = _nivel_real_percentagem -> / * -> _nivel_real `ui -> -> 100 `i `ui -> -> 10 `i `ui `us ]
+[; ;main.c: 96:     ADC_StartConversion();
+[e ( _ADC_StartConversion ..  ]
 "97
-[; ;main.c: 97: }
+[; ;main.c: 97:     nivel_real = (uint16_t)CheckSensores();
+[e = _nivel_real -> ( _CheckSensores ..  `us ]
+"98
+[; ;main.c: 98:     nivel_real_percentagem = (nivel_real * 100) / 10;
+[e = _nivel_real_percentagem -> / * -> _nivel_real `ui -> -> 100 `i `ui -> -> 10 `i `ui `us ]
+"99
+[; ;main.c: 99: }
 [e :UE 861 ]
 }
-"99
-[; ;main.c: 99: void TMR1_MyInterruptHandler(void) {
+"101
+[; ;main.c: 101: void TMR1_MyInterruptHandler(void) {
 [v _TMR1_MyInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR1_MyInterruptHandler ]
 [f ]
-"101
-[; ;main.c: 101:     if (SistemaControloLigado) {
+"103
+[; ;main.c: 103:     if (SistemaControloLigado) {
 [e $ ! != -> _SistemaControloLigado `i -> 0 `i 863  ]
 {
-"102
-[; ;main.c: 102:         do { LATBbits.LATB4 = ~LATBbits.LATB4; } while(0);
+"104
+[; ;main.c: 104:         do { LATBbits.LATB4 = ~LATBbits.LATB4; } while(0);
 [e :U 866 ]
 {
 [e = . . _LATBbits 0 4 -> ~ -> . . _LATBbits 0 4 `i `uc ]
 }
 [e :U 865 ]
-"103
-[; ;main.c: 103:     }
+"105
+[; ;main.c: 105:     }
 }
 [e :U 863 ]
-"104
-[; ;main.c: 104: }
+"106
+[; ;main.c: 106: }
 [e :UE 862 ]
 }
-"106
-[; ;main.c: 106: void TMR6_MyInterruptHandler(void) {
+"108
+[; ;main.c: 108: void TMR2_MyInterruptHandler(void) {
+[v _TMR2_MyInterruptHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _TMR2_MyInterruptHandler ]
+[f ]
+"109
+[; ;main.c: 109:     erro_nivel = nivel_referencia_percentagem - nivel_real_percentagem;
+[e = _erro_nivel -> - -> _nivel_referencia_percentagem `ui -> _nivel_real_percentagem `ui `i ]
+"110
+[; ;main.c: 110:     if (erro_nivel > 0) {
+[e $ ! > _erro_nivel -> 0 `i 868  ]
+{
+"111
+[; ;main.c: 111:         BombaLigada = 1;
+[e = _BombaLigada -> -> 1 `i `a ]
+"112
+[; ;main.c: 112:         do { LATBbits.LATB7 = 1; } while(0);
+[e :U 871 ]
+{
+[e = . . _LATBbits 0 7 -> -> 1 `i `uc ]
+}
+[e :U 870 ]
+"113
+[; ;main.c: 113:     } else {
+}
+[e $U 872  ]
+[e :U 868 ]
+{
+"114
+[; ;main.c: 114:         BombaLigada = 0;
+[e = _BombaLigada -> -> 0 `i `a ]
+"115
+[; ;main.c: 115:         do { LATBbits.LATB7 = 0; } while(0);
+[e :U 875 ]
+{
+[e = . . _LATBbits 0 7 -> -> 0 `i `uc ]
+}
+[e :U 874 ]
+"116
+[; ;main.c: 116:     }
+}
+[e :U 872 ]
+"117
+[; ;main.c: 117: }
+[e :UE 867 ]
+}
+"119
+[; ;main.c: 119: void TMR6_MyInterruptHandler(void) {
 [v _TMR6_MyInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR6_MyInterruptHandler ]
 [f ]
-"107
-[; ;main.c: 107:     do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0);
-[e :U 870 ]
+"120
+[; ;main.c: 120:     do { LATBbits.LATB6 = ~LATBbits.LATB6; } while(0);
+[e :U 879 ]
 {
-[e = . . _LATCbits 0 0 -> ~ -> . . _LATCbits 0 0 `i `uc ]
+[e = . . _LATBbits 0 6 -> ~ -> . . _LATBbits 0 6 `i `uc ]
 }
-[e :U 869 ]
-"108
-[; ;main.c: 108: }
-[e :UE 867 ]
+[e :U 878 ]
+"121
+[; ;main.c: 121:     UpdateLCD = 1;
+[e = _UpdateLCD -> -> 1 `i `a ]
+"122
+[; ;main.c: 122: }
+[e :UE 876 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"117
-[; ;main.c: 117: void main(void) {
+"131
+[; ;main.c: 131: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"118
-[; ;main.c: 118:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"121
-[; ;main.c: 121:     SPI2_Open(SPI2_DEFAULT);
-[e ( _SPI2_Open (1 . `E6402 0 ]
-"123
-[; ;main.c: 123:     lcd_init();
-[e ( _lcd_init ..  ]
-"125
-[; ;main.c: 125:     Draw_Welcome_Screen();
-[e ( _Draw_Welcome_Screen ..  ]
-"127
-[; ;main.c: 127:     (INTCONbits.GIEH = 1);
-[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-"128
-[; ;main.c: 128:     (INTCONbits.GIEL = 1);
-[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-"129
-[; ;main.c: 129:     (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"131
-[; ;main.c: 131:     INT0_SetInterruptHandler(INT0_MyInterruptHandler);
-[e ( _INT0_SetInterruptHandler (1 &U _INT0_MyInterruptHandler ]
 "132
-[; ;main.c: 132:     ADC_SetInterruptHandler(ADC_MyInterruptHandler);
-[e ( _ADC_SetInterruptHandler (1 &U _ADC_MyInterruptHandler ]
-"133
-[; ;main.c: 133:     TMR0_SetInterruptHandler(TMR0_MyInterruptHandler);
-[e ( _TMR0_SetInterruptHandler (1 &U _TMR0_MyInterruptHandler ]
-"134
-[; ;main.c: 134:     TMR0_StartTimer();
-[e ( _TMR0_StartTimer ..  ]
-"136
-[; ;main.c: 136:     TMR1_SetInterruptHandler(TMR1_MyInterruptHandler);
-[e ( _TMR1_SetInterruptHandler (1 &U _TMR1_MyInterruptHandler ]
+[; ;main.c: 132:     SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
+"135
+[; ;main.c: 135:     SPI2_Open(SPI2_DEFAULT);
+[e ( _SPI2_Open (1 . `E6402 0 ]
 "137
-[; ;main.c: 137:     TMR1_StartTimer();
-[e ( _TMR1_StartTimer ..  ]
+[; ;main.c: 137:     lcd_init();
+[e ( _lcd_init ..  ]
 "139
-[; ;main.c: 139:     TMR6_SetInterruptHandler(TMR6_MyInterruptHandler);
-[e ( _TMR6_SetInterruptHandler (1 &U _TMR6_MyInterruptHandler ]
-"140
-[; ;main.c: 140:     TMR6_StartTimer();
-[e ( _TMR6_StartTimer ..  ]
+[; ;main.c: 139:     Draw_Welcome_Screen();
+[e ( _Draw_Welcome_Screen ..  ]
+"141
+[; ;main.c: 141:     (INTCONbits.GIEH = 1);
+[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
 "142
-[; ;main.c: 142:     printf("SETUP COMPLETED SUCCESSFULLY\r\n");
-[e ( _printf :s 1C ]
+[; ;main.c: 142:     (INTCONbits.GIEL = 1);
+[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
 "143
-[; ;main.c: 143:     SistemaControloLigado = 1;
-[e = _SistemaControloLigado -> -> 1 `i `a ]
+[; ;main.c: 143:     (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
 "145
-[; ;main.c: 145:     while (1) {
-[e :U 873 ]
-{
+[; ;main.c: 145:     INT0_SetInterruptHandler(INT0_MyInterruptHandler);
+[e ( _INT0_SetInterruptHandler (1 &U _INT0_MyInterruptHandler ]
+"146
+[; ;main.c: 146:     ADC_SetInterruptHandler(ADC_MyInterruptHandler);
+[e ( _ADC_SetInterruptHandler (1 &U _ADC_MyInterruptHandler ]
 "147
-[; ;main.c: 147:         if (!SistemaControloLigado) {
-[e $ ! ! != -> _SistemaControloLigado `i -> 0 `i 875  ]
-{
+[; ;main.c: 147:     TMR0_SetInterruptHandler(TMR0_MyInterruptHandler);
+[e ( _TMR0_SetInterruptHandler (1 &U _TMR0_MyInterruptHandler ]
 "148
-[; ;main.c: 148:             TMR1_StopTimer();
+[; ;main.c: 148:     TMR0_StartTimer();
+[e ( _TMR0_StartTimer ..  ]
+"150
+[; ;main.c: 150:     TMR1_SetInterruptHandler(TMR1_MyInterruptHandler);
+[e ( _TMR1_SetInterruptHandler (1 &U _TMR1_MyInterruptHandler ]
+"151
+[; ;main.c: 151:     TMR1_StartTimer();
+[e ( _TMR1_StartTimer ..  ]
+"153
+[; ;main.c: 153:     TMR2_SetInterruptHandler(TMR2_MyInterruptHandler);
+[e ( _TMR2_SetInterruptHandler (1 &U _TMR2_MyInterruptHandler ]
+"154
+[; ;main.c: 154:     TMR2_StartTimer();
+[e ( _TMR2_StartTimer ..  ]
+"156
+[; ;main.c: 156:     TMR6_SetInterruptHandler(TMR6_MyInterruptHandler);
+[e ( _TMR6_SetInterruptHandler (1 &U _TMR6_MyInterruptHandler ]
+"157
+[; ;main.c: 157:     TMR6_StartTimer();
+[e ( _TMR6_StartTimer ..  ]
+"159
+[; ;main.c: 159:     printf("SETUP COMPLETED SUCCESSFULLY\r\n");
+[e ( _printf :s 1C ]
+"160
+[; ;main.c: 160:     SistemaControloLigado = 1;
+[e = _SistemaControloLigado -> -> 1 `i `a ]
+"162
+[; ;main.c: 162:     while (1) {
+[e :U 882 ]
+{
+"164
+[; ;main.c: 164:         if (!SistemaControloLigado) {
+[e $ ! ! != -> _SistemaControloLigado `i -> 0 `i 884  ]
+{
+"165
+[; ;main.c: 165:             TMR1_StopTimer();
 [e ( _TMR1_StopTimer ..  ]
-"149
-[; ;main.c: 149:             do { LATBbits.LATB4 = 0; } while(0);
-[e :U 878 ]
+"166
+[; ;main.c: 166:             do { LATBbits.LATB4 = 0; } while(0);
+[e :U 887 ]
 {
 [e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 877 ]
-"150
-[; ;main.c: 150:             do { LATBbits.LATB3 = 1; } while(0);
-[e :U 881 ]
+[e :U 886 ]
+"167
+[; ;main.c: 167:             do { LATBbits.LATB3 = 1; } while(0);
+[e :U 890 ]
 {
 [e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
 }
-[e :U 880 ]
-"151
-[; ;main.c: 151:         } else {
+[e :U 889 ]
+"168
+[; ;main.c: 168:         } else {
 }
-[e $U 882  ]
-[e :U 875 ]
+[e $U 891  ]
+[e :U 884 ]
 {
-"152
-[; ;main.c: 152:             TMR1_StartTimer();
+"169
+[; ;main.c: 169:             TMR1_StartTimer();
 [e ( _TMR1_StartTimer ..  ]
-"153
-[; ;main.c: 153:             do { LATBbits.LATB3 = 0; } while(0);
-[e :U 885 ]
+"170
+[; ;main.c: 170:             do { LATBbits.LATB3 = 0; } while(0);
+[e :U 894 ]
 {
 [e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
 }
-[e :U 884 ]
-"154
-[; ;main.c: 154:         }
+[e :U 893 ]
+"171
+[; ;main.c: 171:         }
 }
-[e :U 882 ]
-"157
-[; ;main.c: 157:         if (BombaLigada) {
-[e $ ! != -> _BombaLigada `i -> 0 `i 886  ]
+[e :U 891 ]
+"174
+[; ;main.c: 174:         if (BombaLigada) {
+[e $ ! != -> _BombaLigada `i -> 0 `i 895  ]
 {
-"158
-[; ;main.c: 158:             do { LATBbits.LATB5 = 1; } while(0);
-[e :U 889 ]
+"175
+[; ;main.c: 175:             do { LATBbits.LATB5 = 1; } while(0);
+[e :U 898 ]
 {
 [e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 888 ]
-"159
-[; ;main.c: 159:         } else {
+[e :U 897 ]
+"177
+[; ;main.c: 177:         } else {
 }
-[e $U 890  ]
-[e :U 886 ]
+[e $U 899  ]
+[e :U 895 ]
 {
-"160
-[; ;main.c: 160:             do { LATBbits.LATB5 = 0; } while(0);
-[e :U 893 ]
+"178
+[; ;main.c: 178:             do { LATBbits.LATB5 = 0; } while(0);
+[e :U 902 ]
 {
 [e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 892 ]
-"161
-[; ;main.c: 161:         }
+[e :U 901 ]
+"179
+[; ;main.c: 179:         }
 }
-[e :U 890 ]
-"163
-[; ;main.c: 163:         if (carater_recebido) {
-[e $ ! != -> _carater_recebido `i -> 0 `i 894  ]
+[e :U 899 ]
+"181
+[; ;main.c: 181:         if (carater_recebido) {
+[e $ ! != -> _carater_recebido `i -> 0 `i 903  ]
 {
-"164
-[; ;main.c: 164:             ShowMenuInTerminal();
-[e ( _ShowMenuInTerminal ..  ]
-"165
-[; ;main.c: 165:             carater_recebido = 0;
-[e = _carater_recebido -> -> 0 `i `uc ]
-"166
-[; ;main.c: 166:         }
-}
-[e :U 894 ]
-"167
-[; ;main.c: 167:         CheckUSART();
-[e ( _CheckUSART ..  ]
-"169
-[; ;main.c: 169:         static int i=0;
-[v F6592 `i ~T0 @X0 1 s i ]
-[i F6592
--> 0 `i
-]
-"170
-[; ;main.c: 170:         if(i==3){
-[e $ ! == F6592 -> 3 `i 895  ]
-{
-"171
-[; ;main.c: 171:             Draw_Interface_Screen();
-[e ( _Draw_Interface_Screen ..  ]
-"172
-[; ;main.c: 172:             i=0;
-[e = F6592 -> 0 `i ]
-"173
-[; ;main.c: 173:         }else{
-}
-[e $U 896  ]
-[e :U 895 ]
-{
-"174
-[; ;main.c: 174:             i++;
-[e ++ F6592 -> 1 `i ]
-"175
-[; ;main.c: 175:         }
-}
-[e :U 896 ]
-"176
-[; ;main.c: 176:     }
-}
-[e :U 872 ]
-[e $U 873  ]
-[e :U 874 ]
-"177
-[; ;main.c: 177: }
-[e :UE 871 ]
-}
 "182
-[; ;main.c: 182: void ShowMenuInTerminal() {
+[; ;main.c: 182:             ShowMenuInTerminal();
+[e ( _ShowMenuInTerminal ..  ]
+"183
+[; ;main.c: 183:             carater_recebido = 0;
+[e = _carater_recebido -> -> 0 `i `uc ]
+"184
+[; ;main.c: 184:         }
+}
+[e :U 903 ]
+"186
+[; ;main.c: 186:         if (UpdateLCD) {
+[e $ ! != -> _UpdateLCD `i -> 0 `i 904  ]
+{
+"187
+[; ;main.c: 187:             Draw_Interface_Screen();
+[e ( _Draw_Interface_Screen ..  ]
+"188
+[; ;main.c: 188:             UpdateLCD = 0;
+[e = _UpdateLCD -> -> 0 `i `a ]
+"189
+[; ;main.c: 189:         }
+}
+[e :U 904 ]
+"191
+[; ;main.c: 191:         CheckUSART();
+[e ( _CheckUSART ..  ]
+"192
+[; ;main.c: 192:     }
+}
+[e :U 881 ]
+[e $U 882  ]
+[e :U 883 ]
+"193
+[; ;main.c: 193: }
+[e :UE 880 ]
+}
+"198
+[; ;main.c: 198: void ShowMenuInTerminal() {
 [v _ShowMenuInTerminal `(v ~T0 @X0 1 ef ]
 {
 [e :U _ShowMenuInTerminal ]
 [f ]
-"183
-[; ;main.c: 183:     switch (menu) {
-[e $U 899  ]
-{
-"184
-[; ;main.c: 184:         case '0':
-[e :U 900 ]
-"185
-[; ;main.c: 185:             EUSART1_Write(12);
-[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
-"186
-[; ;main.c: 186:             printf("\r\nMENU PRINCIPAL");
-[e ( _printf :s 2C ]
-"187
-[; ;main.c: 187:             printf("\r\n1 - Desligar bomba de agua");
-[e ( _printf :s 3C ]
-"188
-[; ;main.c: 188:             printf("\r\n2 - Ativar comtrolo do nivel de agua");
-[e ( _printf :s 4C ]
-"189
-[; ;main.c: 189:             printf("\r\n3 - Visualizar a percentagem do nivel de agua");
-[e ( _printf :s 5C ]
-"190
-[; ;main.c: 190:             printf("\r\n4 - Visualizar o nivel de referencia");
-[e ( _printf :s 6C ]
-"191
-[; ;main.c: 191:             printf("\r\n5 - Programar novo valor de referencia");
-[e ( _printf :s 7C ]
-"192
-[; ;main.c: 192:             printf("\r\n0 - Voltar ao Menu Principal");
-[e ( _printf :s 8C ]
-"193
-[; ;main.c: 193:             printf("\r\nOpcao: ");
-[e ( _printf :s 9C ]
-"194
-[; ;main.c: 194:             menu = '0';
-[e = _menu -> -> 48 `ui `uc ]
-"195
-[; ;main.c: 195:             break;
-[e $U 898  ]
-"196
-[; ;main.c: 196:         case '1':
-[e :U 901 ]
-"197
-[; ;main.c: 197:             EUSART1_Write(12);
-[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
 "199
-[; ;main.c: 199:             printf("\r\nBomba de agua desligada");
-[e ( _printf :s 10C ]
+[; ;main.c: 199:     switch (menu) {
+[e $U 907  ]
+{
 "200
-[; ;main.c: 200:             printf("\r\nPrima 0 para voltar ao Menu Principall");
-[e ( _printf :s 11C ]
+[; ;main.c: 200:         case '0':
+[e :U 908 ]
 "201
-[; ;main.c: 201:             printf("\r\nOpcao: ");
-[e ( _printf :s 12C ]
+[; ;main.c: 201:             EUSART1_Write(12);
+[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
 "202
-[; ;main.c: 202:             BombaLigada = 0;
-[e = _BombaLigada -> -> 0 `i `a ]
+[; ;main.c: 202:             printf("\r\nMENU PRINCIPAL");
+[e ( _printf :s 2C ]
 "203
-[; ;main.c: 203:             menu = '0';
-[e = _menu -> -> 48 `ui `uc ]
+[; ;main.c: 203:             printf("\r\n1 - Desligar bomba de agua");
+[e ( _printf :s 3C ]
 "204
-[; ;main.c: 204:             break;
-[e $U 898  ]
+[; ;main.c: 204:             printf("\r\n2 - Ativar comtrolo do nivel de agua");
+[e ( _printf :s 4C ]
 "205
-[; ;main.c: 205:         case '2':
-[e :U 902 ]
+[; ;main.c: 205:             printf("\r\n3 - Visualizar a percentagem do nivel de agua");
+[e ( _printf :s 5C ]
 "206
-[; ;main.c: 206:             EUSART1_Write(12);
-[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
+[; ;main.c: 206:             printf("\r\n4 - Visualizar o nivel de referencia");
+[e ( _printf :s 6C ]
+"207
+[; ;main.c: 207:             printf("\r\n5 - Programar novo valor de referencia");
+[e ( _printf :s 7C ]
 "208
-[; ;main.c: 208:             printf("\r\nControlo do nivel de agua ativado!");
-[e ( _printf :s 13C ]
+[; ;main.c: 208:             printf("\r\n0 - Voltar ao Menu Principal");
+[e ( _printf :s 8C ]
 "209
-[; ;main.c: 209:             SistemaControloLigado = 1;
-[e = _SistemaControloLigado -> -> 1 `i `a ]
+[; ;main.c: 209:             printf("\r\nOpcao: ");
+[e ( _printf :s 9C ]
 "210
-[; ;main.c: 210:             printf("\r\n\nPrima 0 para voltar ao Menu Principal");
-[e ( _printf :s 14C ]
+[; ;main.c: 210:             menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
 "211
-[; ;main.c: 211:             printf("\r\nOpcao: ");
-[e ( _printf :s 15C ]
+[; ;main.c: 211:             break;
+[e $U 906  ]
 "212
-[; ;main.c: 212:             menu = '0';
-[e = _menu -> -> 48 `ui `uc ]
+[; ;main.c: 212:         case '1':
+[e :U 909 ]
 "213
-[; ;main.c: 213:             break;
-[e $U 898  ]
-"214
-[; ;main.c: 214:         case '3':
-[e :U 903 ]
+[; ;main.c: 213:             EUSART1_Write(12);
+[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
 "215
-[; ;main.c: 215:             EUSART1_Write(12);
-[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
+[; ;main.c: 215:             printf("\r\nBomba de agua desligada");
+[e ( _printf :s 10C ]
+"216
+[; ;main.c: 216:             printf("\r\nPrima 0 para voltar ao Menu Principall");
+[e ( _printf :s 11C ]
 "217
-[; ;main.c: 217:             printf("\r\nPercentagem do nivel de agua: %hu", nivel_referencia_percentagem);
-[e ( _printf , (. :s 16C -> _nivel_referencia_percentagem `ui ]
+[; ;main.c: 217:             printf("\r\nOpcao: ");
+[e ( _printf :s 12C ]
 "218
-[; ;main.c: 218:             printf("\r\nbits: %d", nivel_referencia);
-[e ( _printf , (. :s 17C -> _nivel_referencia `ui ]
+[; ;main.c: 218:             BombaLigada = 0;
+[e = _BombaLigada -> -> 0 `i `a ]
 "219
-[; ;main.c: 219:             printf("\r\n\nPrima 0 para voltar ao Menu Principal");
-[e ( _printf :s 18C ]
-"220
-[; ;main.c: 220:             printf("\r\nOpcao: ");
-[e ( _printf :s 19C ]
-"221
-[; ;main.c: 221:             menu = '0';
+[; ;main.c: 219:             menu = '0';
 [e = _menu -> -> 48 `ui `uc ]
+"220
+[; ;main.c: 220:             break;
+[e $U 906  ]
+"221
+[; ;main.c: 221:         case '2':
+[e :U 910 ]
 "222
-[; ;main.c: 222:             break;
-[e $U 898  ]
-"223
-[; ;main.c: 223:         case '4':
-[e :U 904 ]
-"224
-[; ;main.c: 224:             EUSART1_Write(12);
+[; ;main.c: 222:             EUSART1_Write(12);
 [e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
+"224
+[; ;main.c: 224:             printf("\r\nControlo do nivel de agua ativado!");
+[e ( _printf :s 13C ]
+"225
+[; ;main.c: 225:             SistemaControloLigado = 1;
+[e = _SistemaControloLigado -> -> 1 `i `a ]
 "226
 [; ;main.c: 226:             printf("\r\n\nPrima 0 para voltar ao Menu Principal");
-[e ( _printf :s 20C ]
+[e ( _printf :s 14C ]
 "227
 [; ;main.c: 227:             printf("\r\nOpcao: ");
-[e ( _printf :s 21C ]
+[e ( _printf :s 15C ]
 "228
 [; ;main.c: 228:             menu = '0';
 [e = _menu -> -> 48 `ui `uc ]
 "229
 [; ;main.c: 229:             break;
-[e $U 898  ]
+[e $U 906  ]
 "230
-[; ;main.c: 230:         case '5':
-[e :U 905 ]
+[; ;main.c: 230:         case '3':
+[e :U 911 ]
 "231
 [; ;main.c: 231:             EUSART1_Write(12);
 [e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
 "233
-[; ;main.c: 233:             printf("\r\n\nPrima 0 para voltar ao Menu Principal");
-[e ( _printf :s 22C ]
+[; ;main.c: 233:             printf("\r\nPercentagem do nivel de agua: %hu", nivel_real_percentagem);
+[e ( _printf , (. :s 16C -> _nivel_real_percentagem `ui ]
 "234
-[; ;main.c: 234:             printf("\r\nOpcao: ");
-[e ( _printf :s 23C ]
+[; ;main.c: 234:             printf("\r\nbits: %d", nivel_real);
+[e ( _printf , (. :s 17C -> _nivel_real `ui ]
 "235
-[; ;main.c: 235:             menu = '0';
-[e = _menu -> -> 48 `ui `uc ]
+[; ;main.c: 235:             printf("\r\n\nPrima 0 para voltar ao Menu Principal");
+[e ( _printf :s 18C ]
 "236
-[; ;main.c: 236:             break;
-[e $U 898  ]
+[; ;main.c: 236:             printf("\r\nOpcao: ");
+[e ( _printf :s 19C ]
 "237
-[; ;main.c: 237:         default:
-[e :U 906 ]
-"238
-[; ;main.c: 238:             EUSART1_Write(12);
-[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
-"239
-[; ;main.c: 239:             printf("\r\nOpcao Invalida!");
-[e ( _printf :s 24C ]
-"240
-[; ;main.c: 240:             printf("\r\nPrima 0 para voltar ao Menu Principal");
-[e ( _printf :s 25C ]
-"241
-[; ;main.c: 241:             menu = '0';
+[; ;main.c: 237:             menu = '0';
 [e = _menu -> -> 48 `ui `uc ]
+"238
+[; ;main.c: 238:             break;
+[e $U 906  ]
+"239
+[; ;main.c: 239:         case '4':
+[e :U 912 ]
+"240
+[; ;main.c: 240:             EUSART1_Write(12);
+[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
 "242
-[; ;main.c: 242:             break;
-[e $U 898  ]
+[; ;main.c: 242:             printf("\r\n\nPrima 0 para voltar ao Menu Principal");
+[e ( _printf :s 20C ]
 "243
-[; ;main.c: 243:     }
-}
-[e $U 898  ]
-[e :U 899 ]
-[e [\ -> _menu `i , $ -> -> 48 `ui `i 900
- , $ -> -> 49 `ui `i 901
- , $ -> -> 50 `ui `i 902
- , $ -> -> 51 `ui `i 903
- , $ -> -> 52 `ui `i 904
- , $ -> -> 53 `ui `i 905
- 906 ]
-[e :U 898 ]
+[; ;main.c: 243:             printf("\r\nOpcao: ");
+[e ( _printf :s 21C ]
 "244
-[; ;main.c: 244: }
-[e :UE 897 ]
-}
+[; ;main.c: 244:             menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
+"245
+[; ;main.c: 245:             break;
+[e $U 906  ]
 "246
-[; ;main.c: 246: void CheckUSART() {
+[; ;main.c: 246:         case '5':
+[e :U 913 ]
+"247
+[; ;main.c: 247:             EUSART1_Write(12);
+[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
+"249
+[; ;main.c: 249:             printf("\r\n\nPrima 0 para voltar ao Menu Principal");
+[e ( _printf :s 22C ]
+"250
+[; ;main.c: 250:             printf("\r\nOpcao: ");
+[e ( _printf :s 23C ]
+"251
+[; ;main.c: 251:             menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
+"252
+[; ;main.c: 252:             break;
+[e $U 906  ]
+"253
+[; ;main.c: 253:         default:
+[e :U 914 ]
+"254
+[; ;main.c: 254:             EUSART1_Write(12);
+[e ( _EUSART1_Write (1 -> -> 12 `i `uc ]
+"255
+[; ;main.c: 255:             printf("\r\nOpcao Invalida!");
+[e ( _printf :s 24C ]
+"256
+[; ;main.c: 256:             printf("\r\nPrima 0 para voltar ao Menu Principal");
+[e ( _printf :s 25C ]
+"257
+[; ;main.c: 257:             menu = '0';
+[e = _menu -> -> 48 `ui `uc ]
+"258
+[; ;main.c: 258:             break;
+[e $U 906  ]
+"259
+[; ;main.c: 259:     }
+}
+[e $U 906  ]
+[e :U 907 ]
+[e [\ -> _menu `i , $ -> -> 48 `ui `i 908
+ , $ -> -> 49 `ui `i 909
+ , $ -> -> 50 `ui `i 910
+ , $ -> -> 51 `ui `i 911
+ , $ -> -> 52 `ui `i 912
+ , $ -> -> 53 `ui `i 913
+ 914 ]
+[e :U 906 ]
+"260
+[; ;main.c: 260: }
+[e :UE 905 ]
+}
+"262
+[; ;main.c: 262: void CheckUSART() {
 [v _CheckUSART `(v ~T0 @X0 1 ef ]
 {
 [e :U _CheckUSART ]
 [f ]
-"247
-[; ;main.c: 247:     if (EUSART1_is_rx_ready()) {
-[e $ ! != -> ( _EUSART1_is_rx_ready ..  `i -> 0 `i 908  ]
+"263
+[; ;main.c: 263:     if (EUSART1_is_rx_ready()) {
+[e $ ! != -> ( _EUSART1_is_rx_ready ..  `i -> 0 `i 916  ]
 {
-"248
-[; ;main.c: 248:         rxData = EUSART1_Read();
+"264
+[; ;main.c: 264:         rxData = EUSART1_Read();
 [e = _rxData ( _EUSART1_Read ..  ]
-"249
-[; ;main.c: 249:         EUSART1_Write(rxData);
+"265
+[; ;main.c: 265:         EUSART1_Write(rxData);
 [e ( _EUSART1_Write (1 _rxData ]
-"251
-[; ;main.c: 251:         if ((rxData >= 48 && rxData <= 57) || rxData == 13) {
-[e $ ! || && >= -> _rxData `i -> 48 `i <= -> _rxData `i -> 57 `i == -> _rxData `i -> 13 `i 909  ]
+"267
+[; ;main.c: 267:         if ((rxData >= 48 && rxData <= 57) || rxData == 13) {
+[e $ ! || && >= -> _rxData `i -> 48 `i <= -> _rxData `i -> 57 `i == -> _rxData `i -> 13 `i 917  ]
 {
-"252
-[; ;main.c: 252:             carater_recebido = 1;
+"268
+[; ;main.c: 268:             carater_recebido = 1;
 [e = _carater_recebido -> -> 1 `i `uc ]
-"253
-[; ;main.c: 253:             menu = rxData;
+"269
+[; ;main.c: 269:             menu = rxData;
 [e = _menu _rxData ]
-"254
-[; ;main.c: 254:         } else {
+"270
+[; ;main.c: 270:         } else {
 }
-[e $U 910  ]
-[e :U 909 ]
+[e $U 918  ]
+[e :U 917 ]
 {
-"255
-[; ;main.c: 255:             carater_recebido = 0;
+"271
+[; ;main.c: 271:             carater_recebido = 0;
 [e = _carater_recebido -> -> 0 `i `uc ]
-"256
-[; ;main.c: 256:             menu = '0';
+"272
+[; ;main.c: 272:             menu = '0';
 [e = _menu -> -> 48 `ui `uc ]
-"257
-[; ;main.c: 257:         }
+"273
+[; ;main.c: 273:         }
 }
-[e :U 910 ]
-"258
-[; ;main.c: 258:     }
+[e :U 918 ]
+"274
+[; ;main.c: 274:     }
 }
-[e :U 908 ]
-"259
-[; ;main.c: 259: }
-[e :UE 907 ]
+[e :U 916 ]
+"275
+[; ;main.c: 275: }
+[e :UE 915 ]
 }
-"261
-[; ;main.c: 261: int CheckSensores() {
+"277
+[; ;main.c: 277: int CheckSensores() {
 [v _CheckSensores `(i ~T0 @X0 1 ef ]
 {
 [e :U _CheckSensores ]
 [f ]
-"262
-[; ;main.c: 262:     int getValueFuncs[10];
-[v _getValueFuncs `i ~T0 @X0 -> 10 `i a ]
-"263
-[; ;main.c: 263:     getValueFuncs[0] = PORTDbits.RD7;
-[e = *U + &U _getValueFuncs * -> -> -> 0 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTDbits 0 7 `i ]
-"264
-[; ;main.c: 264:     getValueFuncs[1] = PORTDbits.RD6;
-[e = *U + &U _getValueFuncs * -> -> -> 1 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTDbits 0 6 `i ]
-"265
-[; ;main.c: 265:     getValueFuncs[2] = PORTDbits.RD5;
-[e = *U + &U _getValueFuncs * -> -> -> 2 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTDbits 0 5 `i ]
-"266
-[; ;main.c: 266:     getValueFuncs[3] = PORTDbits.RD3;
-[e = *U + &U _getValueFuncs * -> -> -> 3 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTDbits 0 3 `i ]
-"267
-[; ;main.c: 267:     getValueFuncs[4] = PORTDbits.RD2;
-[e = *U + &U _getValueFuncs * -> -> -> 4 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTDbits 0 2 `i ]
-"268
-[; ;main.c: 268:     getValueFuncs[5] = PORTCbits.RC5;
-[e = *U + &U _getValueFuncs * -> -> -> 5 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTCbits 0 5 `i ]
-"269
-[; ;main.c: 269:     getValueFuncs[6] = PORTCbits.RC4;
-[e = *U + &U _getValueFuncs * -> -> -> 6 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTCbits 0 4 `i ]
-"270
-[; ;main.c: 270:     getValueFuncs[7] = PORTCbits.RC3;
-[e = *U + &U _getValueFuncs * -> -> -> 7 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTCbits 0 3 `i ]
-"271
-[; ;main.c: 271:     getValueFuncs[8] = PORTCbits.RC2;
-[e = *U + &U _getValueFuncs * -> -> -> 8 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTCbits 0 2 `i ]
-"272
-[; ;main.c: 272:     getValueFuncs[9] = PORTCbits.RC1;
-[e = *U + &U _getValueFuncs * -> -> -> 9 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTCbits 0 1 `i ]
-"273
-[; ;main.c: 273:     int i;
-[v _i `i ~T0 @X0 1 a ]
-"274
-[; ;main.c: 274:     for (i = 0; i < 10; i++) {
-{
-[e = _i -> 0 `i ]
-[e $ < _i -> 10 `i 912  ]
-[e $U 913  ]
-[e :U 912 ]
-{
-"275
-[; ;main.c: 275:         if (getValueFuncs[i] == 0) {
-[e $ ! == *U + &U _getValueFuncs * -> -> _i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> 0 `i 915  ]
-{
-"276
-[; ;main.c: 276:             return i + 1;
-[e ) + _i -> 1 `i ]
-[e $UE 911  ]
-"277
-[; ;main.c: 277:         }
-}
-[e :U 915 ]
 "278
-[; ;main.c: 278:     }
+[; ;main.c: 278:     int getValueFuncs[10];
+[v _getValueFuncs `i ~T0 @X0 -> 10 `i a ]
+"279
+[; ;main.c: 279:     getValueFuncs[0] = PORTDbits.RD7;
+[e = *U + &U _getValueFuncs * -> -> -> 0 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTDbits 0 7 `i ]
+"280
+[; ;main.c: 280:     getValueFuncs[1] = PORTDbits.RD6;
+[e = *U + &U _getValueFuncs * -> -> -> 1 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTDbits 0 6 `i ]
+"281
+[; ;main.c: 281:     getValueFuncs[2] = PORTDbits.RD5;
+[e = *U + &U _getValueFuncs * -> -> -> 2 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTDbits 0 5 `i ]
+"282
+[; ;main.c: 282:     getValueFuncs[3] = PORTDbits.RD3;
+[e = *U + &U _getValueFuncs * -> -> -> 3 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTDbits 0 3 `i ]
+"283
+[; ;main.c: 283:     getValueFuncs[4] = PORTDbits.RD2;
+[e = *U + &U _getValueFuncs * -> -> -> 4 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTDbits 0 2 `i ]
+"284
+[; ;main.c: 284:     getValueFuncs[5] = PORTCbits.RC5;
+[e = *U + &U _getValueFuncs * -> -> -> 5 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTCbits 0 5 `i ]
+"285
+[; ;main.c: 285:     getValueFuncs[6] = PORTCbits.RC4;
+[e = *U + &U _getValueFuncs * -> -> -> 6 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTCbits 0 4 `i ]
+"286
+[; ;main.c: 286:     getValueFuncs[7] = PORTCbits.RC3;
+[e = *U + &U _getValueFuncs * -> -> -> 7 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTCbits 0 3 `i ]
+"287
+[; ;main.c: 287:     getValueFuncs[8] = PORTCbits.RC0;
+[e = *U + &U _getValueFuncs * -> -> -> 8 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTCbits 0 0 `i ]
+"288
+[; ;main.c: 288:     getValueFuncs[9] = PORTCbits.RC1;
+[e = *U + &U _getValueFuncs * -> -> -> 9 `i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> . . _PORTCbits 0 1 `i ]
+"290
+[; ;main.c: 290:     int nivel_agua = 0;
+[v _nivel_agua `i ~T0 @X0 1 a ]
+[e = _nivel_agua -> 0 `i ]
+"291
+[; ;main.c: 291:     for (int i = 0; i < 10; i++) {
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 10 `i 920  ]
+[e $U 921  ]
+[e :U 920 ]
+{
+"292
+[; ;main.c: 292:         if (getValueFuncs[i] == 0) {
+[e $ ! == *U + &U _getValueFuncs * -> -> _i `ui `ux -> -> # *U &U _getValueFuncs `ui `ux -> 0 `i 923  ]
+{
+"293
+[; ;main.c: 293:             nivel_agua++;
+[e ++ _nivel_agua -> 1 `i ]
+"294
+[; ;main.c: 294:         }
+}
+[e :U 923 ]
+"295
+[; ;main.c: 295:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 10 `i 912  ]
-[e :U 913 ]
+[e $ < _i -> 10 `i 920  ]
+[e :U 921 ]
 }
-"279
-[; ;main.c: 279:     return 0;
-[e ) -> 0 `i ]
-[e $UE 911  ]
-"280
-[; ;main.c: 280: }
-[e :UE 911 ]
+"296
+[; ;main.c: 296:     return nivel_agua;
+[e ) _nivel_agua ]
+[e $UE 919  ]
+"297
+[; ;main.c: 297: }
+[e :UE 919 ]
 }
-"282
-[; ;main.c: 282: void Draw_Welcome_Screen() {
+"299
+[; ;main.c: 299: void Draw_Welcome_Screen() {
 [v _Draw_Welcome_Screen `(v ~T0 @X0 1 ef ]
 {
 [e :U _Draw_Welcome_Screen ]
 [f ]
-"283
-[; ;main.c: 283:     lcd_draw_line(9, 210, 310, 210, 0xFFFF);
-[e ( _lcd_draw_line (4 , , , , -> -> 9 `i `us -> -> 210 `i `us -> -> 310 `i `us -> -> 210 `i `us -> -> 65535 `ui `us ]
-"284
-[; ;main.c: 284:     lcd_draw_string(40, 215, "ENGENHARIA ELETROTECNICA", 0x0000, 0xFFFF);
-[e ( _lcd_draw_string (4 , , , , -> -> 40 `i `us -> -> 215 `i `us :s 26C -> -> 0 `i `us -> -> 65535 `ui `us ]
-"285
-[; ;main.c: 285:     snprintf(string, sizeof(string), "MICROPROCESSADORES");
-[e ( _snprintf (2 , , &U _string -> # _string `ui :s 27C ]
-"286
-[; ;main.c: 286:     lcd_draw_string(60, 190, string, 0xFFFF, 0x0000);
-[e ( _lcd_draw_string (4 , , , , -> -> 60 `i `us -> -> 190 `i `us -> &U _string `*Cuc -> -> 65535 `ui `us -> -> 0 `i `us ]
-"287
-[; ;main.c: 287:     snprintf(string, sizeof(string), "2023 / 2024");
-[e ( _snprintf (2 , , &U _string -> # _string `ui :s 28C ]
-"288
-[; ;main.c: 288:     lcd_draw_string(120, 165, string, 0xFFFF, 0x0000);
-[e ( _lcd_draw_string (4 , , , , -> -> 120 `i `us -> -> 165 `i `us -> &U _string `*Cuc -> -> 65535 `ui `us -> -> 0 `i `us ]
-"289
-[; ;main.c: 289:     snprintf(string, sizeof(string), "SISTEMA PARA CONTROLO");
-[e ( _snprintf (2 , , &U _string -> # _string `ui :s 29C ]
-"290
-[; ;main.c: 290:     lcd_draw_string(20, 140, string, 0xFD20, 0x0000);
-[e ( _lcd_draw_string (4 , , , , -> -> 20 `i `us -> -> 140 `i `us -> &U _string `*Cuc -> -> 64800 `ui `us -> -> 0 `i `us ]
-"291
-[; ;main.c: 291:     snprintf(string, sizeof(string), "DO NIVEL DE AGUA");
-[e ( _snprintf (2 , , &U _string -> # _string `ui :s 30C ]
-"292
-[; ;main.c: 292:     lcd_draw_string(20, 120, string, 0xFD20, 0x0000);
-[e ( _lcd_draw_string (4 , , , , -> -> 20 `i `us -> -> 120 `i `us -> &U _string `*Cuc -> -> 64800 `ui `us -> -> 0 `i `us ]
-"293
-[; ;main.c: 293:     snprintf(string, sizeof(string), "Autores: Pedro Ferreira");
-[e ( _snprintf (2 , , &U _string -> # _string `ui :s 31C ]
-"294
-[; ;main.c: 294:     lcd_draw_string(20, 95, string, 0xFFE0, 0x0000);
-[e ( _lcd_draw_string (4 , , , , -> -> 20 `i `us -> -> 95 `i `us -> &U _string `*Cuc -> -> 65504 `ui `us -> -> 0 `i `us ]
-"295
-[; ;main.c: 295:     snprintf(string, sizeof(string), "Bernardo Santos");
-[e ( _snprintf (2 , , &U _string -> # _string `ui :s 32C ]
-"296
-[; ;main.c: 296:     lcd_draw_string(90, 75, string, 0xFFE0, 0x0000);
-[e ( _lcd_draw_string (4 , , , , -> -> 90 `i `us -> -> 75 `i `us -> &U _string `*Cuc -> -> 65504 `ui `us -> -> 0 `i `us ]
-"298
-[; ;main.c: 298:     snprintf(string, sizeof(string), "Nivel de agua:");
-[e ( _snprintf (2 , , &U _string -> # _string `ui :s 33C ]
-"299
-[; ;main.c: 299:     lcd_draw_string(20, 20, string, 0xFFFF, 0x0000);
-[e ( _lcd_draw_string (4 , , , , -> -> 20 `i `us -> -> 20 `i `us -> &U _string `*Cuc -> -> 65535 `ui `us -> -> 0 `i `us ]
 "300
-[; ;main.c: 300:     snprintf(string, sizeof(string), "Nivel de referencia:");
-[e ( _snprintf (2 , , &U _string -> # _string `ui :s 34C ]
+[; ;main.c: 300:     lcd_draw_line(9, 210, 310, 210, 0xFFFF);
+[e ( _lcd_draw_line (4 , , , , -> -> 9 `i `us -> -> 210 `i `us -> -> 310 `i `us -> -> 210 `i `us -> -> 65535 `ui `us ]
 "301
-[; ;main.c: 301:     lcd_draw_string(20, 40, string, 0xFFFF, 0x0000);
-[e ( _lcd_draw_string (4 , , , , -> -> 20 `i `us -> -> 40 `i `us -> &U _string `*Cuc -> -> 65535 `ui `us -> -> 0 `i `us ]
+[; ;main.c: 301:     lcd_draw_string(40, 215, "ENGENHARIA ELETROTECNICA", 0x0000, 0xFFFF);
+[e ( _lcd_draw_string (4 , , , , -> -> 40 `i `us -> -> 215 `i `us :s 26C -> -> 0 `i `us -> -> 65535 `ui `us ]
 "302
-[; ;main.c: 302: }
-[e :UE 916 ]
-}
+[; ;main.c: 302:     snprintf(string, sizeof(string), "MICROPROCESSADORES");
+[e ( _snprintf (2 , , &U _string -> # _string `ui :s 27C ]
+"303
+[; ;main.c: 303:     lcd_draw_string(60, 190, string, 0xFFFF, 0x0000);
+[e ( _lcd_draw_string (4 , , , , -> -> 60 `i `us -> -> 190 `i `us -> &U _string `*Cuc -> -> 65535 `ui `us -> -> 0 `i `us ]
 "304
-[; ;main.c: 304: void Draw_Interface_Screen() {
+[; ;main.c: 304:     snprintf(string, sizeof(string), "2023 / 2024");
+[e ( _snprintf (2 , , &U _string -> # _string `ui :s 28C ]
+"305
+[; ;main.c: 305:     lcd_draw_string(120, 165, string, 0xFFFF, 0x0000);
+[e ( _lcd_draw_string (4 , , , , -> -> 120 `i `us -> -> 165 `i `us -> &U _string `*Cuc -> -> 65535 `ui `us -> -> 0 `i `us ]
+"306
+[; ;main.c: 306:     snprintf(string, sizeof(string), "SISTEMA PARA CONTROLO");
+[e ( _snprintf (2 , , &U _string -> # _string `ui :s 29C ]
+"307
+[; ;main.c: 307:     lcd_draw_string(20, 140, string, 0xFD20, 0x0000);
+[e ( _lcd_draw_string (4 , , , , -> -> 20 `i `us -> -> 140 `i `us -> &U _string `*Cuc -> -> 64800 `ui `us -> -> 0 `i `us ]
+"308
+[; ;main.c: 308:     snprintf(string, sizeof(string), "DO NIVEL DE AGUA");
+[e ( _snprintf (2 , , &U _string -> # _string `ui :s 30C ]
+"309
+[; ;main.c: 309:     lcd_draw_string(20, 120, string, 0xFD20, 0x0000);
+[e ( _lcd_draw_string (4 , , , , -> -> 20 `i `us -> -> 120 `i `us -> &U _string `*Cuc -> -> 64800 `ui `us -> -> 0 `i `us ]
+"310
+[; ;main.c: 310:     snprintf(string, sizeof(string), "Autores: Pedro Ferreira");
+[e ( _snprintf (2 , , &U _string -> # _string `ui :s 31C ]
+"311
+[; ;main.c: 311:     lcd_draw_string(20, 95, string, 0xFFE0, 0x0000);
+[e ( _lcd_draw_string (4 , , , , -> -> 20 `i `us -> -> 95 `i `us -> &U _string `*Cuc -> -> 65504 `ui `us -> -> 0 `i `us ]
+"312
+[; ;main.c: 312:     snprintf(string, sizeof(string), "Bernardo Santos");
+[e ( _snprintf (2 , , &U _string -> # _string `ui :s 32C ]
+"313
+[; ;main.c: 313:     lcd_draw_string(90, 75, string, 0xFFE0, 0x0000);
+[e ( _lcd_draw_string (4 , , , , -> -> 90 `i `us -> -> 75 `i `us -> &U _string `*Cuc -> -> 65504 `ui `us -> -> 0 `i `us ]
+"315
+[; ;main.c: 315:     snprintf(string, sizeof(string), "Nivel de agua:");
+[e ( _snprintf (2 , , &U _string -> # _string `ui :s 33C ]
+"316
+[; ;main.c: 316:     lcd_draw_string(20, 20, string, 0xFFFF, 0x0000);
+[e ( _lcd_draw_string (4 , , , , -> -> 20 `i `us -> -> 20 `i `us -> &U _string `*Cuc -> -> 65535 `ui `us -> -> 0 `i `us ]
+"317
+[; ;main.c: 317:     snprintf(string, sizeof(string), "Nivel de referencia:");
+[e ( _snprintf (2 , , &U _string -> # _string `ui :s 34C ]
+"318
+[; ;main.c: 318:     lcd_draw_string(20, 40, string, 0xFFFF, 0x0000);
+[e ( _lcd_draw_string (4 , , , , -> -> 20 `i `us -> -> 40 `i `us -> &U _string `*Cuc -> -> 65535 `ui `us -> -> 0 `i `us ]
+"319
+[; ;main.c: 319: }
+[e :UE 924 ]
+}
+"321
+[; ;main.c: 321: void Draw_Interface_Screen() {
 [v _Draw_Interface_Screen `(v ~T0 @X0 1 ef ]
 {
 [e :U _Draw_Interface_Screen ]
 [f ]
-"307
-[; ;main.c: 307:     lcd_fill_rect(275, 10, 295, 190, 0xFFFF);
+"323
+[; ;main.c: 323:     lcd_fill_rect(275, 10, 295, 190, 0xFFFF);
 [e ( _lcd_fill_rect (4 , , , , -> -> 275 `i `us -> -> 10 `i `us -> -> 295 `i `us -> -> 190 `i `us -> -> 65535 `ui `us ]
-"310
-[; ;main.c: 310:     uint16_t barra_agua = (nivel_real_percentagem * 180) / 100;
+"326
+[; ;main.c: 326:     uint16_t barra_agua = (nivel_real_percentagem * 180) / 100;
 [v _barra_agua `us ~T0 @X0 1 a ]
 [e = _barra_agua -> / * -> _nivel_real_percentagem `ui -> -> 180 `i `ui -> -> 100 `i `ui `us ]
-"311
-[; ;main.c: 311:     if (barra_agua >= 180) {
-[e $ ! >= -> _barra_agua `ui -> -> 180 `i `ui 918  ]
+"327
+[; ;main.c: 327:     if (barra_agua >= 180) {
+[e $ ! >= -> _barra_agua `ui -> -> 180 `i `ui 926  ]
 {
-"312
-[; ;main.c: 312:         barra_agua = 180;
+"328
+[; ;main.c: 328:         barra_agua = 180;
 [e = _barra_agua -> -> 180 `i `us ]
-"313
-[; ;main.c: 313:     } else if (barra_agua <= 0) {
+"329
+[; ;main.c: 329:     } else if (barra_agua <= 0) {
 }
-[e $U 919  ]
-[e :U 918 ]
-[e $ ! <= -> _barra_agua `ui -> -> 0 `i `ui 920  ]
+[e $U 927  ]
+[e :U 926 ]
+[e $ ! <= -> _barra_agua `ui -> -> 0 `i `ui 928  ]
 {
-"314
-[; ;main.c: 314:         barra_agua = 11;
+"330
+[; ;main.c: 330:         barra_agua = 11;
 [e = _barra_agua -> -> 11 `i `us ]
-"315
-[; ;main.c: 315:     }
+"331
+[; ;main.c: 331:     }
 }
-[e :U 920 ]
-[e :U 919 ]
-"316
-[; ;main.c: 316:     lcd_fill_rect(276, 11, 294, barra_agua, 0x001F);
+[e :U 928 ]
+[e :U 927 ]
+"332
+[; ;main.c: 332:     lcd_fill_rect(276, 11, 294, barra_agua, 0x001F);
 [e ( _lcd_fill_rect (4 , , , , -> -> 276 `i `us -> -> 11 `i `us -> -> 294 `i `us _barra_agua -> -> 31 `i `us ]
-"319
-[; ;main.c: 319:     uint16_t barra_referencia = (nivel_referencia_percentagem * 180) / 100;
+"335
+[; ;main.c: 335:     uint16_t barra_referencia = (nivel_referencia_percentagem * 180) / 100;
 [v _barra_referencia `us ~T0 @X0 1 a ]
 [e = _barra_referencia -> / * -> _nivel_referencia_percentagem `ui -> -> 180 `i `ui -> -> 100 `i `ui `us ]
-"321
-[; ;main.c: 321:     if (barra_referencia >= 180) {
-[e $ ! >= -> _barra_referencia `ui -> -> 180 `i `ui 921  ]
+"337
+[; ;main.c: 337:     if (barra_referencia >= 180) {
+[e $ ! >= -> _barra_referencia `ui -> -> 180 `i `ui 929  ]
 {
-"322
-[; ;main.c: 322:         barra_referencia = 180;
+"338
+[; ;main.c: 338:         barra_referencia = 180;
 [e = _barra_referencia -> -> 180 `i `us ]
-"323
-[; ;main.c: 323:     } else if (barra_referencia <= 0) {
+"339
+[; ;main.c: 339:     } else if (barra_referencia <= 0) {
 }
-[e $U 922  ]
-[e :U 921 ]
-[e $ ! <= -> _barra_referencia `ui -> -> 0 `i `ui 923  ]
+[e $U 930  ]
+[e :U 929 ]
+[e $ ! <= -> _barra_referencia `ui -> -> 0 `i `ui 931  ]
 {
-"324
-[; ;main.c: 324:         barra_referencia = 11;
+"340
+[; ;main.c: 340:         barra_referencia = 11;
 [e = _barra_referencia -> -> 11 `i `us ]
-"325
-[; ;main.c: 325:     }
+"341
+[; ;main.c: 341:     }
 }
-[e :U 923 ]
-[e :U 922 ]
-"326
-[; ;main.c: 326:     lcd_fill_rect(276, barra_referencia, 294, barra_referencia + 2, 0xF800);
+[e :U 931 ]
+[e :U 930 ]
+"342
+[; ;main.c: 342:     lcd_fill_rect(276, barra_referencia, 294, barra_referencia + 2, 0xF800);
 [e ( _lcd_fill_rect (4 , , , , -> -> 276 `i `us _barra_referencia -> -> 294 `i `us -> + -> _barra_referencia `ui -> -> 2 `i `ui `us -> -> 63488 `ui `us ]
-"329
-[; ;main.c: 329:     snprintf(string, sizeof(string), "%d%%", nivel_referencia_percentagem);
+"345
+[; ;main.c: 345:     snprintf(string, sizeof(string), "%d%%", nivel_referencia_percentagem);
 [e ( _snprintf (2 , (. , , &U _string -> # _string `ui :s 35C -> _nivel_referencia_percentagem `ui ]
-"330
-[; ;main.c: 330:     lcd_draw_string(180, 40, string, 0xFFFF, 0x0000);
+"346
+[; ;main.c: 346:     lcd_draw_string(180, 40, string, 0xFFFF, 0x0000);
 [e ( _lcd_draw_string (4 , , , , -> -> 180 `i `us -> -> 40 `i `us -> &U _string `*Cuc -> -> 65535 `ui `us -> -> 0 `i `us ]
-"331
-[; ;main.c: 331:     snprintf(string, sizeof(string), "%d%%", nivel_real_percentagem);
+"347
+[; ;main.c: 347:     snprintf(string, sizeof(string), "%d%%", nivel_real_percentagem);
 [e ( _snprintf (2 , (. , , &U _string -> # _string `ui :s 36C -> _nivel_real_percentagem `ui ]
-"332
-[; ;main.c: 332:     lcd_draw_string(140, 20, string, 0xFFFF, 0x0000);
+"348
+[; ;main.c: 348:     lcd_draw_string(140, 20, string, 0xFFFF, 0x0000);
 [e ( _lcd_draw_string (4 , , , , -> -> 140 `i `us -> -> 20 `i `us -> &U _string `*Cuc -> -> 65535 `ui `us -> -> 0 `i `us ]
-"333
-[; ;main.c: 333: }
-[e :UE 917 ]
+"349
+[; ;main.c: 349: }
+[e :UE 925 ]
 }
 [p f _printf 75498624 ]
 [p f _snprintf 9437312 ]
