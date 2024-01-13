@@ -58,11 +58,12 @@ volatile bool BombaLigada = false;
 volatile bool BuzzerLigado = false;
 volatile bool UpdateLCD = true;
 
+volatile uint8_t MecanismoControlo = 0;  // 1 - Potenciometro, 2 - Interface serie
+
 volatile uint16_t nivel_referencia = 0;
 volatile uint16_t nivel_referencia_percentagem = 0;
 volatile uint16_t nivel_real = 0;
 volatile uint16_t nivel_real_percentagem = 0;
-volatile int erro_nivel = 0;
 
 uint8_t rxData;
 uint8_t menu = '0';
@@ -70,6 +71,13 @@ int temperatura = 18;
 unsigned char cnt_char = 0;
 unsigned char s[4];
 unsigned char carater_recebido = 1;
+unsigned char intro_valor=0;
+
+void CheckUSART(void);
+void ShowMenuInTerminal(void);
+uint16_t CheckSensores(void);
+void Draw_Welcome_Screen(void);
+void Draw_Interface_Screen(void);
 
 //______________INTERRUPTS________________________
 void INT0_MyInterruptHandler(void) {
@@ -85,7 +93,7 @@ void INT0_MyInterruptHandler(void) {
 void ADC_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
     nivel_referencia = ADC_GetConversionResult();
-    nivel_referencia_percentagem = (float)(nivel_referencia * 100.0) / 1023.0;
+    nivel_referencia_percentagem = (uint16_t)((nivel_referencia * 100.0) / 1023.0);
 }
 
 /**
@@ -94,7 +102,7 @@ void ADC_MyInterruptHandler(void) {
 void TMR0_MyInterruptHandler(void) {
     ADC_SelectChannel(channel_AN0);
     ADC_StartConversion();
-    nivel_real = (uint16_t)CheckSensores();  // Verifica o estado dos sensores
+    nivel_real = CheckSensores();  // Verifica o estado dos sensores
     nivel_real_percentagem = (nivel_real * 100) / 10;
 }
 
@@ -106,7 +114,7 @@ void TMR1_MyInterruptHandler(void) {
 }
 
 void TMR2_MyInterruptHandler(void) {
-    erro_nivel = nivel_referencia_percentagem - nivel_real_percentagem;
+    volatile int erro_nivel = (int)(nivel_referencia_percentagem - nivel_real_percentagem);
     if (erro_nivel > 0) {
         BombaLigada = true;
         IO_RB7_Motor_Control_SetHigh();
@@ -122,11 +130,6 @@ void TMR6_MyInterruptHandler(void) {
 }
 
 //________________________________________________
-void CheckUSART(void);
-void ShowMenuInTerminal(void);
-int CheckSensores(void);
-void Draw_Welcome_Screen(void);
-void Draw_Interface_Screen(void);
 
 void main(void) {
     SYSTEM_Initialize();
@@ -170,14 +173,6 @@ void main(void) {
             IO_RB3_LED_RED_SetLow();
         }
 
-        // se a bomba estiver ligada acende o led verde
-        if (BombaLigada) {
-            IO_RB5_LED_GREEN_SetHigh();
-            
-        } else {
-            IO_RB5_LED_GREEN_SetLow();
-        }
-
         if (carater_recebido) {
             ShowMenuInTerminal();
             carater_recebido = 0;
@@ -207,74 +202,134 @@ void ShowMenuInTerminal() {
             printf("\r\n5 - Programar novo valor de referencia");
             printf("\r\n0 - Voltar ao Menu Principal");
             printf("\r\nOpcao: ");
-            menu = '0';
+            menu = 0;
             break;
         case '1':  // Desligar bomba de agua
             EUSART1_Write(12);
             // TODO - Desligar bomba de agua
-            printf("\r\nBomba de agua desligada");
+            if (BombaLigada) {
+                printf("\r\nBomba de agua desligada");
+                IO_RB7_Motor_Control_SetLow();  // Desliga a bomba de agua
+            } else {
+                printf("\r\nBomba de agua ja esta desligada!");
+            }
+
             printf("\r\nPrima 0 para voltar ao Menu Principall");
             printf("\r\nOpcao: ");
             BombaLigada = false;
-            menu = '0';
+            menu = 0;
             break;
         case '2':  // Ativar comtrolo do nivel de agua
             EUSART1_Write(12);
-            // TODO - Ativar controlo do nivel de agua
-            printf("\r\nControlo do nivel de agua ativado!");
-            SistemaControloLigado = true;
-            printf("\r\n\nPrima 0 para voltar ao Menu Principal");
+            printf("\r\nEscolha o mecanismo para controlar o nivel de agua:");
+            printf("\r\n1 - Potenciometro");
+            printf("\r\n2 - Interface serie");
             printf("\r\nOpcao: ");
-            menu = '0';
+            intro_valor = 2;
+            cnt_char = 0;
+            menu = 0;
             break;
         case '3':  // Visualizar a percentagem do nivel de agua
             EUSART1_Write(12);
-            // TODO - Visualizar a percentagem do nivel de agua
-            printf("\r\nPercentagem do nivel de agua: %hu", nivel_real_percentagem);
-            printf("\r\nbits: %d", nivel_real);
+            printf("\r\nPercentagem do nivel de agua: %hu %%", nivel_real_percentagem);
+            printf("\r\nRaw: %d", nivel_real);
             printf("\r\n\nPrima 0 para voltar ao Menu Principal");
             printf("\r\nOpcao: ");
-            menu = '0';
+            menu = 0;
             break;
         case '4':  // Visualizar o nivel de referencia
             EUSART1_Write(12);
-            // TODO - Visualizar o nivel de referencia
+            printf("\r\nNivel de referencia: %hu %%", nivel_referencia_percentagem);
+            printf("\r\nRaw: %d", nivel_referencia);
             printf("\r\n\nPrima 0 para voltar ao Menu Principal");
             printf("\r\nOpcao: ");
-            menu = '0';
+            menu = 0;
             break;
         case '5':  // Programar novo valor de referencia
             EUSART1_Write(12);
-            // TODO - Programar novo valor de referencia
-            printf("\r\n\nPrima 0 para voltar ao Menu Principal");
-            printf("\r\nOpcao: ");
-            menu = '0';
+            printf("\r\nProgramar novo valor de referencia");
+            printf("\r\nIntroduza o novo valor de referencia (0-100): ");
+            intro_valor = 1;
+            cnt_char = 0;
+            menu = 0;
+            break;
+        case 1:  // opcao para ler um numero de referencia
+            s[cnt_char] = rxData;
+            if (cnt_char == 3 || rxData == 13) {  // Se nº máx char = 3 (999)
+                if (cnt_char == 3) {
+                    cnt_char++;
+                }
+
+                s[cnt_char] = '\0';                      // Coloca o char de fim de string
+                nivel_referencia_percentagem = (uint16_t) atoi(s);  // Converte a string num inteiro
+                EUSART1_Write(12);
+                //so pode ser entre 0 e 100
+                if (nivel_referencia_percentagem >= 0 && nivel_referencia_percentagem <= 100) {
+                    printf("\r\nNivel de referencia = %3d %%\r\n", nivel_referencia_percentagem);
+                } else {
+                    printf("\r\nNivel de referencia invalido\r\n");
+                    nivel_referencia_percentagem = 0;
+                }
+                intro_valor = 0;
+            } else {
+                cnt_char++;
+            }
+            menu = 0;
+            break;
+        case 2:  // opcao para ler um numero do mecanismo de controlo
+            s[cnt_char] = rxData;
+            if (cnt_char == 1 || rxData == 13) {
+                if (cnt_char == 1) {
+                    cnt_char++;
+                }
+
+                s[cnt_char] = '\0';                      // Coloca o char de fim de string
+                MecanismoControlo = (uint16_t) atoi(s);  // Converte a string num inteiro
+                EUSART1_Write(12);
+                //so pode ser 1 ou 2
+                if (MecanismoControlo == 1) {
+                    printf("\r\nMecanismo de controlo = Potenciometro\r\n");
+                } else if (MecanismoControlo == 2) {
+                    printf("\r\nMecanismo de controlo = Interface serie\r\n");
+                } else {
+                    printf("\r\nMecanismo de controlo invalido\r\n");
+                    MecanismoControlo = 0;
+                }
+                intro_valor = 0;
+            } else {
+                cnt_char++;
+            }
+            menu = 0;
             break;
         default:  // Opcao Invalida
             EUSART1_Write(12);
             printf("\r\nOpcao Invalida!");
             printf("\r\nPrima 0 para voltar ao Menu Principal");
-            menu = '0';
+            menu = 0;
             break;
     }
 }
 
 void CheckUSART() {
     if (EUSART1_is_rx_ready()) {
-        rxData = EUSART1_Read();  // Funcao que le caracter da EUSART
-        EUSART1_Write(rxData);    // Mostra caracter recebido devolvendo-o a EUART
-
-        if ((rxData >= 48 && rxData <= 57) || rxData == 13) {
+        rxData = EUSART1_Read();                               // Funcao que le caracter da EUSART
+        EUSART1_Write(rxData);                                 // Mostra caracter recebido devolvendo-o ah EUSART
+        if ((rxData >= '0' && rxData <= '9') || rxData == 13)  // Protecao / Se estiver enrtre 0 e 9 ou ENTER
+        {
             carater_recebido = 1;  // Indica caracter aceite
-            menu = rxData;         // O caracter será usado para o switch case
+            menu = rxData;         // O caracter ser]a usado para o switch case
         } else {
             carater_recebido = 0;  // Caso contrario nao aceita o caracter e...
             menu = '0';            // ...volta a mostrar o menu principal opcao 0
         }
+        if (intro_valor == 1)  // Se estiver em modo de ler um valor para o programa e nao escolher um item do menu
+        {
+            menu = 1;  // Vai para o switch case 1 onde ira carregar os digitos lidos numa string
+        }
     }
 }
 
-int CheckSensores() {
+uint16_t CheckSensores() {
     int getValueFuncs[10];                     // array dos sensores de nivel de agua
     getValueFuncs[0] = IO_RD7_N01_GetValue();  // sensor 1 PORTDbits.RD7
     getValueFuncs[1] = IO_RD6_N02_GetValue();  // sensor 2 PORTDbits.RD6
@@ -286,8 +341,8 @@ int CheckSensores() {
     getValueFuncs[7] = IO_RC3_N08_GetValue();  // sensor 8 PORTCbits.RC3
     getValueFuncs[8] = IO_RC0_N09_GetValue();  // sensor 9 PORTCbits.RC0
     getValueFuncs[9] = IO_RC1_N10_GetValue();  // sensor 10 PORTCbits.RC1
-    //saber o nivel de agua sabendo que o sensor esta em contacto com a agua quando o valor e 0
-    int nivel_agua = 0;
+    // saber o nivel de agua sabendo que o sensor esta em contacto com a agua quando o valor e 0
+    uint16_t nivel_agua = 0;
     for (int i = 0; i < 10; i++) {
         if (getValueFuncs[i] == 0) {
             nivel_agua++;

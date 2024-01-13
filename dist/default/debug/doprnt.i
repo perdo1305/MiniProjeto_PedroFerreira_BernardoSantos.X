@@ -850,7 +850,15 @@ static int nout;
 static int pad(FILE *fp, char *buf, int p)
 {
     int i, w;
-# 164 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+
+
+
+    if (flags & (1 << 0)) {
+        fputs((const char *)buf, fp);
+    }
+
+
+
     w = (p < 0) ? 0 : p;
     i = 0;
     while (i < w) {
@@ -860,11 +868,11 @@ static int pad(FILE *fp, char *buf, int p)
 
 
 
-
+    if (!(flags & (1 << 0))) {
 
         fputs((const char *)buf, fp);
 
-
+    }
 
 
 
@@ -955,7 +963,26 @@ static int utoa(FILE *fp, vfpf_uint_t d)
 
     return (int) pad(fp, &dbuf[i], w);
 }
-# 1047 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+# 1028 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+static int
+read_prec_or_width (const char **fmt, va_list *ap) {
+    int n = 0;
+    if ((*fmt)[0] == '*') {
+        ++*fmt;
+        n = (*(int *)__va_arg(*(int **)*ap, (int)0));
+    } else {
+        unsigned char c;
+        while ((c = ((unsigned)(*fmt)[0]) - '0') < 10) {
+            n = n * 10 + c;
+            ++*fmt;
+        }
+    }
+    return n;
+}
+
+
+
+
 static int
 vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
 {
@@ -976,6 +1003,12 @@ vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
 
         flags = width = 0;
         prec = -1;
+# 1117 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
+  width = read_prec_or_width(fmt, ap);
+  if (width < 0) {
+   flags |= (1 << 0);
+   width = -width;
+  }
 # 1143 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\sources\\c99\\common\\doprnt.c"
   cp = *fmt;
 
