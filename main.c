@@ -58,7 +58,7 @@ volatile bool BombaLigada = false;
 volatile bool BuzzerLigado = false;
 volatile bool UpdateLCD = true;
 
-volatile uint8_t MecanismoControlo = 0;  // 1 - Potenciometro, 2 - Interface serie
+volatile uint16_t MecanismoControlo = 0;  // 1 - Potenciometro, 2 - Interface serie
 
 volatile uint16_t nivel_referencia = 0;
 volatile uint16_t nivel_referencia_percentagem = 0;
@@ -71,7 +71,7 @@ int temperatura = 18;
 unsigned char cnt_char = 0;
 unsigned char s[4];
 unsigned char carater_recebido = 1;
-unsigned char intro_valor=0;
+unsigned char intro_valor = 0;
 
 void CheckUSART(void);
 void ShowMenuInTerminal(void);
@@ -100,8 +100,10 @@ void ADC_MyInterruptHandler(void) {
  * Funcao que e chamada quando o timer 0 termina a contagem (25ms)
  */
 void TMR0_MyInterruptHandler(void) {
-    ADC_SelectChannel(channel_AN0);
-    ADC_StartConversion();
+    if (MecanismoControlo == 1) {
+        ADC_SelectChannel(channel_AN0);
+        ADC_StartConversion();
+    }
     nivel_real = CheckSensores();  // Verifica o estado dos sensores
     nivel_real_percentagem = (nivel_real * 100) / 10;
 }
@@ -133,6 +135,7 @@ void TMR6_MyInterruptHandler(void) {
 
 void main(void) {
     SYSTEM_Initialize();
+    TMR4_StopTimer();
 
     // inicia a comunicacao SPI com o LCD
     SPI2_Open(SPI2_DEFAULT);
@@ -147,35 +150,34 @@ void main(void) {
 
     INT0_SetInterruptHandler(INT0_MyInterruptHandler);
     ADC_SetInterruptHandler(ADC_MyInterruptHandler);
-    TMR0_SetInterruptHandler(TMR0_MyInterruptHandler);
+
+    TMR0_SetInterruptHandler(TMR0_MyInterruptHandler);  // 5ms (ADC trigger + verificacao dos sensores)
     TMR0_StartTimer();
 
-    TMR1_SetInterruptHandler(TMR1_MyInterruptHandler);
+    TMR1_SetInterruptHandler(TMR1_MyInterruptHandler);  // 250ms (Se o sistema de controlo estiver ligado pisca led laranja)
     TMR1_StartTimer();
 
-    TMR2_SetInterruptHandler(TMR2_MyInterruptHandler);
+    TMR2_SetInterruptHandler(TMR2_MyInterruptHandler);  // 5ms (Se o sistema de controlo estiver ligado calculo do erro e ligar/desligar a bomba de agua)
     TMR2_StartTimer();
 
-    TMR6_SetInterruptHandler(TMR6_MyInterruptHandler);
+    TMR6_SetInterruptHandler(TMR6_MyInterruptHandler);  // 250ms (Atualizar o LCD e heartbeat LED)
     TMR6_StartTimer();
 
     printf("SETUP COMPLETED SUCCESSFULLY\r\n");
-    SistemaControloLigado = true;
+    SistemaControloLigado = false;  // o sistema de controlo comeca desligado
 
     while (1) {
         // Sistema de controlo desligado, desliga o timer e acende o led vermelho
-        if (!SistemaControloLigado) {
-            TMR1_StopTimer();
-            IO_RB4_LED_ORANGE_SetLow();
-            IO_RB3_LED_RED_SetHigh();
+        if (SistemaControloLigado == false) {
+            TMR1_StopTimer();               // Desliga o timer 1 que controla o led laranja
+            TMR2_StopTimer();               // Desliga o timer 2 que controla a bomba de agua
+            IO_RB4_LED_ORANGE_SetLow();     // Desliga o led laranja
+            IO_RB3_LED_RED_SetHigh();       // Acende o led vermelho para indicar que o sistema esta desligado
+            //IO_RB7_Motor_Control_SetLow();  // Desliga a bomba de agua
         } else {
             TMR1_StartTimer();
+            TMR2_StartTimer();
             IO_RB3_LED_RED_SetLow();
-        }
-
-        if (carater_recebido) {
-            ShowMenuInTerminal();
-            carater_recebido = 0;
         }
 
         if (UpdateLCD) {
@@ -184,6 +186,18 @@ void main(void) {
         }
 
         CheckUSART();
+        if (carater_recebido) {
+            ShowMenuInTerminal();
+            carater_recebido = 0;
+        }
+
+        // Buzzer para qunado o reservatorio estiver cheio
+        if (nivel_real_percentagem >= 100) {
+            TMR4_StartTimer();
+            PWM5_LoadDutyValue(50);
+        } else {
+            TMR4_StopTimer();
+        }
     }
 }
 /**
@@ -195,38 +209,63 @@ void ShowMenuInTerminal() {
         case '0':               // Apresenta menu principal
             EUSART1_Write(12);  // Escreve na primeira linha do terminal
             printf("\r\nMENU PRINCIPAL");
-            printf("\r\n1 - Desligar bomba de agua");
-            printf("\r\n2 - Ativar comtrolo do nivel de agua");
+            if (BombaLigada == false) {
+                printf("\r\n1 - Ligar bomba de agua");
+            } else {
+                printf("\r\n1 - Desligar bomba de agua");
+            }
+
+            if (SistemaControloLigado == false) {
+                printf("\r\n2 - Ativar controlo do nivel de agua");
+            } else {
+                printf("\r\n2 - Desativar controlo do nivel de agua");
+            }
             printf("\r\n3 - Visualizar a percentagem do nivel de agua");
             printf("\r\n4 - Visualizar o nivel de referencia");
-            printf("\r\n5 - Programar novo valor de referencia");
+            if (MecanismoControlo == 2) {
+                printf("\r\n5 - Programar novo valor de referencia atraves do terminal");
+            }
             printf("\r\n0 - Voltar ao Menu Principal");
             printf("\r\nOpcao: ");
             menu = 0;
             break;
         case '1':  // Desligar bomba de agua
             EUSART1_Write(12);
-            // TODO - Desligar bomba de agua
-            if (BombaLigada) {
-                printf("\r\nBomba de agua desligada");
-                IO_RB7_Motor_Control_SetLow();  // Desliga a bomba de agua
+            if (SistemaControloLigado) {
+                printf("\r\nNao e possivel ligar/desligar a bomba de agua ");
+                printf("\r\nenquanto o sistema de controlo estiver ligado");
             } else {
-                printf("\r\nBomba de agua ja esta desligada!");
+                if (BombaLigada) {
+                    printf("\r\nBomba de agua desligada");
+                    IO_RB7_Motor_Control_SetLow();  // Desliga a bomba de agua
+                    BombaLigada = false;
+                } else {
+                    printf("\r\nBomba de agua ligada");
+                    IO_RB7_Motor_Control_SetHigh();  // Liga a bomba de agua
+                    BombaLigada = true;
+                }
             }
 
             printf("\r\nPrima 0 para voltar ao Menu Principall");
             printf("\r\nOpcao: ");
-            BombaLigada = false;
             menu = 0;
             break;
-        case '2':  // Ativar comtrolo do nivel de agua
+        case '2':  // Ativar controlo do nivel de agua
             EUSART1_Write(12);
-            printf("\r\nEscolha o mecanismo para controlar o nivel de agua:");
-            printf("\r\n1 - Potenciometro");
-            printf("\r\n2 - Interface serie");
-            printf("\r\nOpcao: ");
-            intro_valor = 2;
-            cnt_char = 0;
+            if (SistemaControloLigado == false) {
+                printf("\r\nSistema de controlo ligado");
+                printf("\r\nEscolha o mecanismo para controlar o nivel de agua:");
+                printf("\r\n1 - Potenciometro");
+                printf("\r\n2 - Interface serie");
+                printf("\r\nOpcao: ");
+                intro_valor = 2;
+                cnt_char = 0;
+            } else {
+                printf("\r\nSistema de controlo desligado");
+                printf("\r\n\nPrima 0 para voltar ao Menu Principal");
+                printf("\r\nOpcao: ");
+                SistemaControloLigado = false;
+            }
             menu = 0;
             break;
         case '3':  // Visualizar a percentagem do nivel de agua
@@ -247,10 +286,14 @@ void ShowMenuInTerminal() {
             break;
         case '5':  // Programar novo valor de referencia
             EUSART1_Write(12);
-            printf("\r\nProgramar novo valor de referencia");
-            printf("\r\nIntroduza o novo valor de referencia (0-100): ");
-            intro_valor = 1;
-            cnt_char = 0;
+            if (MecanismoControlo == 2) {
+                printf("\r\nNivel de referencia atual: %hu %%", nivel_referencia_percentagem);
+                printf("\r\nIntroduza o novo valor de referencia (0-100): ");
+                intro_valor = 1;
+                cnt_char = 0;
+            } else {
+                printf("\r\nNao e possivel programar novo valor de referencia, utilize o potenciometro");
+            }
             menu = 0;
             break;
         case 1:  // opcao para ler um numero de referencia
@@ -259,17 +302,17 @@ void ShowMenuInTerminal() {
                 if (cnt_char == 3) {
                     cnt_char++;
                 }
-
-                s[cnt_char] = '\0';                      // Coloca o char de fim de string
-                nivel_referencia_percentagem = (uint16_t) atoi(s);  // Converte a string num inteiro
+                s[cnt_char] = '\0';                                // Coloca o char de fim de string
+                nivel_referencia_percentagem = (uint16_t)atoi((const char*)s);  // Converte a string num inteiro
                 EUSART1_Write(12);
-                //so pode ser entre 0 e 100
-                if (nivel_referencia_percentagem >= 0 && nivel_referencia_percentagem <= 100) {
+                // so pode ser entre 0 e 100
+                if (nivel_referencia_percentagem <= 100) {
                     printf("\r\nNivel de referencia = %3d %%\r\n", nivel_referencia_percentagem);
                 } else {
                     printf("\r\nNivel de referencia invalido\r\n");
                     nivel_referencia_percentagem = 0;
                 }
+                printf("\r\nPrima 0 para voltar ao Menu Principal\n");
                 intro_valor = 0;
             } else {
                 cnt_char++;
@@ -282,19 +325,22 @@ void ShowMenuInTerminal() {
                 if (cnt_char == 1) {
                     cnt_char++;
                 }
-
-                s[cnt_char] = '\0';                      // Coloca o char de fim de string
-                MecanismoControlo = (uint16_t) atoi(s);  // Converte a string num inteiro
+                s[cnt_char] = '\0';                     // Coloca o char de fim de string
+                MecanismoControlo = (uint16_t)atoi((const char*)s); // Converte a string num inteiro
                 EUSART1_Write(12);
-                //so pode ser 1 ou 2
+                // so pode ser 1 ou 2
                 if (MecanismoControlo == 1) {
                     printf("\r\nMecanismo de controlo = Potenciometro\r\n");
+                    SistemaControloLigado = true;
                 } else if (MecanismoControlo == 2) {
                     printf("\r\nMecanismo de controlo = Interface serie\r\n");
+                    SistemaControloLigado = true;
                 } else {
                     printf("\r\nMecanismo de controlo invalido\r\n");
                     MecanismoControlo = 0;
+                    SistemaControloLigado = false;
                 }
+                printf("\r\nPrima 0 para voltar ao Menu Principal\n");
                 intro_valor = 0;
             } else {
                 cnt_char++;
@@ -304,7 +350,7 @@ void ShowMenuInTerminal() {
         default:  // Opcao Invalida
             EUSART1_Write(12);
             printf("\r\nOpcao Invalida!");
-            printf("\r\nPrima 0 para voltar ao Menu Principal");
+            printf("\r\nPrima 0 para voltar ao Menu Principal\n");
             menu = 0;
             break;
     }
@@ -324,7 +370,10 @@ void CheckUSART() {
         }
         if (intro_valor == 1)  // Se estiver em modo de ler um valor para o programa e nao escolher um item do menu
         {
-            menu = 1;  // Vai para o switch case 1 onde ira carregar os digitos lidos numa string
+            menu = 1;                 // Vai para o switch case 1 onde ira carregar os digitos lidos numa string
+        } else if (intro_valor == 2)  // Se estiver em modo de ler um valor para o programa e nao escolher um item do menu
+        {
+            menu = 2;  // Vai para o switch case 2 onde ira carregar os digitos lidos numa string
         }
     }
 }
@@ -375,16 +424,16 @@ void Draw_Welcome_Screen() {
 
 void Draw_Interface_Screen() {
     // barra branca de fundo
-    lcd_fill_rect(275, 10, 295, 190, WHITE);
+    lcd_fill_rect(275, 10, 295, 192, WHITE);
 
     // barra azul de agua
     uint16_t barra_agua = (nivel_real_percentagem * 180) / 100;
     if (barra_agua >= 180) {
         barra_agua = 180;
     } else if (barra_agua <= 0) {
-        barra_agua = 11;
+        barra_agua = 1;
     }
-    lcd_fill_rect(276, 11, 294, barra_agua, BLUE);
+    lcd_fill_rect(276, 11, 294, barra_agua + 10, BLUE);
 
     // barra vermelha de referencia
     uint16_t barra_referencia = (nivel_referencia_percentagem * 180) / 100;
@@ -392,9 +441,9 @@ void Draw_Interface_Screen() {
     if (barra_referencia >= 180) {
         barra_referencia = 180;
     } else if (barra_referencia <= 0) {
-        barra_referencia = 11;
+        barra_referencia = 1;
     }
-    lcd_fill_rect(276, barra_referencia, 294, barra_referencia + 2, RED);
+    lcd_fill_rect(276, barra_referencia + 10, 294, barra_referencia + 2 + 10, RED);
 
     // Display the percentages
     snprintf(string, sizeof(string), "%d%%", nivel_referencia_percentagem);
@@ -403,18 +452,6 @@ void Draw_Interface_Screen() {
     lcd_draw_string(140, 20, string, WHITE, BLACK);
 }
 
-// TODO - o valor de referencia do nivel de agua do tanque podera ser definido pelo utilizador de duas dforams (terminal ou potenciometro)
-// TODO - timer para comparar o nivel de agua real com o de referencia e ligar ou desligar a bomba de agua
-// TODO - timer para os sensores de nivel de agua e devover 0-100% de agua no tanque com resolucao de 10% mesma frequancia que o timer anterior
-// TODO - nivel logico 0 quando o sensor esta em contacto com a agua e nivel logico 1 quando nao esta em contacto com a agua
-// TODO - ligar ou desligar a bomba de agua com um gpio
-// TODO - Indicador de sistema ligado: desligado quando o sistema de controlo estiver desligado, ativo com uma periodicidade de 2 Hz quando o sistema de controlo estiver ativo
-// TODO - Indicador de sistema desligado: desligado quando o sistema de controlo estiver ativo, ligado (estaticamente) se o sistema estiver parado;
-// TODO - Indicador de bomba de água em atuação: ligado enquanto o motor da bomba de água for ativo
-// TODO - Buzzer para qunado o reservatorio estiver cheio
-// TODO - Display LCD para mostrar o nivel de agua em percentagem e o nivel de referencia em percentagem (a cada ciclo do timer da malha fechada)
-// TODO - ADC com timer para ler o valor do potenciometro
-// TODO - Botao de emergencia para desligar a bomba de agua e o sistema de controlo
 /*
 Esta interface deverá permitir ao utilizador as seguintes operações:
 • Desligar a bomba de água do reservatório;

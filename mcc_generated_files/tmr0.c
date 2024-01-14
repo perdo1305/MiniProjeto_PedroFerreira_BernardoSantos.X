@@ -71,12 +71,12 @@ void TMR0_Initialize(void)
     // TMR0H 0; 
     TMR0H = 0x00;
 
-    // TMR0L 61; 
-    TMR0L = 0x3D;
+    // TMR0L 217; 
+    TMR0L = 0xD9;
 
 	
     // Load TMR0 value to the 8-bit reload variable
-    timer0ReloadVal = 61;
+    timer0ReloadVal = 217;
 
     // Clear Interrupt flag before enabling the interrupt
     INTCONbits.TMR0IF = 0;

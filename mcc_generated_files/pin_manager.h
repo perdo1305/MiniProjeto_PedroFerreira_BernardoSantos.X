@@ -133,23 +133,6 @@
 #define IO_RB4_LED_ORANGE_SetAnalogMode()      do { ANSELBbits.ANSB4 = 1; } while(0)
 #define IO_RB4_LED_ORANGE_SetDigitalMode()     do { ANSELBbits.ANSB4 = 0; } while(0)
 
-// get/set IO_RB5_LED_GREEN aliases
-#define IO_RB5_LED_GREEN_TRIS                 TRISBbits.TRISB5
-#define IO_RB5_LED_GREEN_LAT                  LATBbits.LATB5
-#define IO_RB5_LED_GREEN_PORT                 PORTBbits.RB5
-#define IO_RB5_LED_GREEN_WPU                  WPUBbits.WPUB5
-#define IO_RB5_LED_GREEN_ANS                  ANSELBbits.ANSB5
-#define IO_RB5_LED_GREEN_SetHigh()            do { LATBbits.LATB5 = 1; } while(0)
-#define IO_RB5_LED_GREEN_SetLow()             do { LATBbits.LATB5 = 0; } while(0)
-#define IO_RB5_LED_GREEN_Toggle()             do { LATBbits.LATB5 = ~LATBbits.LATB5; } while(0)
-#define IO_RB5_LED_GREEN_GetValue()           PORTBbits.RB5
-#define IO_RB5_LED_GREEN_SetDigitalInput()    do { TRISBbits.TRISB5 = 1; } while(0)
-#define IO_RB5_LED_GREEN_SetDigitalOutput()   do { TRISBbits.TRISB5 = 0; } while(0)
-#define IO_RB5_LED_GREEN_SetPullup()          do { WPUBbits.WPUB5 = 1; } while(0)
-#define IO_RB5_LED_GREEN_ResetPullup()        do { WPUBbits.WPUB5 = 0; } while(0)
-#define IO_RB5_LED_GREEN_SetAnalogMode()      do { ANSELBbits.ANSB5 = 1; } while(0)
-#define IO_RB5_LED_GREEN_SetDigitalMode()     do { ANSELBbits.ANSB5 = 0; } while(0)
-
 // get/set IO_RB6_Led_HeartBeat aliases
 #define IO_RB6_Led_HeartBeat_TRIS                 TRISBbits.TRISB6
 #define IO_RB6_Led_HeartBeat_LAT                  LATBbits.LATB6
@@ -415,6 +398,16 @@
 #define IO_RE1_SetDigitalOutput()   do { TRISEbits.TRISE1 = 0; } while(0)
 #define IO_RE1_SetAnalogMode()      do { ANSELEbits.ANSE1 = 1; } while(0)
 #define IO_RE1_SetDigitalMode()     do { ANSELEbits.ANSE1 = 0; } while(0)
+
+// get/set RE2 procedures
+#define RE2_SetHigh()            do { LATEbits.LATE2 = 1; } while(0)
+#define RE2_SetLow()             do { LATEbits.LATE2 = 0; } while(0)
+#define RE2_Toggle()             do { LATEbits.LATE2 = ~LATEbits.LATE2; } while(0)
+#define RE2_GetValue()              PORTEbits.RE2
+#define RE2_SetDigitalInput()    do { TRISEbits.TRISE2 = 1; } while(0)
+#define RE2_SetDigitalOutput()   do { TRISEbits.TRISE2 = 0; } while(0)
+#define RE2_SetAnalogMode()         do { ANSELEbits.ANSE2 = 1; } while(0)
+#define RE2_SetDigitalMode()        do { ANSELEbits.ANSE2 = 0; } while(0)
 
 /**
    @Param

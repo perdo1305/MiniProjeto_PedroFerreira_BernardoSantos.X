@@ -9688,11 +9688,11 @@ void TMR0_Initialize(void)
     TMR0H = 0x00;
 
 
-    TMR0L = 0x3D;
+    TMR0L = 0xD9;
 
 
 
-    timer0ReloadVal = 61;
+    timer0ReloadVal = 217;
 
 
     INTCONbits.TMR0IF = 0;
