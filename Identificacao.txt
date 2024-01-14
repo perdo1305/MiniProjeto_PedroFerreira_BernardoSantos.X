@@ -1,0 +1,32 @@
+=== REGRAS IDENTIFICAÇÃO DO MINIPROJECTO ===
+
+Crie uma directoria para o projecto com a designacao "TP_MINIPROJ_#_PL$_G%",
+substituindo:
+ # pelo número do enunciado da proposta de Mini Projecto realizada,
+   (AP no caso de uma auto-proposta),
+ $ pelo número da turma laboratorial dos autores do trabalho,
+ % pelo número de grupo dos autores na respectiva turma laboratorial.
+Não utilize no nome dos ficheiros e no codigo caracteres acentuados e/ou
+cedilhados, tais como ~, º, ç, ã, á, à.
+Guarde este ficheiro na directoria do projecto com a informação relativa à  
+identificação dos autores do trabalho devidamente preenchida.
+A mesma informação de identificação dos autores do trabalho deve constar do
+cabeçalho do ficheiro de código fonte sob a forma de comentario. Para tal,
+utilize o template abaixo transcrito:
+
+/*
+ * MINIPROJ: Sistema de Controlo de nivel de agua
+ * TURMA: PL3
+ * GRUPO: 12
+ *
+ * NOME: Pedro Ferreira
+ * NUMERO: 2222035
+ *
+ * NOME: Bernardo Santos
+ * NUMERO: 2222033
+ */
+
+Quando concluir o trabalho, crie um ficheiro comprimido com o conteúdo da
+directoria criada para o projecto com a mesma designação, ou seja,
+"TP_MINIPROJ_#_PL$_G%.rar" ou "TP_MINIPROJ_#_PL$_G%.zip" e envie o trabalho
+para os docentes através do Moodle, utilizando o link para o efeito criado.
