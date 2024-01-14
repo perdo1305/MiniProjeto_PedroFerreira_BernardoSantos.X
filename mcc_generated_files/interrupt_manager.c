@@ -73,12 +73,12 @@ void  INTERRUPT_Initialize (void)
     // TMRI - high priority
     IPR1bits.TMR2IP = 1;
 
-    // TMRI - high priority
-    IPR1bits.TMR1IP = 1;
-
 
     // TMRI - low priority
     IPR5bits.TMR6IP = 0;    
+
+    // TMRI - low priority
+    IPR1bits.TMR1IP = 0;    
 
 }
 
@@ -109,10 +109,6 @@ void __interrupt() INTERRUPT_InterruptManagerHigh (void)
     {
         TMR2_ISR();
     }
-    else if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
-    {
-        TMR1_ISR();
-    }
     else
     {
         //Unhandled Interrupt
@@ -125,6 +121,10 @@ void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
     if(PIE5bits.TMR6IE == 1 && PIR5bits.TMR6IF == 1)
     {
         TMR6_ISR();
+    }
+    else if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
+    {
+        TMR1_ISR();
     }
     else
     {

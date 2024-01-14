@@ -188,9 +188,13 @@
       </HI-TECH-LINK>
       <Tool>
         <property key="design.file" value="Mini_projeto_micro.pdsprj"/>
+        <property key="target.ip.address" value="localhost"/>
+        <property key="target.ip.port" value="8001"/>
       </Tool>
       <VSMViewerPlatformTool>
         <property key="design.file" value="Mini_projeto_micro.pdsprj"/>
+        <property key="target.ip.address" value="localhost"/>
+        <property key="target.ip.port" value="8001"/>
       </VSMViewerPlatformTool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
