@@ -42,10 +42,14 @@
 */
 
 /*
-    Autores: Pedro Ferreira N2222035
-             Bernardo Santos N2222033
-    Repositorio: https://github.com/perdo1305/MiniProjeto_PedroFerreira_BernardoSantos.X
+  MINIPROJ: Sistema de Controlo de nivel de agua TURMA: PL3
+  GRUPO: 12
+  Autores: Pedro Ferreira N2222035
+           Bernardo Santos N2222033
+  Repositorio: https://github.com/perdo1305/MiniProjeto_PedroFerreira_BernardoSantos.X
 */
+
+
 
 #include "lib_ili9341.h"
 #include "mcc_generated_files/mcc.h"
