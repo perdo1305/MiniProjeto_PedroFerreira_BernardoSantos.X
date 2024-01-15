@@ -145,7 +145,7 @@ text116 CODE 0 3D50 3D50 14 1 2
 bssCOMRAM COMRAM 1 51 51 E 1 1
 mediumconst MEDIUMCONST 0 CD52 CD52 32AE 1 2
 config CONFIG 4 300000 300000 E 1 1
-$C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+$C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 idloc IDLOC 5 200000 200000 8 1 1
 init CODE 0 8A 8A 4 1 2
 reset_vec CODE 0 0 0 4 1 2
@@ -205,7 +205,7 @@ MEDIUMCONST 3E80-CD51 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-18 intcodelo CODE >30209:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
+18 intcodelo CODE >30209:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
 18 intcodelo CODE >118:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/interrupt_manager.c
 2E intcodelo CODE >121:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/interrupt_manager.c
 4A intcodelo CODE >123:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/interrupt_manager.c
@@ -213,7 +213,7 @@ $dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 52 intcodelo CODE >125:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/interrupt_manager.c
 6E intcodelo CODE >127:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/interrupt_manager.c
 72 intcodelo CODE >133:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/interrupt_manager.c
-8 intcode CODE >30977:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
+8 intcode CODE >30977:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
 8 intcode CODE >85:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/interrupt_manager.c
 3D50 text116 CODE >109:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/adc.c
 3D50 text116 CODE >112:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/adc.c
@@ -442,11 +442,11 @@ E16 text113 CODE >205:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\commo
 1BE8 text111 CODE >42:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\xxtofl.c
 1BEA text111 CODE >43:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\xxtofl.c
 1BFA text111 CODE >44:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\xxtofl.c
-310C text110 CODE >104:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 310C text110 CODE >105:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3112 text110 CODE >106:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-311E text110 CODE >107:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3194 text110 CODE >108:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+310C text110 CODE >106:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3112 text110 CODE >107:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+311E text110 CODE >108:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3194 text110 CODE >109:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3E7E text109 CODE >155:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/adc.c
 3E7E text109 CODE >158:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/adc.c
 3A06 text108 CODE >140:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/adc.c
@@ -491,10 +491,10 @@ E16 text113 CODE >205:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\commo
 37DA text102 CODE >219:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/eusart1.c
 37DA text102 CODE >221:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/eusart1.c
 37DC text102 CODE >223:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/eusart1.c
-3DB4 text101 CODE >94:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3DB4 text101 CODE >95:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3DBA text101 CODE >96:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3DBE text101 CODE >97:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3DB4 text101 CODE >96:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3DBA text101 CODE >97:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3DBE text101 CODE >98:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3E7A text100 CODE >54:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/ext_int.c
 3E7A text100 CODE >57:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/ext_int.c
 3AC0 text99 CODE >41:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/ext_int.c
@@ -508,25 +508,25 @@ E16 text113 CODE >205:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\commo
 3E6E text97 CODE >96:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/adc.c
 3E6E text97 CODE >99:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/adc.c
 3E70 text97 CODE >100:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/adc.c
-221C text96 CODE >415:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-221C text96 CODE >417:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2236 text96 CODE >418:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2250 text96 CODE >419:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-226A text96 CODE >420:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2284 text96 CODE >421:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-229E text96 CODE >422:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-22B8 text96 CODE >423:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-22D2 text96 CODE >424:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-22EC text96 CODE >425:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2306 text96 CODE >426:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2320 text96 CODE >428:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2328 text96 CODE >429:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2330 text96 CODE >430:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2354 text96 CODE >431:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2358 text96 CODE >432:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+221C text96 CODE >416:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+221C text96 CODE >418:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2236 text96 CODE >419:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2250 text96 CODE >420:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+226A text96 CODE >421:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2284 text96 CODE >422:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+229E text96 CODE >423:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+22B8 text96 CODE >424:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+22D2 text96 CODE >425:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+22EC text96 CODE >426:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2306 text96 CODE >427:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2320 text96 CODE >429:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2328 text96 CODE >430:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2330 text96 CODE >431:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2354 text96 CODE >432:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 2358 text96 CODE >433:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2378 text96 CODE >434:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2380 text96 CODE >435:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2358 text96 CODE >434:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2378 text96 CODE >435:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2380 text96 CODE >436:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3314 text95 CODE >7:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\lwdiv.c
 3314 text95 CODE >13:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\lwdiv.c
 331C text95 CODE >14:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\lwdiv.c
@@ -550,13 +550,13 @@ E16 text113 CODE >205:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\commo
 3C26 text94 CODE >39:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
 3C2E text94 CODE >52:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
 3C36 text94 CODE >53:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
-34AC text93 CODE >116:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 34AC text93 CODE >117:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-34BE text93 CODE >118:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-34C4 text93 CODE >119:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-34C8 text93 CODE >121:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-34D4 text93 CODE >122:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3504 text93 CODE >123:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+34AC text93 CODE >118:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+34BE text93 CODE >119:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+34C4 text93 CODE >120:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+34C8 text93 CODE >122:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+34D4 text93 CODE >123:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3504 text93 CODE >124:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3E78 text92 CODE >151:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr0.c
 3E78 text92 CODE >154:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr0.c
 3970 text91 CODE >129:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr0.c
@@ -565,14 +565,14 @@ E16 text113 CODE >205:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\commo
 3976 text91 CODE >138:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr0.c
 398A text91 CODE >140:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr0.c
 39A2 text91 CODE >144:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr0.c
-3856 text90 CODE >141:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3856 text90 CODE >142:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3862 text90 CODE >143:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-387C text90 CODE >144:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3882 text90 CODE >145:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3888 text90 CODE >147:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-388E text90 CODE >148:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3890 text90 CODE >150:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3856 text90 CODE >143:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3862 text90 CODE >144:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+387C text90 CODE >145:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3882 text90 CODE >146:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3888 text90 CODE >148:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+388E text90 CODE >149:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3890 text90 CODE >151:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3E76 text89 CODE >136:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr2.c
 3E76 text89 CODE >139:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr2.c
 39D6 text88 CODE >119:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr2.c
@@ -601,10 +601,10 @@ E16 text113 CODE >205:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\commo
 25E2 intcode_body CODE >111:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/interrupt_manager.c
 25E6 intcode_body CODE >115:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/interrupt_manager.c
 25E6 intcode_body CODE >116:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/interrupt_manager.c
-393A text86 CODE >129:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 393A text86 CODE >130:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-394C text86 CODE >131:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-396E text86 CODE >133:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+393A text86 CODE >131:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+394C text86 CODE >132:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+396E text86 CODE >134:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3E74 text85 CODE >176:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr1.c
 3E74 text85 CODE >179:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr1.c
 3B1A text84 CODE >121:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr1.c
@@ -623,10 +623,10 @@ E16 text113 CODE >205:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\commo
 3828 text83 CODE >165:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr1.c
 383C text83 CODE >167:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr1.c
 3854 text83 CODE >169:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr1.c
-3A92 text82 CODE >157:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3A92 text82 CODE >158:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3ABA text82 CODE >159:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3ABE text82 CODE >160:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3A92 text82 CODE >159:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3ABA text82 CODE >160:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3ABE text82 CODE >161:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3E72 text81 CODE >151:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr6.c
 3E72 text81 CODE >154:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr6.c
 3A64 text80 CODE >137:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr6.c
@@ -667,21 +667,21 @@ E16 text113 CODE >205:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\commo
 3D0A text75 CODE >137:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/eusart1.c
 3D0A text75 CODE >139:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/eusart1.c
 3D20 text75 CODE >140:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/eusart1.c
-3072 text74 CODE >387:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3072 text74 CODE >388:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3086 text74 CODE >389:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-308E text74 CODE >390:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3094 text74 CODE >391:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-30C8 text74 CODE >393:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-30CC text74 CODE >394:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-30D0 text74 CODE >395:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-30D4 text74 CODE >396:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-30D8 text74 CODE >397:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-30DC text74 CODE >399:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-30EC text74 CODE >401:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-30F0 text74 CODE >402:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3106 text74 CODE >404:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-310A text74 CODE >407:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3072 text74 CODE >389:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3086 text74 CODE >390:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+308E text74 CODE >391:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3094 text74 CODE >392:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+30C8 text74 CODE >394:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+30CC text74 CODE >395:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+30D0 text74 CODE >396:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+30D4 text74 CODE >397:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+30D8 text74 CODE >398:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+30DC text74 CODE >400:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+30EC text74 CODE >402:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+30F0 text74 CODE >403:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3106 text74 CODE >405:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+310A text74 CODE >408:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3CBE text73 CODE >92:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/spi2.c
 3CC2 text73 CODE >94:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/spi2.c
 3CC6 text73 CODE >95:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/spi2.c
@@ -1015,25 +1015,25 @@ FE8 text50 CODE >1259:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\commo
 27C6 text48 CODE >34:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_snprintf.c
 27E8 text48 CODE >35:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_snprintf.c
 2838 text48 CODE >39:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_snprintf.c
-1812 text47 CODE >468:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 1812 text47 CODE >469:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-183E text47 CODE >472:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1872 text47 CODE >473:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-188A text47 CODE >474:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1892 text47 CODE >475:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-18A8 text47 CODE >476:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-18B0 text47 CODE >478:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-18EA text47 CODE >481:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-191E text47 CODE >482:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1936 text47 CODE >483:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-193E text47 CODE >484:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1954 text47 CODE >485:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-195C text47 CODE >487:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-19A2 text47 CODE >490:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-19C8 text47 CODE >491:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-19F4 text47 CODE >492:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1A1A text47 CODE >493:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1A46 text47 CODE >494:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1812 text47 CODE >470:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+183E text47 CODE >473:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1872 text47 CODE >474:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+188A text47 CODE >475:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1892 text47 CODE >476:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+18A8 text47 CODE >477:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+18B0 text47 CODE >479:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+18EA text47 CODE >482:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+191E text47 CODE >483:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1936 text47 CODE >484:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+193E text47 CODE >485:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1954 text47 CODE >486:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+195C text47 CODE >488:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+19A2 text47 CODE >491:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+19C8 text47 CODE >492:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+19F4 text47 CODE >493:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1A1A text47 CODE >494:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1A46 text47 CODE >495:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 39A4 text46 CODE >255:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\lib_ili9341.c
 39A4 text46 CODE >257:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\lib_ili9341.c
 39C8 text46 CODE >259:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\lib_ili9341.c
@@ -1057,26 +1057,26 @@ FE8 text50 CODE >1259:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\commo
 2206 text45 CODE >249:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\lib_ili9341.c
 220E text45 CODE >250:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\lib_ili9341.c
 221A text45 CODE >253:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\lib_ili9341.c
-1560 text44 CODE >440:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 1560 text44 CODE >441:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-158C text44 CODE >442:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-15B8 text44 CODE >443:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-15D6 text44 CODE >444:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1602 text44 CODE >445:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1620 text44 CODE >446:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-164C text44 CODE >447:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-166A text44 CODE >448:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1698 text44 CODE >449:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-16B6 text44 CODE >450:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-16E4 text44 CODE >451:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1702 text44 CODE >452:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1730 text44 CODE >453:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-174E text44 CODE >454:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-177C text44 CODE >456:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-179A text44 CODE >457:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-17C6 text44 CODE >458:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-17E4 text44 CODE >459:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1810 text44 CODE >460:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1560 text44 CODE >442:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+158C text44 CODE >443:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+15B8 text44 CODE >444:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+15D6 text44 CODE >445:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1602 text44 CODE >446:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1620 text44 CODE >447:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+164C text44 CODE >448:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+166A text44 CODE >449:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1698 text44 CODE >450:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+16B6 text44 CODE >451:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+16E4 text44 CODE >452:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1702 text44 CODE >453:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1730 text44 CODE >454:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+174E text44 CODE >455:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+177C text44 CODE >457:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+179A text44 CODE >458:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+17C6 text44 CODE >459:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+17E4 text44 CODE >460:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1810 text44 CODE >461:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 37DE text43 CODE >82:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/pwm5.c
 37DE text43 CODE >85:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/pwm5.c
 37FA text43 CODE >88:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/pwm5.c
@@ -1286,124 +1286,124 @@ FE8 text50 CODE >1259:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\commo
 3B9C text13 CODE >9:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\printf.c
 3BA6 text13 CODE >10:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\printf.c
 3BC2 text13 CODE >13:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\printf.c
-8E text12 CODE >233:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 8E text12 CODE >234:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-92 text12 CODE >236:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-98 text12 CODE >237:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-A6 text12 CODE >238:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-B8 text12 CODE >239:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-C4 text12 CODE >240:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-C8 text12 CODE >241:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-D4 text12 CODE >244:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-E6 text12 CODE >245:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-F2 text12 CODE >246:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-F6 text12 CODE >247:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-102 text12 CODE >248:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+8E text12 CODE >235:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+92 text12 CODE >237:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+98 text12 CODE >238:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+A6 text12 CODE >239:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+B8 text12 CODE >240:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+C4 text12 CODE >241:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+C8 text12 CODE >242:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+D4 text12 CODE >245:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+E6 text12 CODE >246:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+F2 text12 CODE >247:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+F6 text12 CODE >248:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 102 text12 CODE >249:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-110 text12 CODE >250:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-11E text12 CODE >251:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-132 text12 CODE >252:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-140 text12 CODE >253:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+102 text12 CODE >250:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+110 text12 CODE >251:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+11E text12 CODE >252:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+132 text12 CODE >253:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 140 text12 CODE >254:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-14E text12 CODE >255:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-15C text12 CODE >256:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-162 text12 CODE >257:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-166 text12 CODE >259:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-16C text12 CODE >260:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-17E text12 CODE >261:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-18A text12 CODE >262:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-198 text12 CODE >263:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-19C text12 CODE >264:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1AC text12 CODE >265:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1B8 text12 CODE >266:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1BA text12 CODE >267:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1C0 text12 CODE >268:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1C4 text12 CODE >269:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1D0 text12 CODE >270:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1D2 text12 CODE >271:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1D8 text12 CODE >274:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1E6 text12 CODE >275:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F8 text12 CODE >279:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1FE text12 CODE >280:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-210 text12 CODE >281:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-21C text12 CODE >282:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-22A text12 CODE >283:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-238 text12 CODE >284:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-246 text12 CODE >285:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-254 text12 CODE >286:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-25A text12 CODE >287:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-25E text12 CODE >288:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-262 text12 CODE >289:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-26E text12 CODE >290:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-27C text12 CODE >291:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-28A text12 CODE >292:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-294 text12 CODE >297:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-29A text12 CODE >298:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2B0 text12 CODE >300:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2BE text12 CODE >301:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2CC text12 CODE >302:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2D2 text12 CODE >303:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2D6 text12 CODE >305:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2DC text12 CODE >306:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2F2 text12 CODE >308:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-300 text12 CODE >309:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-30E text12 CODE >310:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-314 text12 CODE >311:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-318 text12 CODE >313:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-31E text12 CODE >314:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-332 text12 CODE >315:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-348 text12 CODE >316:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-356 text12 CODE >317:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-360 text12 CODE >320:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-372 text12 CODE >325:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-382 text12 CODE >326:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3A6 text12 CODE >327:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3B8 text12 CODE >328:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3BA text12 CODE >330:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3C8 text12 CODE >331:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3DC text12 CODE >332:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3E2 text12 CODE >334:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3F8 text12 CODE >335:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-40E text12 CODE >336:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-412 text12 CODE >337:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-420 text12 CODE >338:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-428 text12 CODE >340:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-436 text12 CODE >341:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-43C text12 CODE >342:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-440 text12 CODE >343:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-446 text12 CODE >348:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-456 text12 CODE >349:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-478 text12 CODE >350:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-488 text12 CODE >351:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-48A text12 CODE >353:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-498 text12 CODE >354:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-4AC text12 CODE >355:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-4B2 text12 CODE >356:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-4C4 text12 CODE >357:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-4D2 text12 CODE >358:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-4D8 text12 CODE >359:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-4F0 text12 CODE >360:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-502 text12 CODE >363:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-510 text12 CODE >364:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-518 text12 CODE >365:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-51E text12 CODE >366:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+140 text12 CODE >255:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+14E text12 CODE >256:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+15C text12 CODE >257:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+162 text12 CODE >258:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+166 text12 CODE >260:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+16C text12 CODE >261:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+17E text12 CODE >262:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+18A text12 CODE >263:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+198 text12 CODE >264:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+19C text12 CODE >265:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1AC text12 CODE >266:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1B8 text12 CODE >267:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1BA text12 CODE >268:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1C0 text12 CODE >269:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1C4 text12 CODE >270:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1D0 text12 CODE >271:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1D2 text12 CODE >272:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1D8 text12 CODE >275:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1E6 text12 CODE >276:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F8 text12 CODE >280:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1FE text12 CODE >281:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+210 text12 CODE >282:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+21C text12 CODE >283:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+22A text12 CODE >284:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+238 text12 CODE >285:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+246 text12 CODE >286:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+254 text12 CODE >287:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+25A text12 CODE >288:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+25E text12 CODE >289:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+262 text12 CODE >290:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+26E text12 CODE >291:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+27C text12 CODE >292:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+28A text12 CODE >293:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+294 text12 CODE >298:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+29A text12 CODE >299:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2B0 text12 CODE >301:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2BE text12 CODE >302:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2CC text12 CODE >303:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2D2 text12 CODE >304:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2D6 text12 CODE >306:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2DC text12 CODE >307:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2F2 text12 CODE >309:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+300 text12 CODE >310:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+30E text12 CODE >311:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+314 text12 CODE >312:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+318 text12 CODE >314:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+31E text12 CODE >315:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+332 text12 CODE >316:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+348 text12 CODE >317:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+356 text12 CODE >318:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+360 text12 CODE >321:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+372 text12 CODE >326:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+382 text12 CODE >327:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3A6 text12 CODE >328:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3B8 text12 CODE >329:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3BA text12 CODE >331:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3C8 text12 CODE >332:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3DC text12 CODE >333:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3E2 text12 CODE >335:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3F8 text12 CODE >336:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+40E text12 CODE >337:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+412 text12 CODE >338:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+420 text12 CODE >339:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+428 text12 CODE >341:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+436 text12 CODE >342:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+43C text12 CODE >343:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+440 text12 CODE >344:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+446 text12 CODE >349:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+456 text12 CODE >350:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+478 text12 CODE >351:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+488 text12 CODE >352:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+48A text12 CODE >354:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+498 text12 CODE >355:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+4AC text12 CODE >356:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+4B2 text12 CODE >357:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+4C4 text12 CODE >358:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+4D2 text12 CODE >359:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+4D8 text12 CODE >360:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+4F0 text12 CODE >361:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+502 text12 CODE >364:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+510 text12 CODE >365:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+518 text12 CODE >366:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 51E text12 CODE >367:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-52A text12 CODE >368:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-530 text12 CODE >369:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-534 text12 CODE >375:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-53A text12 CODE >376:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-548 text12 CODE >377:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-55A text12 CODE >380:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-566 text12 CODE >380:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-574 text12 CODE >380:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-57C text12 CODE >380:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-584 text12 CODE >380:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-58C text12 CODE >380:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-594 text12 CODE >380:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-59C text12 CODE >380:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-5A4 text12 CODE >380:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-5AC text12 CODE >380:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-5B6 text12 CODE >381:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+51E text12 CODE >368:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+52A text12 CODE >369:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+530 text12 CODE >370:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+534 text12 CODE >376:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+53A text12 CODE >377:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+548 text12 CODE >378:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+55A text12 CODE >381:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+566 text12 CODE >381:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+574 text12 CODE >381:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+57C text12 CODE >381:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+584 text12 CODE >381:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+58C text12 CODE >381:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+594 text12 CODE >381:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+59C text12 CODE >381:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+5A4 text12 CODE >381:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+5AC text12 CODE >381:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+5B6 text12 CODE >382:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 3E6A text11 CODE >94:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr0.c
 3E6A text11 CODE >97:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr0.c
 3E6C text11 CODE >98:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\mcc_generated_files/tmr0.c
@@ -1534,89 +1534,89 @@ F6 text12 CODE >247:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_Berna
 9D8 text1 CODE >127:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\lib_ili9341.c
 9DE text1 CODE >130:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\lib_ili9341.c
 9EC text1 CODE >132:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\lib_ili9341.c
-1F28 text0 CODE >164:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
 1F28 text0 CODE >165:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F2C text0 CODE >166:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F30 text0 CODE >168:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F36 text0 CODE >169:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F3A text0 CODE >170:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F3E text0 CODE >172:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F40 text0 CODE >173:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F42 text0 CODE >174:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F44 text0 CODE >176:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F52 text0 CODE >177:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F60 text0 CODE >179:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F6E text0 CODE >180:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F72 text0 CODE >182:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F80 text0 CODE >183:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F84 text0 CODE >185:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F92 text0 CODE >186:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1F96 text0 CODE >188:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1FA4 text0 CODE >189:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1FA8 text0 CODE >191:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1FAE text0 CODE >192:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1FBA text0 CODE >195:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1FE4 text0 CODE >196:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1FF6 text0 CODE >197:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1FFA text0 CODE >198:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-1FFE text0 CODE >199:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2004 text0 CODE >201:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2008 text0 CODE >202:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-200C text0 CODE >203:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-200E text0 CODE >204:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2010 text0 CODE >206:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2018 text0 CODE >209:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-202A text0 CODE >210:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-202E text0 CODE >211:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2034 text0 CODE >214:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2038 text0 CODE >215:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-206E text0 CODE >216:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2072 text0 CODE >217:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2078 text0 CODE >220:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-208E text0 CODE >221:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-2092 text0 CODE >222:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-20A0 text0 CODE >223:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-20A4 text0 CODE >224:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
-3558 cinit CODE >15511:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3558 cinit CODE >15513:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3558 cinit CODE >15516:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3558 cinit CODE >15651:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-355A cinit CODE >15652:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-355C cinit CODE >15653:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-355E cinit CODE >15654:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3560 cinit CODE >15655:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3562 cinit CODE >15656:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3564 cinit CODE >15657:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3568 cinit CODE >15658:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-356C cinit CODE >15659:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-356C cinit CODE >15660:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-356E cinit CODE >15661:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3572 cinit CODE >15662:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3574 cinit CODE >15663:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3576 cinit CODE >15664:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3578 cinit CODE >15668:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-357C cinit CODE >15669:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-357E cinit CODE >15670:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-357E cinit CODE >15671:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3580 cinit CODE >15672:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3582 cinit CODE >15673:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3584 cinit CODE >15676:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3588 cinit CODE >15677:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-358A cinit CODE >15678:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-358A cinit CODE >15679:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-358C cinit CODE >15680:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-358E cinit CODE >15681:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3590 cinit CODE >15684:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3594 cinit CODE >15685:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3596 cinit CODE >15686:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3596 cinit CODE >15687:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-3598 cinit CODE >15688:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-359A cinit CODE >15689:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-359C cinit CODE >15695:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-359C cinit CODE >15697:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-359E cinit CODE >15698:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-35A0 cinit CODE >15699:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
-35A2 cinit CODE >15700:C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_1.s
+1F28 text0 CODE >166:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F2C text0 CODE >167:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F30 text0 CODE >169:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F36 text0 CODE >170:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F3A text0 CODE >171:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F3E text0 CODE >173:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F40 text0 CODE >174:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F42 text0 CODE >175:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F44 text0 CODE >177:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F52 text0 CODE >178:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F60 text0 CODE >180:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F6E text0 CODE >181:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F72 text0 CODE >183:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F80 text0 CODE >184:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F84 text0 CODE >186:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F92 text0 CODE >187:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1F96 text0 CODE >189:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1FA4 text0 CODE >190:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1FA8 text0 CODE >192:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1FAE text0 CODE >193:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1FBA text0 CODE >196:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1FE4 text0 CODE >197:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1FF6 text0 CODE >198:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1FFA text0 CODE >199:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+1FFE text0 CODE >200:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2004 text0 CODE >202:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2008 text0 CODE >203:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+200C text0 CODE >204:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+200E text0 CODE >205:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2010 text0 CODE >207:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2018 text0 CODE >210:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+202A text0 CODE >211:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+202E text0 CODE >212:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2034 text0 CODE >215:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2038 text0 CODE >216:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+206E text0 CODE >217:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2072 text0 CODE >218:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2078 text0 CODE >221:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+208E text0 CODE >222:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+2092 text0 CODE >223:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+20A0 text0 CODE >224:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+20A4 text0 CODE >225:C:\Users\pedro\Documents\git\MiniProjeto_PedroFerreira_BernardoSantos.X\main.c
+3558 cinit CODE >15511:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3558 cinit CODE >15513:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3558 cinit CODE >15516:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3558 cinit CODE >15651:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+355A cinit CODE >15652:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+355C cinit CODE >15653:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+355E cinit CODE >15654:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3560 cinit CODE >15655:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3562 cinit CODE >15656:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3564 cinit CODE >15657:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3568 cinit CODE >15658:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+356C cinit CODE >15659:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+356C cinit CODE >15660:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+356E cinit CODE >15661:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3572 cinit CODE >15662:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3574 cinit CODE >15663:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3576 cinit CODE >15664:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3578 cinit CODE >15668:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+357C cinit CODE >15669:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+357E cinit CODE >15670:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+357E cinit CODE >15671:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3580 cinit CODE >15672:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3582 cinit CODE >15673:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3584 cinit CODE >15676:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3588 cinit CODE >15677:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+358A cinit CODE >15678:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+358A cinit CODE >15679:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+358C cinit CODE >15680:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+358E cinit CODE >15681:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3590 cinit CODE >15684:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3594 cinit CODE >15685:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3596 cinit CODE >15686:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3596 cinit CODE >15687:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+3598 cinit CODE >15688:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+359A cinit CODE >15689:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+359C cinit CODE >15695:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+359C cinit CODE >15697:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+359E cinit CODE >15698:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+35A0 cinit CODE >15699:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
+35A2 cinit CODE >15700:C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1644,7 +1644,7 @@ __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/debug\MiniProjeto_PedroFerreira_
 _TMR4_StopTimer 3E3C 0 CODE 0 text5 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 EUSART1_SetErrorHandler@interruptHandler 67 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-__mediumconst CD52 0 MEDIUMCONST 0 mediumconst C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+__mediumconst CD52 0 MEDIUMCONST 0 mediumconst C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 _INT0_DefaultInterruptHandler 3E7A 0 CODE 0 text100 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _EUSART1_Initialize 321E 0 CODE 0 text34 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _lcd_draw_char 1D9E 0 CODE 0 text67 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
@@ -1668,7 +1668,7 @@ _TMR2 FBC 0 ABS 0 - dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.
 _TMR4 F53 0 ABS 0 - dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _TMR6 F4C 0 ABS 0 - dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _WPUB F61 0 ABS 0 - dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-___sp 0 0 STACK 2 stack C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+___sp 0 0 STACK 2 stack C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 _atoi 2382 0 CODE 0 text14 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _dbuf 14A 0 BANK1 1 bssBANK1 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _dtoa 1BFC 0 CODE 0 text56 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
@@ -1685,7 +1685,7 @@ read_prec_or_width@n 74 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_Ped
 pad@i 80 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 pad@p 7D 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 pad@w 82 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-start 8A 0 CODE 0 init C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+start 8A 0 CODE 0 init C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 i2___lwdiv@quotient B 0 COMRAM 1 cstackCOMRAM dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 ___flmul@aexp 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 ___flmul@bexp 21 0 COMRAM 1 cstackCOMRAM dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
@@ -1728,11 +1728,11 @@ utoa@d 86 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_PedroFerreira_Ber
 utoa@i 8C 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 utoa@p 8A 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 utoa@w 88 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-__accesstop 60 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
-intlevel0 0 0 CODE 0 text C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
-intlevel1 0 0 CODE 0 text C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
-intlevel2 0 0 CODE 0 text C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
-intlevel3 0 0 CODE 0 text C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+__accesstop 60 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
+intlevel0 0 0 CODE 0 text C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
+intlevel1 0 0 CODE 0 text C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
+intlevel2 0 0 CODE 0 text C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
+intlevel3 0 0 CODE 0 text C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 __end_of_TMR4_StopTimer 3E42 0 CODE 0 text5 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __ptext100 3E7A 0 CODE 0 text100 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __ptext101 3DB4 0 CODE 0 text101 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
@@ -1785,8 +1785,8 @@ lcd_set_cursor_x@x 6A 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_Pedro
 lcd_set_cursor_y@y 6A 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _TMR0_DefaultInterruptHandler 3E78 0 CODE 0 text92 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 ___awdiv@dividend 67 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 _nivel_real 53 0 COMRAM 1 bssCOMRAM dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _CCPR5H F56 0 ABS 0 - dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _CCPR5L F55 0 ABS 0 - dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
@@ -1908,7 +1908,7 @@ _SPI2_Initialize 3D64 0 CODE 0 text27 dist/default/debug\MiniProjeto_PedroFerrei
 __end_of_TMR4_Initialize 3D98 0 CODE 0 text20 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __end_of_TMR4_StartTimer 3E48 0 CODE 0 text6 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _EUSART1_DefaultOverrunErrorHandler 3E48 0 CODE 0 text104 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-isa$xinst 0 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+isa$xinst 0 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 TMR2_SetInterruptHandler@InterruptHandler 67 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __end_of_EUSART1_Receive_ISR 2F12 0 CODE 0 text103 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __end_of_TMR1_SetInterruptHandler 3DDE 0 CODE 0 text24 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
@@ -1960,7 +1960,7 @@ lcd_draw_pixel_at@color 74 0 BANK0 1 cstackBANK0 dist/default/debug\MiniProjeto_
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __Hbigram 0 0 ABS 0 bigram dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 _BAUDCON1 FB8 0 ABS 0 - dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 ___xxtofl@arg B 0 COMRAM 1 cstackCOMRAM dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 ___xxtofl@exp A 0 COMRAM 1 cstackCOMRAM dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
@@ -2376,12 +2376,12 @@ _strlen 3892 0 CODE 0 text58 dist/default/debug\MiniProjeto_PedroFerreira_Bernar
 _TMR0_SetInterruptHandler 3DDE 0 CODE 0 text26 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _lcd_draw_pixel_at 39A4 0 CODE 0 text46 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-isa$std 1 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+isa$std 1 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 ___fldiv@new_exp 39 0 COMRAM 1 cstackCOMRAM dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _SistemaControloLigado D6 0 BANK0 1 bssBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __end_of_EUSART1_SetFramingErrorHandler 3E1A 0 CODE 0 text38 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-stackhi 0 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
-stacklo 0 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+stackhi 0 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
+stacklo 0 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 __end_of_EUSART1_SetOverrunErrorHandler 3E10 0 CODE 0 text37 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __end_of_EUSART1_Write 34AC 0 CODE 0 text76 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _EXT_INT_Initialize 3D3A 0 CODE 0 text32 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
@@ -2569,7 +2569,7 @@ __Ltext97 0 0 ABS 0 text97 dist/default/debug\MiniProjeto_PedroFerreira_Bernardo
 __Ltext98 0 0 ABS 0 text98 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __Ltext99 0 0 ABS 0 text99 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __end_of_PWM5_Initialize 3CF2 0 CODE 0 text28 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-__ramtop 1000 0 RAM 0 ramtop C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+__ramtop 1000 0 RAM 0 ramtop C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 TMR6_ISR@CountCallBack 5B 0 COMRAM 1 bssCOMRAM dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 CheckSensores@i 1B 0 COMRAM 1 cstackCOMRAM dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _vfprintf 33EE 0 CODE 0 text49 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
@@ -2594,8 +2594,8 @@ __end_of_INTERRUPT_InterruptManagerLow 8A 0 CODE 0 intcodelo dist/default/debug\
 ADC_SelectChannel@channel 2 0 COMRAM 1 cstackCOMRAM dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 __end_of_vfprintf 3452 0 CODE 0 text49 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 _EUSART1_TxDefaultInterruptHandler EE 0 BANK0 1 nvBANK0 dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
-___heap_hi 0 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
-___heap_lo 0 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAse10.\driver_tmp_14.o
+___heap_hi 0 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
+___heap_lo 0 0 ABS 0 - C:\Users\pedro\AppData\Local\Temp\xcAs8bg.\driver_tmp_14.o
 _spi2_configuration FA6B 0 MEDIUMCONST 0 mediumconst dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 ___fltol@f1 41 0 COMRAM 1 cstackCOMRAM dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o
 ___param_bank 0 0 ABS 0 - dist/default/debug\MiniProjeto_PedroFerreira_BernardoSantos.X.debug.o

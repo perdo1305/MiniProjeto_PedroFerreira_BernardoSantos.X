@@ -7,7 +7,7 @@
 # 1 "C:/Users/pedro/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 49 "main.c"
+# 50 "main.c"
 # 1 "./lib_ili9341.h" 1
 # 13 "./lib_ili9341.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdint.h" 1 3
@@ -710,7 +710,7 @@ void lcd_draw_string (uint16_t x, uint16_t y, const char *pS, uint16_t fg_color,
 
 void setWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
 void lcd_draw_image(uint16_t x, uint16_t y, uint16_t width, uint16_t height, const uint16_t *Imagedata);
-# 49 "main.c" 2
+# 50 "main.c" 2
 
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
@@ -10678,7 +10678,7 @@ void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 void SYSTEM_Initialize(void);
 # 93 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 50 "main.c" 2
+# 51 "main.c" 2
 
 
 
@@ -10844,7 +10844,7 @@ void main(void) {
         }
 
         CheckUSART();
-        if (carater_recebido || (menu == '3' || menu == '4')) {
+        if (carater_recebido || menu == '3' || menu == '4') {
             ShowMenuInTerminal();
             carater_recebido = 0;
         }
